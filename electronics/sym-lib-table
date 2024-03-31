@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "TB6612FNG_C_8_EL")(type "KiCad")(uri "${KIPRJMOD}/libs/TB6612FNG_C_8_EL/TB6612FNG_C_8_EL.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP32-S3-WROOM-1-N8R8")(type "KiCad")(uri "${KIPRJMOD}/libs/ESP32-S3-WROOM-1-N8R8/ESP32-S3-WROOM-1-N8R8.kicad_sym")(options "")(descr ""))
+)
