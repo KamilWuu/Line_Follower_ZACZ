@@ -1,4 +1,7 @@
 (fp_lib_table
+  (version 7)
   (lib (name "ESP32-S3-WROOM-1-N8R8")(type "KiCad")(uri "${KIPRJMOD}/libs/ESP32-S3-WROOM-1-N8R8")(options "")(descr ""))
   (lib (name "TB6612FNG_C_8_EL")(type "KiCad")(uri "${KIPRJMOD}/libs/TB6612FNG_C_8_EL")(options "")(descr ""))
+  (lib (name "electronics")(type "KiCad")(uri "C:/Users/owozn/Documents/GitHub/Line_Follower_ZACZ/electronics.pretty")(options "")(descr ""))
+  (lib (name "Importowane schematy")(type "KiCad")(uri "${KIPRJMOD}/Importowane schematy.pretty")(options "")(descr ""))
 )
