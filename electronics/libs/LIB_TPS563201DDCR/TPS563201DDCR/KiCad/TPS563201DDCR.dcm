@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPS563201DDCR
+D 4.5 V to 17 V input, 3 A output, synchronous step-down converter in Eco-mode
+K
+F http://www.ti.com/lit/gpn/tps563201
+$ENDCMP
+#
+#End Doc Library
