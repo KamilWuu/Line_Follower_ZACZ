@@ -1,0 +1,9 @@
+Manufacturer=STMicroelectronics
+PartNumber=LM2901DT
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=14
+Version=3.1
+Released=2015-05-27 02:55:33
+Downloaded=2024-04-03 20:59:18
+3D=Y
