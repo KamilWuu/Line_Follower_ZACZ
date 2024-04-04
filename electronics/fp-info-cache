@@ -1,4 +1,4 @@
-22358527669032084
+22360239896751195
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -56013,6 +56013,13 @@ heatsink
 0
 0
 0
+Importowane schematy
+QFN50P300X250X87-14N
+BMI270
+Integrated Circuit
+0
+14
+14
 Importowane schematy
 SOIC127P600X175-14N
 SO 14
