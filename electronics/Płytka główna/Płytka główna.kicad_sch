@@ -1,0 +1,65 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 27.94 20.32) (size 25.4 13.97) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 14a25981-261b-4223-ba60-f7910fec1ca0)
+    (property "Sheetname" "Zasilanie" (at 27.94 19.6084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "zasilanie.kicad_sch" (at 27.94 34.8746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Płytka główna"
+        (path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 27.94 41.91) (size 25.4 15.24) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 4da3fa82-dae7-4ff0-bb87-1448ee4d8070)
+    (property "Sheetname" "ESP32" (at 27.94 41.1984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "esp32.kicad_sch" (at 27.94 57.7346 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Płytka główna"
+        (path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 27.94 63.5) (size 25.4 13.97) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 8c8a7e79-ed7d-4e74-9c3e-586e9dec96fd)
+    (property "Sheetname" "Mostki_h" (at 27.94 62.7884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "mostki_h.kicad_sch" (at 27.94 78.0546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Płytka główna"
+        (path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f" (page "4"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
