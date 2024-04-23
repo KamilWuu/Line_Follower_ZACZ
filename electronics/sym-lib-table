@@ -1,7 +1,8 @@
 (sym_lib_table
-  (version 7)
-  (lib (name "TB6612FNG_C_8_EL")(type "KiCad")(uri "${KIPRJMOD}/libs/TB6612FNG_C_8_EL/TB6612FNG_C_8_EL.kicad_sym")(options "")(descr ""))
+  (lib (name "BMI270")(type "KiCad")(uri "${KIPRJMOD}/libs/BMI270/KiCad/BMI270.kicad_sym")(options "")(descr ""))
   (lib (name "ESP32-S3-WROOM-1-N8R8")(type "KiCad")(uri "${KIPRJMOD}/libs/ESP32-S3-WROOM-1-N8R8/ESP32-S3-WROOM-1-N8R8.kicad_sym")(options "")(descr ""))
-  (lib (name "Importowane schematy")(type "KiCad")(uri "${KIPRJMOD}/Importowane schematy.kicad_sym")(options "")(descr ""))
+  (lib (name "LM2901DT")(type "KiCad")(uri "${KIPRJMOD}/libs/LIB_LM2901DT/LM2901DT/KiCad/LM2901DT.kicad_sym")(options "")(descr ""))
   (lib (name "TPS563201DDCR")(type "KiCad")(uri "${KIPRJMOD}/libs/LIB_TPS563201DDCR/TPS563201DDCR/KiCad/TPS563201DDCR.kicad_sym")(options "")(descr ""))
+  (lib (name "MCP73844-840I_MS")(type "KiCad")(uri "${KIPRJMOD}/libs/MCP73844-840IMS/MCP73844-840I_MS.kicad_sym")(options "")(descr ""))
+  (lib (name "TB6612FNG_C_8_EL")(type "KiCad")(uri "${KIPRJMOD}/libs/TB6612FNG_C_8_EL/TB6612FNG_C_8_EL.kicad_sym")(options "")(descr ""))
 )
