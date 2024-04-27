@@ -4711,7 +4711,7 @@
 		)
 		(uuid "5ddb6c6b-3d7f-45a4-8b39-addddb1a590e")
 	)
-	(text "Dwa ostatnie już się nie mieszczą na ESP\n"
+	(text "Jest 20 czujników, pozostają 2 miejsca\n na ESP i 4 na połączeniu"
 		(exclude_from_sim no)
 		(at 152.4 82.55 0)
 		(effects
@@ -4743,28 +4743,6 @@
 			(justify left bottom)
 		)
 		(uuid "dff96b96-51c6-4d84-a366-f1fd6719ebe7")
-	)
-	(global_label "IR_SIG_21"
-		(shape output)
-		(at 55.88 80.01 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "09781992-cf4f-4c75-b3a6-84ece49145ce")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.1785 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
 	)
 	(global_label "IO0"
 		(shape input)
@@ -5162,28 +5140,6 @@
 			)
 		)
 	)
-	(global_label "IR_SIG_21"
-		(shape output)
-		(at 146.05 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "391b010d-b6ea-446d-934c-708ea21b1260")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.7515 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "IR_SIG_05"
 		(shape output)
 		(at 146.05 38.1 180)
@@ -5426,28 +5382,6 @@
 			)
 		)
 	)
-	(global_label "IR_SIG_24"
-		(shape output)
-		(at 146.05 86.36 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5c9624f5-f9a0-49bc-b640-8db643392fe0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.7515 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BUTTON"
 		(shape input)
 		(at 69.342 145.796 0)
@@ -5646,28 +5580,6 @@
 			)
 		)
 	)
-	(global_label "IR_SIG_23"
-		(shape output)
-		(at 146.05 83.82 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9944832e-062b-4662-b138-dc3c10ce246f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.7515 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "IR_SIG_04"
 		(shape output)
 		(at 146.05 35.56 180)
@@ -5725,28 +5637,6 @@
 		(uuid "9cddc561-f69b-456c-839a-7556668b2a91")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 133.7515 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "IR_SIG_22"
-		(shape output)
-		(at 146.05 81.28 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9d23dd38-e64b-4afa-8190-8932bcff987c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.7515 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5923,28 +5813,6 @@
 		(uuid "c55bbd56-cccc-4765-a31b-90b30906df5c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 68.1785 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "IR_SIG_22"
-		(shape output)
-		(at 55.88 82.55 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c7248c73-ea49-49c5-9e8b-0fdaa89ae4aa")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.1785 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)

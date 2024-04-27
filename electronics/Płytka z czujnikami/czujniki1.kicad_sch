@@ -431,20 +431,11 @@
   (junction (at 81.28 67.31) (diameter 0) (color 0 0 0 0)
     (uuid 24c92e4c-42dc-4da2-9ef3-efc6d616ccc9)
   )
-  (junction (at 256.54 143.51) (diameter 0) (color 0 0 0 0)
-    (uuid 30a737eb-8b62-4021-83fe-326ddd5a0650)
-  )
   (junction (at 214.63 67.31) (diameter 0) (color 0 0 0 0)
     (uuid 313a3030-ad3e-4a49-ab1f-713340c703bb)
   )
-  (junction (at 214.63 106.68) (diameter 0) (color 0 0 0 0)
-    (uuid 34bda559-9209-46d0-a4ed-c1793fffbc7e)
-  )
   (junction (at 168.91 143.51) (diameter 0) (color 0 0 0 0)
     (uuid 473f6f45-fb61-4634-acb1-ffed2fe7c59b)
-  )
-  (junction (at 214.63 143.51) (diameter 0) (color 0 0 0 0)
-    (uuid 5928f161-4a2b-4aed-be2b-6ae19469c800)
   )
   (junction (at 127 106.68) (diameter 0) (color 0 0 0 0)
     (uuid 5f29291e-bfc1-45b5-bbb5-1384d4142d20)
@@ -454,9 +445,6 @@
   )
   (junction (at 256.54 31.75) (diameter 0) (color 0 0 0 0)
     (uuid 67dc9ad5-aa62-4198-a922-7abf80f1f306)
-  )
-  (junction (at 256.54 107.95) (diameter 0) (color 0 0 0 0)
-    (uuid 7205e2a0-3b98-4305-902a-ed8d9c573835)
   )
   (junction (at 39.37 143.51) (diameter 0) (color 0 0 0 0)
     (uuid 78e81301-4d4a-47b6-b448-912354f32577)
@@ -514,10 +502,6 @@
     (stroke (width 0) (type default))
     (uuid 0475dc20-92a7-4b85-8aeb-9e393220a483)
   )
-  (wire (pts (xy 214.63 106.68) (xy 209.55 106.68))
-    (stroke (width 0) (type default))
-    (uuid 0674f095-74b3-4add-9cee-979db7201c24)
-  )
   (wire (pts (xy 168.91 153.67) (xy 168.91 156.21))
     (stroke (width 0) (type default))
     (uuid 07279b92-6bfa-41af-91e0-4da2c894c8e3)
@@ -574,10 +558,6 @@
     (stroke (width 0) (type default))
     (uuid 0e167ce1-cb64-4562-9e30-e5ce8824f722)
   )
-  (wire (pts (xy 214.63 153.67) (xy 214.63 156.21))
-    (stroke (width 0) (type default))
-    (uuid 0e8d368c-7e50-4f3f-8305-b3dc92370129)
-  )
   (wire (pts (xy 15.24 41.91) (xy 15.24 43.18))
     (stroke (width 0) (type default))
     (uuid 0f60a748-8c29-468a-b7bb-f43bb88cfdec)
@@ -594,7 +574,7 @@
     (stroke (width 0) (type default))
     (uuid 14a671e3-d79e-4ace-98e9-d633307716ab)
   )
-  (wire (pts (xy 57.15 35.56) (xy 57.15 31.75))
+  (wire (pts (xy 57.15 34.29) (xy 57.15 31.75))
     (stroke (width 0) (type default))
     (uuid 17622ab6-46bc-4c35-8780-589507f8c445)
   )
@@ -610,17 +590,9 @@
     (stroke (width 0) (type default))
     (uuid 19008a94-b888-4247-b031-f79bac900206)
   )
-  (wire (pts (xy 214.63 143.51) (xy 214.63 146.05))
-    (stroke (width 0) (type default))
-    (uuid 1944f00a-cdf5-464c-bc86-27de1333488f)
-  )
   (wire (pts (xy 15.24 30.48) (xy 19.05 30.48))
     (stroke (width 0) (type default))
     (uuid 1a8653fa-4215-45bc-82fc-5b4b49250184)
-  )
-  (wire (pts (xy 232.41 132.08) (xy 232.41 138.43))
-    (stroke (width 0) (type default))
-    (uuid 1d35ca89-a852-4d91-98b5-0f3146ce0859)
   )
   (wire (pts (xy 214.63 40.64) (xy 214.63 43.18))
     (stroke (width 0) (type default))
@@ -682,10 +654,6 @@
     (stroke (width 0) (type default))
     (uuid 2b203257-d1ed-48ac-a5ca-8ae740104b61)
   )
-  (wire (pts (xy 232.41 119.38) (xy 232.41 120.65))
-    (stroke (width 0) (type default))
-    (uuid 2bb4ce0b-dce6-4b06-a029-a99a01ad1f07)
-  )
   (wire (pts (xy 81.28 34.29) (xy 81.28 31.75))
     (stroke (width 0) (type default))
     (uuid 2d1c5ef5-2418-41c8-bfa1-724a8703f312)
@@ -709,10 +677,6 @@
   (wire (pts (xy 214.63 30.48) (xy 215.9 30.48))
     (stroke (width 0) (type default))
     (uuid 2f6f47b8-9dfa-4862-b0f0-1e42f1d793a7)
-  )
-  (wire (pts (xy 232.41 138.43) (xy 236.22 138.43))
-    (stroke (width 0) (type default))
-    (uuid 2feb0161-600c-4652-b3c0-18d9bc3d8416)
   )
   (wire (pts (xy 102.87 143.51) (xy 106.68 143.51))
     (stroke (width 0) (type default))
@@ -746,17 +710,9 @@
     (stroke (width 0) (type default))
     (uuid 3922ac19-7e07-4f6f-9edf-7d34fd88fcb9)
   )
-  (wire (pts (xy 190.5 118.11) (xy 190.5 119.38))
-    (stroke (width 0) (type default))
-    (uuid 3946086a-2317-4519-8b0f-1b29ea0c701d)
-  )
   (wire (pts (xy 102.87 19.05) (xy 102.87 25.4))
     (stroke (width 0) (type default))
     (uuid 39a94678-6a64-44dc-a1f1-c28bc1c6534b)
-  )
-  (wire (pts (xy 251.46 102.87) (xy 256.54 102.87))
-    (stroke (width 0) (type default))
-    (uuid 39fe1981-93a8-485e-ab5e-5a5d8c48e99d)
   )
   (wire (pts (xy 81.28 143.51) (xy 76.2 143.51))
     (stroke (width 0) (type default))
@@ -766,14 +722,6 @@
     (stroke (width 0) (type default))
     (uuid 3df971d2-048e-4a6e-81a6-1f5a32906bd8)
   )
-  (wire (pts (xy 190.5 138.43) (xy 194.31 138.43))
-    (stroke (width 0) (type default))
-    (uuid 3e5ff82b-5074-4cd7-b39d-7a77aae72ca5)
-  )
-  (wire (pts (xy 190.5 106.68) (xy 194.31 106.68))
-    (stroke (width 0) (type default))
-    (uuid 401286b8-df50-47c0-88f6-c110967a7bfb)
-  )
   (wire (pts (xy 232.41 26.67) (xy 236.22 26.67))
     (stroke (width 0) (type default))
     (uuid 40169070-1517-49e9-9676-f17f6ed876d8)
@@ -781,10 +729,6 @@
   (wire (pts (xy 57.15 31.75) (xy 60.96 31.75))
     (stroke (width 0) (type default))
     (uuid 43df0dcc-058e-4661-a72d-40e02cb471d3)
-  )
-  (wire (pts (xy 256.54 143.51) (xy 251.46 143.51))
-    (stroke (width 0) (type default))
-    (uuid 451c8cc1-8095-4286-949f-c78dd6380135)
   )
   (wire (pts (xy 127 77.47) (xy 127 80.01))
     (stroke (width 0) (type default))
@@ -814,7 +758,7 @@
     (stroke (width 0) (type default))
     (uuid 4adabfdf-4d17-4a3a-8868-543b07e9f7e1)
   )
-  (wire (pts (xy 57.15 43.18) (xy 57.15 44.45))
+  (wire (pts (xy 57.15 41.91) (xy 57.15 44.45))
     (stroke (width 0) (type default))
     (uuid 4b00ca0a-6945-4d8f-bf70-7b258aaa5513)
   )
@@ -830,10 +774,6 @@
     (stroke (width 0) (type default))
     (uuid 4d7af602-6a2b-4ea2-ab64-2be2747ce332)
   )
-  (wire (pts (xy 256.54 118.11) (xy 256.54 120.65))
-    (stroke (width 0) (type default))
-    (uuid 4ee4e442-23ba-4bb6-8bc0-f36584986b7a)
-  )
   (wire (pts (xy 144.78 143.51) (xy 148.59 143.51))
     (stroke (width 0) (type default))
     (uuid 4f1a8022-75fe-4648-a9a5-547a6163bc3c)
@@ -841,10 +781,6 @@
   (wire (pts (xy 102.87 132.08) (xy 102.87 138.43))
     (stroke (width 0) (type default))
     (uuid 5143599d-f681-479f-ac87-9df293eab4a3)
-  )
-  (wire (pts (xy 251.46 138.43) (xy 256.54 138.43))
-    (stroke (width 0) (type default))
-    (uuid 51c6ba2a-68f5-4175-af69-eafefdd9628f)
   )
   (wire (pts (xy 57.15 26.67) (xy 60.96 26.67))
     (stroke (width 0) (type default))
@@ -854,29 +790,13 @@
     (stroke (width 0) (type default))
     (uuid 59466e0e-d601-40b2-b311-602dda47771d)
   )
-  (wire (pts (xy 214.63 95.25) (xy 214.63 101.6))
-    (stroke (width 0) (type default))
-    (uuid 5b44dae0-e336-46a6-b4d3-b74c7e51dc43)
-  )
   (wire (pts (xy 102.87 118.11) (xy 102.87 119.38))
     (stroke (width 0) (type default))
     (uuid 5c6f1738-4bed-47e2-bef2-44be84779531)
   )
-  (wire (pts (xy 209.55 101.6) (xy 214.63 101.6))
-    (stroke (width 0) (type default))
-    (uuid 5d844bae-1747-4fa1-a68f-0275083d42a8)
-  )
   (wire (pts (xy 102.87 62.23) (xy 106.68 62.23))
     (stroke (width 0) (type default))
     (uuid 5ed6e0f2-6794-4cba-a49f-4fece1e9d32c)
-  )
-  (wire (pts (xy 232.41 111.76) (xy 232.41 107.95))
-    (stroke (width 0) (type default))
-    (uuid 61d2d88e-62e8-4d16-8417-eaf4b61a71da)
-  )
-  (wire (pts (xy 256.54 132.08) (xy 256.54 138.43))
-    (stroke (width 0) (type default))
-    (uuid 628e2069-8332-4f6a-86be-deeeea43d613)
   )
   (wire (pts (xy 76.2 102.87) (xy 81.28 102.87))
     (stroke (width 0) (type default))
@@ -885,14 +805,6 @@
   (wire (pts (xy 168.91 143.51) (xy 163.83 143.51))
     (stroke (width 0) (type default))
     (uuid 650fc264-0c32-49b8-9ed9-d128566e8968)
-  )
-  (wire (pts (xy 232.41 102.87) (xy 236.22 102.87))
-    (stroke (width 0) (type default))
-    (uuid 652d8561-f608-4705-adb5-5edc7d80beb8)
-  )
-  (wire (pts (xy 214.63 143.51) (xy 215.9 143.51))
-    (stroke (width 0) (type default))
-    (uuid 67ce0c15-47ec-48ea-a0c3-99ce214cc0e7)
   )
   (wire (pts (xy 39.37 30.48) (xy 34.29 30.48))
     (stroke (width 0) (type default))
@@ -914,14 +826,6 @@
     (stroke (width 0) (type default))
     (uuid 6fe6c752-ceea-4613-9d63-191d9b3df18a)
   )
-  (wire (pts (xy 232.41 96.52) (xy 232.41 102.87))
-    (stroke (width 0) (type default))
-    (uuid 717d5434-5b96-4d8b-999d-18c34cd4046f)
-  )
-  (wire (pts (xy 209.55 138.43) (xy 214.63 138.43))
-    (stroke (width 0) (type default))
-    (uuid 73bcec0c-7463-4277-a94e-432bd50b71d2)
-  )
   (wire (pts (xy 144.78 119.38) (xy 144.78 120.65))
     (stroke (width 0) (type default))
     (uuid 7430897d-2d8e-4fd7-90da-971c3a04b6d4)
@@ -941,10 +845,6 @@
   (wire (pts (xy 127 55.88) (xy 127 62.23))
     (stroke (width 0) (type default))
     (uuid 7659f342-0434-4371-9d84-89f47d7c9111)
-  )
-  (wire (pts (xy 256.54 143.51) (xy 257.81 143.51))
-    (stroke (width 0) (type default))
-    (uuid 768c9791-e905-45be-a0e0-685ee7c73774)
   )
   (wire (pts (xy 81.28 153.67) (xy 81.28 156.21))
     (stroke (width 0) (type default))
@@ -973,10 +873,6 @@
   (wire (pts (xy 102.87 55.88) (xy 102.87 62.23))
     (stroke (width 0) (type default))
     (uuid 7ddd20fb-e6fa-4b45-9079-9504c3a39ddd)
-  )
-  (wire (pts (xy 190.5 143.51) (xy 194.31 143.51))
-    (stroke (width 0) (type default))
-    (uuid 7f8e7c7b-0e41-48e9-8c90-b335891e2590)
   )
   (wire (pts (xy 81.28 77.47) (xy 81.28 80.01))
     (stroke (width 0) (type default))
@@ -1018,10 +914,6 @@
     (stroke (width 0) (type default))
     (uuid 8635d882-c057-4cff-b4fe-6740049528f1)
   )
-  (wire (pts (xy 190.5 95.25) (xy 190.5 101.6))
-    (stroke (width 0) (type default))
-    (uuid 863c55ea-7313-456f-8825-a9ef78494b90)
-  )
   (wire (pts (xy 214.63 30.48) (xy 214.63 33.02))
     (stroke (width 0) (type default))
     (uuid 86b6e9f1-03ad-465b-a48d-e779c7b7b129)
@@ -1033,10 +925,6 @@
   (wire (pts (xy 168.91 96.52) (xy 168.91 102.87))
     (stroke (width 0) (type default))
     (uuid 883b2939-8d13-40b3-82ba-f7636b45fcd3)
-  )
-  (wire (pts (xy 190.5 101.6) (xy 194.31 101.6))
-    (stroke (width 0) (type default))
-    (uuid 8a006ec5-31ab-4069-9560-cac9cb07d8b0)
   )
   (wire (pts (xy 256.54 55.88) (xy 256.54 62.23))
     (stroke (width 0) (type default))
@@ -1082,10 +970,6 @@
     (stroke (width 0) (type default))
     (uuid 96332a3e-f0f1-4702-9e20-395c0bfe6252)
   )
-  (wire (pts (xy 214.63 116.84) (xy 214.63 119.38))
-    (stroke (width 0) (type default))
-    (uuid 9717680c-36f2-49a1-a07a-51290120f1f4)
-  )
   (wire (pts (xy 81.28 143.51) (xy 82.55 143.51))
     (stroke (width 0) (type default))
     (uuid 9776aa14-2ac1-494b-85fc-39fbbe719fbc)
@@ -1110,10 +994,6 @@
     (stroke (width 0) (type default))
     (uuid 9c94d8b8-f17e-4ae2-ad22-fea39e151fab)
   )
-  (wire (pts (xy 232.41 143.51) (xy 236.22 143.51))
-    (stroke (width 0) (type default))
-    (uuid 9d6833e6-1053-4106-a0a5-bfbbffbafd5d)
-  )
   (wire (pts (xy 256.54 67.31) (xy 251.46 67.31))
     (stroke (width 0) (type default))
     (uuid 9d9e0e23-9d26-428d-b0da-dd769f5b2949)
@@ -1129,10 +1009,6 @@
   (wire (pts (xy 81.28 118.11) (xy 81.28 120.65))
     (stroke (width 0) (type default))
     (uuid 9f557181-7979-46bf-9193-58ae8205b618)
-  )
-  (wire (pts (xy 232.41 154.94) (xy 232.41 156.21))
-    (stroke (width 0) (type default))
-    (uuid a265a009-4aab-4d55-9d19-65f18ba7121d)
   )
   (wire (pts (xy 102.87 78.74) (xy 102.87 80.01))
     (stroke (width 0) (type default))
@@ -1157,14 +1033,6 @@
   (wire (pts (xy 15.24 110.49) (xy 15.24 106.68))
     (stroke (width 0) (type default))
     (uuid a5c9ca4b-eb3c-4caa-9499-70458b17709a)
-  )
-  (wire (pts (xy 190.5 147.32) (xy 190.5 143.51))
-    (stroke (width 0) (type default))
-    (uuid a6c70a5a-1834-4713-8c0c-09a74dacfcc3)
-  )
-  (wire (pts (xy 256.54 153.67) (xy 256.54 156.21))
-    (stroke (width 0) (type default))
-    (uuid a92eb236-5d15-473e-8b86-a096988836c6)
   )
   (wire (pts (xy 190.5 67.31) (xy 194.31 67.31))
     (stroke (width 0) (type default))
@@ -1194,10 +1062,6 @@
     (stroke (width 0) (type default))
     (uuid ac3d6915-c596-4278-b316-89aef76bfd05)
   )
-  (wire (pts (xy 256.54 107.95) (xy 251.46 107.95))
-    (stroke (width 0) (type default))
-    (uuid ae5a2d9a-4ec1-4555-9ca2-5c3a3b72bf85)
-  )
   (wire (pts (xy 127 95.25) (xy 127 101.6))
     (stroke (width 0) (type default))
     (uuid aebf5c13-b959-405e-9065-fe6e4d08f9dd)
@@ -1209,10 +1073,6 @@
   (wire (pts (xy 81.28 67.31) (xy 76.2 67.31))
     (stroke (width 0) (type default))
     (uuid b301981d-b977-410f-89c8-a9b1004c1cb0)
-  )
-  (wire (pts (xy 190.5 110.49) (xy 190.5 106.68))
-    (stroke (width 0) (type default))
-    (uuid b3e182c3-e53a-4ea2-ae72-4c1c53c58392)
   )
   (wire (pts (xy 81.28 20.32) (xy 81.28 26.67))
     (stroke (width 0) (type default))
@@ -1234,10 +1094,6 @@
     (stroke (width 0) (type default))
     (uuid b785d23a-66e5-4153-989f-149ce831a442)
   )
-  (wire (pts (xy 232.41 147.32) (xy 232.41 143.51))
-    (stroke (width 0) (type default))
-    (uuid b84b99ac-e2a7-4e74-8be5-f8eaa658e9de)
-  )
   (wire (pts (xy 15.24 147.32) (xy 15.24 143.51))
     (stroke (width 0) (type default))
     (uuid b8d0d6d6-f3e4-4055-bc40-0d1ea08dbdeb)
@@ -1250,10 +1106,6 @@
     (stroke (width 0) (type default))
     (uuid ba7a83c3-b7bb-4dc5-9968-13327e802a4f)
   )
-  (wire (pts (xy 214.63 106.68) (xy 215.9 106.68))
-    (stroke (width 0) (type default))
-    (uuid bac3b939-d994-462a-9ac0-046404855742)
-  )
   (wire (pts (xy 190.5 41.91) (xy 190.5 43.18))
     (stroke (width 0) (type default))
     (uuid bd93ebe2-8dbd-4ae5-8e91-55372d194f93)
@@ -1261,10 +1113,6 @@
   (wire (pts (xy 127 132.08) (xy 127 138.43))
     (stroke (width 0) (type default))
     (uuid be2c79be-97ee-44e1-821f-717d7b25e919)
-  )
-  (wire (pts (xy 190.5 132.08) (xy 190.5 138.43))
-    (stroke (width 0) (type default))
-    (uuid bfb55f31-689d-4a91-b810-d36e973a21c5)
   )
   (wire (pts (xy 102.87 25.4) (xy 106.68 25.4))
     (stroke (width 0) (type default))
@@ -1310,10 +1158,6 @@
     (stroke (width 0) (type default))
     (uuid ccee56f8-79d5-49d0-9b11-7e5e735228bc)
   )
-  (wire (pts (xy 190.5 154.94) (xy 190.5 156.21))
-    (stroke (width 0) (type default))
-    (uuid cd8e94cb-ec1c-4185-bef8-8f8ec086d61b)
-  )
   (wire (pts (xy 251.46 26.67) (xy 256.54 26.67))
     (stroke (width 0) (type default))
     (uuid cdc02531-a52e-431d-8968-7a44dc9e22b6)
@@ -1325,10 +1169,6 @@
   (wire (pts (xy 81.28 107.95) (xy 82.55 107.95))
     (stroke (width 0) (type default))
     (uuid d116eaef-f72f-488c-9d0c-a2fc51465dca)
-  )
-  (wire (pts (xy 256.54 146.05) (xy 256.54 143.51))
-    (stroke (width 0) (type default))
-    (uuid d1fdbd93-5b62-4b35-9c52-83d2297d8cbc)
   )
   (wire (pts (xy 81.28 55.88) (xy 81.28 62.23))
     (stroke (width 0) (type default))
@@ -1342,17 +1182,9 @@
     (stroke (width 0) (type default))
     (uuid d5470c3d-002e-4ff9-b04f-ed7da0a68ce0)
   )
-  (wire (pts (xy 256.54 110.49) (xy 256.54 107.95))
-    (stroke (width 0) (type default))
-    (uuid d57e11c1-c520-4fcb-b6e6-bd2f93ca05a2)
-  )
-  (wire (pts (xy 39.37 30.48) (xy 39.37 33.02))
+  (wire (pts (xy 39.37 30.48) (xy 39.37 34.29))
     (stroke (width 0) (type default))
     (uuid d6a8aa4b-caa9-485a-a83f-d5de5454effc)
-  )
-  (wire (pts (xy 232.41 107.95) (xy 236.22 107.95))
-    (stroke (width 0) (type default))
-    (uuid d7c1a92c-8c04-4621-839d-d59fe5fe8e27)
   )
   (wire (pts (xy 190.5 19.05) (xy 190.5 25.4))
     (stroke (width 0) (type default))
@@ -1361,10 +1193,6 @@
   (wire (pts (xy 232.41 20.32) (xy 232.41 26.67))
     (stroke (width 0) (type default))
     (uuid db3a1785-32a8-4459-b104-68adfd2968d3)
-  )
-  (wire (pts (xy 256.54 96.52) (xy 256.54 102.87))
-    (stroke (width 0) (type default))
-    (uuid dd510a07-8f2c-4cba-bcb5-5ed7966836dc)
   )
   (wire (pts (xy 39.37 67.31) (xy 39.37 69.85))
     (stroke (width 0) (type default))
@@ -1410,10 +1238,6 @@
     (stroke (width 0) (type default))
     (uuid eb225b27-1bc5-4fa6-a5ad-460a2aa7dd04)
   )
-  (wire (pts (xy 214.63 106.68) (xy 214.63 109.22))
-    (stroke (width 0) (type default))
-    (uuid ecb7dfb4-438d-4b66-a7b3-a50d898487f5)
-  )
   (wire (pts (xy 214.63 30.48) (xy 209.55 30.48))
     (stroke (width 0) (type default))
     (uuid ed9b9678-d373-49a1-9cb3-48d340ae25c2)
@@ -1430,7 +1254,7 @@
     (stroke (width 0) (type default))
     (uuid ee41378f-2a1d-4689-98c9-d9adfd2e2c8b)
   )
-  (wire (pts (xy 39.37 40.64) (xy 39.37 43.18))
+  (wire (pts (xy 39.37 41.91) (xy 39.37 43.18))
     (stroke (width 0) (type default))
     (uuid ee935086-e863-4551-89f9-fd10cc58cb91)
   )
@@ -1457,10 +1281,6 @@
   (wire (pts (xy 144.78 138.43) (xy 148.59 138.43))
     (stroke (width 0) (type default))
     (uuid f2a805b7-24ec-4e9b-9e08-723ebcc75f38)
-  )
-  (wire (pts (xy 214.63 143.51) (xy 209.55 143.51))
-    (stroke (width 0) (type default))
-    (uuid f4359031-4dda-4ce2-8f24-e14a308fcda0)
   )
   (wire (pts (xy 144.78 107.95) (xy 148.59 107.95))
     (stroke (width 0) (type default))
@@ -1497,14 +1317,6 @@
   (wire (pts (xy 190.5 30.48) (xy 194.31 30.48))
     (stroke (width 0) (type default))
     (uuid f80c5805-6c7d-432e-a3be-69f899121ddc)
-  )
-  (wire (pts (xy 214.63 132.08) (xy 214.63 138.43))
-    (stroke (width 0) (type default))
-    (uuid f8ac9daf-c0c2-4f32-8a0e-f7da80a7d6b1)
-  )
-  (wire (pts (xy 256.54 107.95) (xy 257.81 107.95))
-    (stroke (width 0) (type default))
-    (uuid f9a55675-f364-41fd-b3bd-53a700039282)
   )
   (wire (pts (xy 168.91 67.31) (xy 163.83 67.31))
     (stroke (width 0) (type default))
@@ -1543,11 +1355,6 @@
     (uuid ffdbbb77-282d-4bf8-9493-59bde80ac9e5)
   )
 
-  (rectangle (start 187.96 88.9) (end 274.32 162.56)
-    (stroke (width 0) (type default))
-    (fill (type none))
-    (uuid 4997bbba-2545-4b6e-98d9-aed1e9c2e9be)
-  )
   (rectangle (start 12.7 12.7) (end 99.06 87.63)
     (stroke (width 0) (type default))
     (fill (type none))
@@ -1589,10 +1396,6 @@
   (text "Czujniki podłoża 1" (at 13.97 15.24 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a6230847-2cd9-4270-b55e-08d784a2b307)
-  )
-  (text "Czujniki podłoża 6\n\n" (at 189.23 93.98 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid bcd3e072-02fb-4f27-a587-267331059806)
   )
   (text "Czujniki podłoża 3\n" (at 101.6 15.24 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1648,13 +1451,6 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "SIGNAL_IR_22" (shape input) (at 257.81 107.95 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 52712496-fcba-4067-a2da-612706bd48d5)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 273.5557 107.95 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "SIGNAL_IR_18" (shape input) (at 257.81 31.75 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 5bb20646-1c88-43f5-a316-1c9e6c8bdec7)
@@ -1673,13 +1469,6 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 727061db-7a3d-4958-9ecd-6118df2e7875)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 185.9257 143.51 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "SIGNAL_IR_23" (shape input) (at 215.9 143.51 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 7e37991b-f196-4e95-9484-4225b7b433c0)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 231.6457 143.51 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1739,20 +1528,6 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "SIGNAL_IR_24" (shape input) (at 257.81 143.51 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid ee46ae7d-96ac-4d48-9119-4c1bc9d21e22)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 273.5557 143.51 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "SIGNAL_IR_21" (shape input) (at 215.9 106.68 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid ef84a673-6f13-4c3d-b1c0-6cb103798ac2)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 231.6457 106.68 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "SIGNAL_IR_05" (shape input) (at 40.64 106.68 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid f800a366-7d61-4be8-8030-c9eed439c4cf)
@@ -1771,13 +1546,13 @@
   (symbol (lib_id "Device:R") (at 102.87 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 01b16320-495b-43a8-9db1-4a670b545024)
-    (property "Reference" "R6" (at 105.41 36.83 0)
+    (property "Reference" "R7" (at 105.41 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 105.41 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 101.092 38.1 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 101.092 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 102.87 38.1 0)
@@ -1788,7 +1563,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R6") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
       (project "LF_1"
@@ -1838,7 +1613,7 @@
   (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 114.3 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 01ec03a6-c29d-4bb8-b3be-0a4575c05f23)
-    (property "Reference" "U21" (at 114.3 132.08 0)
+    (property "Reference" "U19" (at 114.3 132.08 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ITR8307-S17-TR8" (at 114.3 134.62 0)
@@ -1857,7 +1632,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U21") (unit 1)
+          (reference "U19") (unit 1)
         )
       )
       (project "LF_1"
@@ -1871,7 +1646,7 @@
   (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 156.21 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 023840ef-c022-4f95-bddf-5bd2fc0ad40c)
-    (property "Reference" "U22" (at 156.21 132.08 0)
+    (property "Reference" "U20" (at 156.21 132.08 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ITR8307-S17-TR8" (at 156.21 134.62 0)
@@ -1890,7 +1665,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U22") (unit 1)
+          (reference "U20") (unit 1)
         )
       )
       (project "LF_1"
@@ -1904,7 +1679,7 @@
   (symbol (lib_id "power:GND") (at 39.37 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 06211f7f-e87a-4b13-af08-4dd9ab5f3b60)
-    (property "Reference" "#PWR086" (at 39.37 162.56 0)
+    (property "Reference" "#PWR074" (at 39.37 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 39.37 161.29 0)
@@ -1920,7 +1695,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR086") (unit 1)
+          (reference "#PWR074") (unit 1)
         )
       )
       (project "LF_1"
@@ -1940,13 +1715,13 @@
   (symbol (lib_id "Device:R") (at 168.91 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 07278924-f9f8-4f40-8602-cee26d7e53ec)
-    (property "Reference" "R7" (at 171.45 36.83 0)
+    (property "Reference" "R8" (at 171.45 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 171.45 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 167.132 38.1 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 167.132 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 168.91 38.1 0)
@@ -1957,7 +1732,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R7") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
       (project "LF_1"
@@ -2004,13 +1779,13 @@
   (symbol (lib_id "Device:R") (at 168.91 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0d0a9b2c-a726-4b81-8ac2-2599f04dbf29)
-    (property "Reference" "R40" (at 171.45 148.59 0)
+    (property "Reference" "R36" (at 171.45 148.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 171.45 151.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 167.132 149.86 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 167.132 149.86 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 168.91 149.86 0)
@@ -2021,7 +1796,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R40") (unit 1)
+          (reference "R36") (unit 1)
         )
       )
       (project "LF_1"
@@ -2041,7 +1816,7 @@
     (property "Value" "ITR8307-S17-TR8" (at 26.67 97.79 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm" (at 26.67 109.22 0)
+    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 26.67 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 26.67 101.6 0)
@@ -2065,19 +1840,19 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 57.15 39.37 0) (unit 1)
+  (symbol (lib_id "Device:R") (at 57.15 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 160f6ef4-10ba-4876-bfa9-8b2737f2f7a5)
-    (property "Reference" "R10" (at 59.69 38.1 0)
+    (property "Reference" "R5" (at 59.69 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "110R" (at 59.69 40.64 0)
+    (property "Value" "110R" (at 59.69 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 55.372 39.37 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 55.372 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 57.15 39.37 0)
+    (property "Datasheet" "~" (at 57.15 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 520dccb0-9f1c-46d1-9250-ed6e35282d3b))
@@ -2085,7 +1860,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R10") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
       (project "LF_1"
@@ -2135,13 +1910,13 @@
   (symbol (lib_id "Device:R") (at 15.24 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 17035bb5-391e-4311-a64f-0e9a8713521a)
-    (property "Reference" "R28" (at 17.78 113.03 0)
+    (property "Reference" "R27" (at 17.78 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 17.78 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 13.462 114.3 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 13.462 114.3 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 15.24 114.3 0)
@@ -2152,7 +1927,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R28") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
       (project "LF_1"
@@ -2202,7 +1977,7 @@
   (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 156.21 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1b446788-71e9-4c49-b4e9-b7b903de52b5)
-    (property "Reference" "U17" (at 156.21 96.52 0)
+    (property "Reference" "U16" (at 156.21 96.52 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ITR8307-S17-TR8" (at 156.21 99.06 0)
@@ -2221,7 +1996,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U17") (unit 1)
+          (reference "U16") (unit 1)
         )
       )
       (project "LF_1"
@@ -2403,72 +2178,6 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 190.5 132.08 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 2400f614-3f66-4fd5-bca7-271263ed13cf)
-    (property "Reference" "#PWR081" (at 190.5 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 195.072 130.048 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 190.5 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 190.5 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 46059fe1-ee92-40ec-9cd7-bc63df47bb34))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR081") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR082") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 232.41 132.08 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 24241344-619b-4508-a4fc-edd36c16f029)
-    (property "Reference" "#PWR083" (at 232.41 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 236.982 130.048 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 232.41 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 232.41 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 09f42a11-6482-49f1-8f2f-19d7a3782595))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR083") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR084") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 214.63 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 24fa1b61-e56a-40d3-b011-04a591c65865)
@@ -2478,7 +2187,7 @@
     (property "Value" "22kR" (at 217.17 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 212.852 73.66 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 212.852 73.66 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 214.63 73.66 0)
@@ -2539,7 +2248,7 @@
   (symbol (lib_id "power:+3.3V") (at 127 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2b5d24f2-1a26-4c65-bf74-f7baec470c80)
-    (property "Reference" "#PWR078" (at 127 135.89 0)
+    (property "Reference" "#PWR070" (at 127 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 131.572 130.048 0)
@@ -2555,7 +2264,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR078") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
       (project "LF_1"
@@ -2578,7 +2287,7 @@
     (property "Value" "110R" (at 59.69 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 55.372 74.93 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 55.372 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 57.15 74.93 0)
@@ -2603,13 +2312,13 @@
   (symbol (lib_id "Device:R") (at 15.24 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2f806e69-1702-4ed9-963d-9a3207d1a7b7)
-    (property "Reference" "R43" (at 17.78 149.86 0)
+    (property "Reference" "R37" (at 17.78 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 17.78 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 13.462 151.13 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 13.462 151.13 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 15.24 151.13 0)
@@ -2620,7 +2329,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R43") (unit 1)
+          (reference "R37") (unit 1)
         )
       )
       (project "LF_1"
@@ -2703,7 +2412,7 @@
   (symbol (lib_id "power:GND") (at 127 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 32fcf364-7b21-4cfa-afb2-34d4f053d951)
-    (property "Reference" "#PWR090" (at 127 162.56 0)
+    (property "Reference" "#PWR078" (at 127 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 127 161.29 0)
@@ -2719,7 +2428,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR090") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
       (project "LF_1"
@@ -2772,7 +2481,7 @@
   (symbol (lib_id "power:GND") (at 15.24 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 362dd203-db7a-42aa-86af-1d33a58b3339)
-    (property "Reference" "#PWR085" (at 15.24 162.56 0)
+    (property "Reference" "#PWR073" (at 15.24 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 15.24 161.29 0)
@@ -2788,7 +2497,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR085") (unit 1)
+          (reference "#PWR073") (unit 1)
         )
       )
       (project "LF_1"
@@ -2814,7 +2523,7 @@
     (property "Value" "ITR8307-S17-TR8" (at 156.21 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm" (at 156.21 69.85 0)
+    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 156.21 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 156.21 62.23 0)
@@ -2841,7 +2550,7 @@
   (symbol (lib_id "power:+3.3V") (at 102.87 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36dd41c5-126c-40a5-8811-f4b9b1563446)
-    (property "Reference" "#PWR077" (at 102.87 135.89 0)
+    (property "Reference" "#PWR069" (at 102.87 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 107.442 130.048 0)
@@ -2857,7 +2566,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR077") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
       (project "LF_1"
@@ -2904,46 +2613,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 214.63 156.21 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 3b445327-33da-4418-8c88-690aaf9dceef)
-    (property "Reference" "#PWR094" (at 214.63 162.56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 214.63 161.29 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 214.63 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 214.63 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d5b34e2a-18c7-4b86-a640-f28384135eef))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR094") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR089") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 39.37 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c365681-2a6f-41e0-8e1b-1ad10178b989)
-    (property "Reference" "#PWR062" (at 39.37 125.73 0)
+    (property "Reference" "#PWR058" (at 39.37 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 39.37 124.46 0)
@@ -2959,7 +2632,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR062") (unit 1)
+          (reference "#PWR058") (unit 1)
         )
       )
       (project "LF_1"
@@ -2979,7 +2652,7 @@
   (symbol (lib_id "power:+3.3V") (at 144.78 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3d30260d-7e0e-482c-bee0-f4901411b8d1)
-    (property "Reference" "#PWR079" (at 144.78 135.89 0)
+    (property "Reference" "#PWR071" (at 144.78 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 149.352 130.048 0)
@@ -2995,7 +2668,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR079") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
       (project "LF_1"
@@ -3012,13 +2685,13 @@
   (symbol (lib_id "Device:R") (at 127 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3e1cb970-6c96-4385-a5d3-6ce4cb090cd0)
-    (property "Reference" "R2" (at 129.54 35.56 0)
+    (property "Reference" "R1" (at 129.54 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 129.54 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 125.222 36.83 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 125.222 36.83 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 127 36.83 0)
@@ -3029,7 +2702,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R2") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
       (project "LF_1"
@@ -3043,13 +2716,13 @@
   (symbol (lib_id "Device:R") (at 256.54 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3ec2e717-de15-424b-9c5a-1804c7522064)
-    (property "Reference" "R9" (at 259.08 36.83 0)
+    (property "Reference" "R10" (at 259.08 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 259.08 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 254.762 38.1 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 254.762 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 256.54 38.1 0)
@@ -3060,7 +2733,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R9") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
       (project "LF_1"
@@ -3080,7 +2753,7 @@
     (property "Value" "ITR8307-S17-TR8" (at 114.3 97.79 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm" (at 114.3 109.22 0)
+    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 114.3 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 114.3 101.6 0)
@@ -3113,7 +2786,7 @@
     (property "Value" "110R" (at 17.78 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 13.462 74.93 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 13.462 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 15.24 74.93 0)
@@ -3138,7 +2811,7 @@
   (symbol (lib_id "power:GND") (at 168.91 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4045ea95-4329-49e4-8784-2bd5cded77ff)
-    (property "Reference" "#PWR070" (at 168.91 127 0)
+    (property "Reference" "#PWR064" (at 168.91 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 168.91 125.73 0)
@@ -3154,7 +2827,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR070") (unit 1)
+          (reference "#PWR064") (unit 1)
         )
       )
       (project "LF_1"
@@ -3207,7 +2880,7 @@
   (symbol (lib_id "power:GND") (at 102.87 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44a907d4-d2a4-4e5e-b334-731a4d98e63f)
-    (property "Reference" "#PWR063" (at 102.87 125.73 0)
+    (property "Reference" "#PWR059" (at 102.87 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 102.87 124.46 0)
@@ -3223,7 +2896,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR063") (unit 1)
+          (reference "#PWR059") (unit 1)
         )
       )
       (project "LF_1"
@@ -3243,7 +2916,7 @@
   (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 68.58 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4aa38f23-b0cb-4714-93f4-c0c729aa6669)
-    (property "Reference" "U16" (at 68.58 96.52 0)
+    (property "Reference" "U15" (at 68.58 96.52 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ITR8307-S17-TR8" (at 68.58 99.06 0)
@@ -3262,7 +2935,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U16") (unit 1)
+          (reference "U15") (unit 1)
         )
       )
       (project "LF_1"
@@ -3315,7 +2988,7 @@
     (property "Value" "110R" (at 234.95 40.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 230.632 39.37 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 230.632 39.37 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 39.37 0)
@@ -3337,37 +3010,6 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 214.63 149.86 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 5064f2a5-6dbe-4481-8b5f-658dc95df5ec)
-    (property "Reference" "R41" (at 217.17 148.59 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "22kR" (at 217.17 151.13 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 212.852 149.86 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 214.63 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 82995590-4bc4-4e1f-a586-01baf1c5a064))
-    (pin "2" (uuid 802a2c99-6777-4ffe-a3a5-e04589e9596e))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R41") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R32") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 232.41 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5246a0e6-bd35-404d-be4d-985c0114c2a8)
@@ -3377,7 +3019,7 @@
     (property "Value" "110R" (at 234.95 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 230.632 74.93 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 230.632 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 74.93 0)
@@ -3507,39 +3149,6 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 214.63 132.08 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5773fa05-c2d1-42ca-b520-9c1ccbf93109)
-    (property "Reference" "#PWR082" (at 214.63 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 219.202 130.048 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 214.63 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 214.63 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 3f482d6a-212d-463e-81be-148056d52c41))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR082") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR083") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 256.54 20.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5abc60c7-56f8-497d-a9d2-679c1d2fa19f)
@@ -3573,47 +3182,16 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 190.5 114.3 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 5b2fecb6-d1c8-40c1-adbe-28288c970d1b)
-    (property "Reference" "R32" (at 193.04 113.03 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "110R" (at 193.04 115.57 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 188.722 114.3 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 190.5 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0eb41e6b-3043-40bc-a05f-fab0c6bf9a02))
-    (pin "2" (uuid 59004655-606f-4738-9435-ce4eb0fe3bf8))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R32") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R27") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 81.28 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5b32dff4-a3cd-4f1c-9216-b69ed475d5e0)
-    (property "Reference" "R38" (at 83.82 148.59 0)
+    (property "Reference" "R34" (at 83.82 148.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 83.82 151.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 79.502 149.86 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 79.502 149.86 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 81.28 149.86 0)
@@ -3624,7 +3202,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R38") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
       (project "LF_1"
@@ -3671,7 +3249,7 @@
   (symbol (lib_id "power:GND") (at 144.78 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5e36726c-4a1e-4bed-a153-c928cf7e389b)
-    (property "Reference" "#PWR069" (at 144.78 127 0)
+    (property "Reference" "#PWR063" (at 144.78 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 144.78 125.73 0)
@@ -3687,7 +3265,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR069") (unit 1)
+          (reference "#PWR063") (unit 1)
         )
       )
       (project "LF_1"
@@ -3699,42 +3277,6 @@
         )
         (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
           (reference "#PWR078") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 190.5 156.21 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 5ed151a3-a0ae-4d66-9566-ea260c95ac1f)
-    (property "Reference" "#PWR093" (at 190.5 162.56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 190.5 161.29 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 190.5 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 190.5 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid af881b62-0a54-4464-b2d7-d5ac80f38a22))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR093") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -3785,7 +3327,7 @@
     (property "Value" "110R" (at 147.32 40.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 143.002 39.37 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 143.002 39.37 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 39.37 0)
@@ -3807,41 +3349,10 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 214.63 113.03 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 63e96878-0790-4a97-b612-5fc63462740c)
-    (property "Reference" "R27" (at 217.17 111.76 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "22kR" (at 217.17 114.3 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 212.852 113.03 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 214.63 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 22008d76-5a75-4509-bb24-1b94208091c0))
-    (pin "2" (uuid 7a900dc0-2d91-46d9-b763-e1e8756193c7))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R27") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R26") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 57.15 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 65dfb4ea-5d6a-4c73-917d-60ceedcc0e52)
-    (property "Reference" "#PWR087" (at 57.15 162.56 0)
+    (property "Reference" "#PWR075" (at 57.15 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 57.15 161.29 0)
@@ -3857,7 +3368,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR087") (unit 1)
+          (reference "#PWR075") (unit 1)
         )
       )
       (project "LF_1"
@@ -3913,13 +3424,13 @@
   (symbol (lib_id "Device:R") (at 190.5 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6994d9b9-36e6-445f-be91-938a6349741f)
-    (property "Reference" "R8" (at 193.04 36.83 0)
+    (property "Reference" "R9" (at 193.04 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 193.04 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 188.722 38.1 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 188.722 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 190.5 38.1 0)
@@ -3930,7 +3441,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R8") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
       (project "LF_1"
@@ -3977,13 +3488,13 @@
   (symbol (lib_id "Device:R") (at 81.28 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6a1594f4-2207-4d73-845b-a70252b28cd6)
-    (property "Reference" "R5" (at 83.82 36.83 0)
+    (property "Reference" "R6" (at 83.82 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 83.82 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 79.502 38.1 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 79.502 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 81.28 38.1 0)
@@ -3994,7 +3505,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R5") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
       (project "LF_1"
@@ -4077,13 +3588,13 @@
   (symbol (lib_id "Device:R") (at 168.91 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 713cb9ed-1931-4c8b-afc8-94b73bc689b3)
-    (property "Reference" "R31" (at 171.45 113.03 0)
+    (property "Reference" "R30" (at 171.45 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 171.45 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 167.132 114.3 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 167.132 114.3 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 168.91 114.3 0)
@@ -4094,7 +3605,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R31") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
       (project "LF_1"
@@ -4207,39 +3718,6 @@
     )
   )
 
-  (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 201.93 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 79f39943-1e8e-406e-bb68-6fe5016952ca)
-    (property "Reference" "U23" (at 201.93 132.08 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "ITR8307-S17-TR8" (at 201.93 134.62 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 201.93 146.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 201.93 138.43 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a9fad90c-6ddb-4eaa-9ac3-cf04d40c110e))
-    (pin "2" (uuid 49c3ca6d-ebb5-4b81-93a8-59f88ef01ae3))
-    (pin "3" (uuid 498d1e65-d5d8-46f7-8e34-534490ff2b7f))
-    (pin "4" (uuid 58fa6607-bbf8-4a56-96c7-018652166f6a))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U23") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "U11") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 190.5 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7e612d09-c106-4fbe-be7f-90b42232699e)
@@ -4309,7 +3787,7 @@
   (symbol (lib_id "power:+3.3V") (at 39.37 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 82e09579-ffa6-46af-9cc3-e6041f20b252)
-    (property "Reference" "#PWR074" (at 39.37 135.89 0)
+    (property "Reference" "#PWR066" (at 39.37 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 43.942 130.048 0)
@@ -4325,7 +3803,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR074") (unit 1)
+          (reference "#PWR066") (unit 1)
         )
       )
       (project "LF_1"
@@ -4414,7 +3892,7 @@
     (property "Value" "110R" (at 105.41 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 101.092 74.93 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 101.092 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 102.87 74.93 0)
@@ -4436,39 +3914,6 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 256.54 132.08 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 848cdc8e-b4c0-4486-8f58-025bfdc1461a)
-    (property "Reference" "#PWR084" (at 256.54 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 261.112 130.048 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 256.54 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 256.54 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bef82e55-d3b1-4ad5-b243-e77dd3f9568e))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR084") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR085") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 127 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 85b2eebc-ddfe-4d20-a278-1e8a870911a1)
@@ -4478,7 +3923,7 @@
     (property "Value" "22kR" (at 129.54 114.3 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 125.222 113.03 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 125.222 113.03 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 127 113.03 0)
@@ -4536,7 +3981,7 @@
   (symbol (lib_id "power:GND") (at 81.28 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 87811f9a-0a70-435c-9f22-a565512d43fc)
-    (property "Reference" "#PWR068" (at 81.28 127 0)
+    (property "Reference" "#PWR062" (at 81.28 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 81.28 125.73 0)
@@ -4552,7 +3997,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR068") (unit 1)
+          (reference "#PWR062") (unit 1)
         )
       )
       (project "LF_1"
@@ -4572,13 +4017,13 @@
   (symbol (lib_id "Device:R") (at 102.87 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d887a47-1e07-4752-a21a-ffa9041dbcef)
-    (property "Reference" "R45" (at 105.41 149.86 0)
+    (property "Reference" "R39" (at 105.41 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 105.41 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 101.092 151.13 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 101.092 151.13 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 102.87 151.13 0)
@@ -4589,7 +4034,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R45") (unit 1)
+          (reference "R39") (unit 1)
         )
       )
       (project "LF_1"
@@ -4609,7 +4054,7 @@
     (property "Value" "22kR" (at 171.45 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 167.132 73.66 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 167.132 73.66 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 168.91 73.66 0)
@@ -4667,37 +4112,6 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 256.54 149.86 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 8fa5d6cb-15c8-4d35-952c-16516b4ee0e7)
-    (property "Reference" "R42" (at 259.08 148.59 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "22kR" (at 259.08 151.13 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 254.762 149.86 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 256.54 149.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f204e06e-8883-4657-afe0-e732bd57640a))
-    (pin "2" (uuid 0f4c70ac-42ea-4c8d-94dd-701f5ee4e3c2))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R42") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R34") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 232.41 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8fdec18b-33a9-4f2a-9bae-6b0c489af606)
@@ -4729,39 +4143,6 @@
         )
         (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
           (reference "#PWR053") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 243.84 105.41 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 90516898-aa3a-4a20-8d7a-4973e143522a)
-    (property "Reference" "U18" (at 243.84 96.52 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "ITR8307-S17-TR8" (at 243.84 99.06 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 243.84 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 243.84 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 101b7306-3aa7-4a75-9675-6464992eafa4))
-    (pin "2" (uuid bf762db8-e749-46a4-9ae2-4e6d40a2639e))
-    (pin "3" (uuid f74c2584-bf9c-468d-918e-8b7dc6c589cc))
-    (pin "4" (uuid 8497ca21-5d28-45dc-8528-2d1f06516dca))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U18") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "U10") (unit 1)
         )
       )
     )
@@ -4803,43 +4184,10 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 256.54 96.52 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 92f54625-bd4e-41dd-a197-fc3050874ad3)
-    (property "Reference" "#PWR060" (at 256.54 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 261.112 94.488 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 256.54 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 256.54 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid c2b81999-1370-4b08-87a7-42eec71eab83))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR060") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR074") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 144.78 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 93369114-2fa1-4a8b-82ed-c303238a445f)
-    (property "Reference" "#PWR091" (at 144.78 162.56 0)
+    (property "Reference" "#PWR079" (at 144.78 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 144.78 161.29 0)
@@ -4855,7 +4203,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR091") (unit 1)
+          (reference "#PWR079") (unit 1)
         )
       )
       (project "LF_1"
@@ -4881,7 +4229,7 @@
     (property "Value" "22kR" (at 41.91 114.3 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 37.592 113.03 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 37.592 113.03 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 39.37 113.03 0)
@@ -4939,52 +4287,16 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 232.41 156.21 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 99c6f2f9-3d1b-4ab9-9283-d6ac33be6e6c)
-    (property "Reference" "#PWR095" (at 232.41 162.56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 232.41 161.29 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 232.41 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 232.41 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 53a3789b-a4b2-4a0d-846e-99646537baef))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR095") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR090") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 214.63 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9a4b2249-21ec-4fd4-bf1c-527a0aa2c3b2)
-    (property "Reference" "R3" (at 217.17 35.56 0)
+    (property "Reference" "R2" (at 217.17 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 217.17 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 212.852 36.83 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 212.852 36.83 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 214.63 36.83 0)
@@ -4995,43 +4307,12 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R3") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
       (project "LF_1"
         (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
           (reference "R11") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 232.41 151.13 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 9a820594-f39f-4182-b20d-d3ddf9248c05)
-    (property "Reference" "R48" (at 234.95 149.86 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "110R" (at 234.95 152.4 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 230.632 151.13 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 232.41 151.13 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1c1cc810-2070-4e9e-b00f-d014d091987b))
-    (pin "2" (uuid 860b8937-8512-4d4d-96b6-f6b94c9c1484))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R48") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R36") (unit 1)
         )
       )
     )
@@ -5046,7 +4327,7 @@
     (property "Value" "110R" (at 147.32 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 143.002 74.93 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 143.002 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 74.93 0)
@@ -5068,39 +4349,6 @@
     )
   )
 
-  (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 243.84 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 9ed0290e-fc3e-4318-a139-6e0596bf910b)
-    (property "Reference" "U24" (at 243.84 132.08 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "ITR8307-S17-TR8" (at 243.84 134.62 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 243.84 146.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 243.84 138.43 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 556c2177-364c-4166-95b3-d3ad7b95bbbc))
-    (pin "2" (uuid dfd00314-c753-4127-a9a2-6cfa61d1cf2e))
-    (pin "3" (uuid 57ac7523-eead-4cb2-9b5a-93c7868d921e))
-    (pin "4" (uuid ab0b7184-a3ab-4111-a1b5-3e128a83a440))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U24") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "U12") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 256.54 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a14ca1b7-d2b2-4520-8e94-10e5b668c89c)
@@ -5110,7 +4358,7 @@
     (property "Value" "22kR" (at 259.08 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 254.762 73.66 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 254.762 73.66 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 256.54 73.66 0)
@@ -5210,7 +4458,7 @@
     (property "Value" "110R" (at 193.04 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 188.722 74.93 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 188.722 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 190.5 74.93 0)
@@ -5241,7 +4489,7 @@
     (property "Value" "ITR8307-S17-TR8" (at 243.84 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm" (at 243.84 69.85 0)
+    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 243.84 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 243.84 62.23 0)
@@ -5265,82 +4513,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 190.5 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid a5a7e569-7cd3-426a-8cc5-e20e0e9e33bd)
-    (property "Reference" "#PWR065" (at 190.5 125.73 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 190.5 124.46 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 190.5 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 190.5 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 42988a5f-b230-4d78-9e98-9e80af78316e))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR065") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR076") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 256.54 120.65 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid a917295e-813c-40e4-876b-efdc26d87804)
-    (property "Reference" "#PWR072" (at 256.54 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 256.54 125.73 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 256.54 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 256.54 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6c7ef836-a4c3-458d-ac0e-567f5376e5a7))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR072") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR079") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 15.24 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid aa4517f8-32b2-4cd9-a5ad-5138640b0cb0)
-    (property "Reference" "#PWR073" (at 15.24 135.89 0)
+    (property "Reference" "#PWR065" (at 15.24 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 19.812 130.048 0)
@@ -5356,7 +4532,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR073") (unit 1)
+          (reference "#PWR065") (unit 1)
         )
       )
       (project "LF_1"
@@ -5373,7 +4549,7 @@
   (symbol (lib_id "power:GND") (at 102.87 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid abcb4fd2-ebb2-4125-82d4-6ba5193bb248)
-    (property "Reference" "#PWR089" (at 102.87 162.56 0)
+    (property "Reference" "#PWR077" (at 102.87 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 102.87 161.29 0)
@@ -5389,7 +4565,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR089") (unit 1)
+          (reference "#PWR077") (unit 1)
         )
       )
       (project "LF_1"
@@ -5409,7 +4585,7 @@
   (symbol (lib_id "power:GND") (at 127 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid accd00f0-dd26-4447-a746-717878f73f05)
-    (property "Reference" "#PWR064" (at 127 125.73 0)
+    (property "Reference" "#PWR060" (at 127 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 127 124.46 0)
@@ -5425,7 +4601,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR064") (unit 1)
+          (reference "#PWR060") (unit 1)
         )
       )
       (project "LF_1"
@@ -5478,7 +4654,7 @@
   (symbol (lib_id "power:+3.3V") (at 168.91 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ad0f413b-ac51-492f-ba4f-ddf07c6c374c)
-    (property "Reference" "#PWR080" (at 168.91 135.89 0)
+    (property "Reference" "#PWR072" (at 168.91 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 173.482 130.048 0)
@@ -5494,7 +4670,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR080") (unit 1)
+          (reference "#PWR072") (unit 1)
         )
       )
       (project "LF_1"
@@ -5508,19 +4684,19 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 39.37 36.83 0) (unit 1)
+  (symbol (lib_id "Device:R") (at 39.37 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad17923a-9233-4060-ba98-0b4b3f9cea06)
-    (property "Reference" "R1" (at 41.91 35.56 0)
+    (property "Reference" "R4" (at 41.91 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "22kR" (at 41.91 38.1 0)
+    (property "Value" "22kR" (at 41.91 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 37.592 36.83 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 37.592 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 39.37 36.83 0)
+    (property "Datasheet" "~" (at 39.37 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e7bf9dd7-5bae-4287-8cfb-36636ddddf03))
@@ -5528,7 +4704,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R1") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
       (project "LF_1"
@@ -5548,7 +4724,7 @@
     (property "Value" "22kR" (at 83.82 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 79.502 73.66 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 79.502 73.66 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 81.28 73.66 0)
@@ -5570,46 +4746,10 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 214.63 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid af219727-5f26-43c7-a590-f87df8460780)
-    (property "Reference" "#PWR066" (at 214.63 125.73 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 214.63 124.46 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 214.63 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 214.63 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 358b741e-6338-4e55-92d4-6a9edd71e6e6))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR066") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR077") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 144.78 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b10f59fc-6a8f-471e-ba8d-dbca6c995832)
-    (property "Reference" "#PWR057" (at 144.78 100.33 0)
+    (property "Reference" "#PWR055" (at 144.78 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 149.352 94.488 0)
@@ -5625,7 +4765,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR055") (unit 1)
         )
       )
       (project "LF_1"
@@ -5675,7 +4815,7 @@
   (symbol (lib_id "power:GND") (at 168.91 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b31cc215-5891-4893-9ed7-a96394cf8762)
-    (property "Reference" "#PWR092" (at 168.91 162.56 0)
+    (property "Reference" "#PWR080" (at 168.91 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 168.91 161.29 0)
@@ -5691,7 +4831,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR092") (unit 1)
+          (reference "#PWR080") (unit 1)
         )
       )
       (project "LF_1"
@@ -5744,7 +4884,7 @@
   (symbol (lib_id "power:GND") (at 81.28 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b7ddba9b-c7a5-4f0c-9259-38f300f2a0bb)
-    (property "Reference" "#PWR088" (at 81.28 162.56 0)
+    (property "Reference" "#PWR076" (at 81.28 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 81.28 161.29 0)
@@ -5760,7 +4900,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR088") (unit 1)
+          (reference "#PWR076") (unit 1)
         )
       )
       (project "LF_1"
@@ -5780,13 +4920,13 @@
   (symbol (lib_id "Device:R") (at 102.87 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b9f5eb2d-2a90-4e96-b8c9-99d5ffefe829)
-    (property "Reference" "R30" (at 105.41 113.03 0)
+    (property "Reference" "R29" (at 105.41 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 105.41 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 101.092 114.3 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 101.092 114.3 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 102.87 114.3 0)
@@ -5797,45 +4937,12 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R30") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
       (project "LF_1"
         (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
           (reference "R27") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 190.5 95.25 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid bb17a66b-fcd4-45a9-8c87-4f291d896212)
-    (property "Reference" "#PWR053" (at 190.5 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 195.072 93.218 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 190.5 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 190.5 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 53912614-0481-451a-817a-a86d885a8fa0))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR053") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -5850,7 +4957,7 @@
     (property "Value" "ITR8307-S17-TR8" (at 201.93 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm" (at 201.93 69.85 0)
+    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 201.93 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 201.93 62.23 0)
@@ -5877,7 +4984,7 @@
   (symbol (lib_id "power:+3.3V") (at 168.91 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c19b262d-9007-46e4-8e59-626da23bf3a9)
-    (property "Reference" "#PWR058" (at 168.91 100.33 0)
+    (property "Reference" "#PWR056" (at 168.91 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 173.482 94.488 0)
@@ -5893,7 +5000,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR058") (unit 1)
+          (reference "#PWR056") (unit 1)
         )
       )
       (project "LF_1"
@@ -5910,7 +5017,7 @@
   (symbol (lib_id "power:+3.3V") (at 57.15 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c3e7ce57-05a8-4220-9b3f-8a8c5a389ad8)
-    (property "Reference" "#PWR055" (at 57.15 100.33 0)
+    (property "Reference" "#PWR053" (at 57.15 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 61.722 94.488 0)
@@ -5926,7 +5033,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR053") (unit 1)
         )
       )
       (project "LF_1"
@@ -5943,13 +5050,13 @@
   (symbol (lib_id "Device:R") (at 127 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c485855b-10b2-4341-a1eb-b50cfb5e24f4)
-    (property "Reference" "R39" (at 129.54 148.59 0)
+    (property "Reference" "R35" (at 129.54 148.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 129.54 151.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 125.222 149.86 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 125.222 149.86 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 127 149.86 0)
@@ -5960,7 +5067,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R39") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
       (project "LF_1"
@@ -5980,7 +5087,7 @@
     (property "Value" "22kR" (at 129.54 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 125.222 73.66 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 125.222 73.66 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 127 73.66 0)
@@ -6071,37 +5178,6 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 190.5 151.13 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid caf29014-167b-45b6-a01d-232c6c2db35e)
-    (property "Reference" "R47" (at 193.04 149.86 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "110R" (at 193.04 152.4 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 188.722 151.13 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 190.5 151.13 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bb1f9b4b-67e6-4e6a-b2ea-88c7be1b514a))
-    (pin "2" (uuid 8bde43fc-ca12-4489-bbb8-f30af890f826))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R47") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R33") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 39.37 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cbbf58ae-865d-42dd-8a3d-9f637d4e141a)
@@ -6171,13 +5247,13 @@
   (symbol (lib_id "Device:R") (at 57.15 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ce27d00a-4a1e-48c9-9eab-3a77fc048039)
-    (property "Reference" "R44" (at 59.69 149.86 0)
+    (property "Reference" "R38" (at 59.69 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 59.69 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 55.372 151.13 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 55.372 151.13 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 57.15 151.13 0)
@@ -6188,7 +5264,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R44") (unit 1)
+          (reference "R38") (unit 1)
         )
       )
       (project "LF_1"
@@ -6235,37 +5311,6 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 256.54 114.3 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d03a75d5-f796-44e8-a839-9222df6ddc41)
-    (property "Reference" "R33" (at 259.08 113.03 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "22kR" (at 259.08 115.57 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 254.762 114.3 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 256.54 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid c071a798-4fc4-4865-957f-5c53919c8acc))
-    (pin "2" (uuid 25212709-5a33-4bef-a9e3-0d1ea20db958))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R33") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R28") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 15.24 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d2986be0-3fe2-48df-b43a-4c92c8e2378d)
@@ -6299,43 +5344,10 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 214.63 95.25 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid d3edfb69-3af0-4fc2-b392-2475651f99c4)
-    (property "Reference" "#PWR054" (at 214.63 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 219.202 93.218 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 214.63 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 214.63 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f1bd4e03-4800-4779-96a8-0516d2aff3d3))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR054") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR072") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 26.67 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d5be10c2-15a0-4928-8422-5936e816e69f)
-    (property "Reference" "U19" (at 26.67 132.08 0)
+    (property "Reference" "U17" (at 26.67 132.08 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ITR8307-S17-TR8" (at 26.67 134.62 0)
@@ -6354,7 +5366,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U19") (unit 1)
+          (reference "U17") (unit 1)
         )
       )
       (project "LF_1"
@@ -6368,13 +5380,13 @@
   (symbol (lib_id "Device:R") (at 144.78 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d8f78bd0-7936-4e7b-b4ac-a0ea1e36bbd1)
-    (property "Reference" "R46" (at 147.32 149.86 0)
+    (property "Reference" "R40" (at 147.32 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 147.32 152.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 143.002 151.13 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 143.002 151.13 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 151.13 0)
@@ -6385,7 +5397,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R46") (unit 1)
+          (reference "R40") (unit 1)
         )
       )
       (project "LF_1"
@@ -6427,42 +5439,6 @@
         )
         (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
           (reference "#PWR044") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 232.41 120.65 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid db2aaf1c-4109-4166-8de6-1c6e6df23e00)
-    (property "Reference" "#PWR071" (at 232.41 127 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 232.41 125.73 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 232.41 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 232.41 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2cc90955-058e-4748-83fb-9e479878edd6))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR071") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR078") (unit 1)
         )
       )
     )
@@ -6576,7 +5552,7 @@
     (property "Value" "22kR" (at 41.91 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 37.592 73.66 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 37.592 73.66 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 39.37 73.66 0)
@@ -6637,7 +5613,7 @@
   (symbol (lib_id "power:+3.3V") (at 81.28 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e6381c70-6e46-459a-bb77-90342a228cfe)
-    (property "Reference" "#PWR076" (at 81.28 135.89 0)
+    (property "Reference" "#PWR068" (at 81.28 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 85.852 130.048 0)
@@ -6653,7 +5629,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR076") (unit 1)
+          (reference "#PWR068") (unit 1)
         )
       )
       (project "LF_1"
@@ -6709,7 +5685,7 @@
     (property "Value" "ITR8307-S17-TR8" (at 114.3 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm" (at 114.3 69.85 0)
+    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 114.3 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 114.3 62.23 0)
@@ -6736,13 +5712,13 @@
   (symbol (lib_id "Device:R") (at 15.24 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e9f35018-f304-4957-8060-789abf3eb372)
-    (property "Reference" "R4" (at 17.78 36.83 0)
+    (property "Reference" "R3" (at 17.78 36.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 17.78 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 13.462 38.1 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 13.462 38.1 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 15.24 38.1 0)
@@ -6753,7 +5729,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R4") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
       (project "LF_1"
@@ -6767,13 +5743,13 @@
   (symbol (lib_id "Device:R") (at 39.37 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ec1af6ae-d0d6-48cd-a84c-38f19b5a88ff)
-    (property "Reference" "R37" (at 41.91 148.59 0)
+    (property "Reference" "R33" (at 41.91 148.59 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 41.91 151.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 37.592 149.86 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 37.592 149.86 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 39.37 149.86 0)
@@ -6784,7 +5760,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R37") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
       (project "LF_1"
@@ -6828,52 +5804,16 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 256.54 156.21 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid ee31d986-1214-499b-9bfd-2c5b1143b757)
-    (property "Reference" "#PWR096" (at 256.54 162.56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 256.54 161.29 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 256.54 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 256.54 156.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2da0b898-bcf6-4b2d-b364-3218659eae32))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR096") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR05") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/ef9d87e8-52c6-4dc9-8e13-8028fab1ffa8"
-          (reference "#PWR035") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR091") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 81.28 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ee81b8bc-51e4-42c6-b4c0-5636903ce4b8)
-    (property "Reference" "R29" (at 83.82 113.03 0)
+    (property "Reference" "R28" (at 83.82 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22kR" (at 83.82 115.57 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 79.502 114.3 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 79.502 114.3 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 81.28 114.3 0)
@@ -6884,7 +5824,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R29") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
       (project "LF_1"
@@ -6898,7 +5838,7 @@
   (symbol (lib_id "power:GND") (at 57.15 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ef925248-f9ae-4761-8bf6-6918b52c97a4)
-    (property "Reference" "#PWR067" (at 57.15 127 0)
+    (property "Reference" "#PWR061" (at 57.15 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 57.15 125.73 0)
@@ -6914,7 +5854,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR067") (unit 1)
+          (reference "#PWR061") (unit 1)
         )
       )
       (project "LF_1"
@@ -6934,7 +5874,7 @@
   (symbol (lib_id "power:+3.3V") (at 57.15 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f065afb9-6fa2-46f5-a497-ad4b05f96d96)
-    (property "Reference" "#PWR075" (at 57.15 135.89 0)
+    (property "Reference" "#PWR067" (at 57.15 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 61.722 130.048 0)
@@ -6950,7 +5890,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR075") (unit 1)
+          (reference "#PWR067") (unit 1)
         )
       )
       (project "LF_1"
@@ -6967,7 +5907,7 @@
   (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 68.58 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f12a181c-8f4a-4bbe-8250-e9d2508a4b5e)
-    (property "Reference" "U20" (at 68.58 132.08 0)
+    (property "Reference" "U18" (at 68.58 132.08 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ITR8307-S17-TR8" (at 68.58 134.62 0)
@@ -6986,7 +5926,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U20") (unit 1)
+          (reference "U18") (unit 1)
         )
       )
       (project "LF_1"
@@ -7102,13 +6042,13 @@
   (symbol (lib_id "Device:R") (at 144.78 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f3309514-da66-482a-a6dd-d26ac246b640)
-    (property "Reference" "R35" (at 147.32 114.3 0)
+    (property "Reference" "R32" (at 147.32 114.3 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 147.32 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 143.002 115.57 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 143.002 115.57 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 115.57 0)
@@ -7119,7 +6059,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R35") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
       (project "LF_1"
@@ -7133,13 +6073,13 @@
   (symbol (lib_id "Device:R") (at 57.15 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f52c4400-5b14-44b8-ae39-8a8f74de508e)
-    (property "Reference" "R34" (at 59.69 114.3 0)
+    (property "Reference" "R31" (at 59.69 114.3 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "110R" (at 59.69 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 55.372 115.57 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (at 55.372 115.57 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 57.15 115.57 0)
@@ -7150,7 +6090,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R34") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
       (project "LF_1"
@@ -7194,43 +6134,10 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 232.41 96.52 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid f6811a0b-f01f-4629-9500-98c3337fa40e)
-    (property "Reference" "#PWR059" (at 232.41 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 236.982 94.488 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 232.41 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 232.41 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 57c2afb9-6072-49e5-b110-73dce4b0e278))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR059") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e"
-          (reference "#PWR04") (unit 1)
-        )
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "#PWR073") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 81.28 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f6ccfe19-4b2d-4717-b88f-4aff5fd48b24)
-    (property "Reference" "#PWR056" (at 81.28 100.33 0)
+    (property "Reference" "#PWR054" (at 81.28 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 85.852 94.488 0)
@@ -7246,7 +6153,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR054") (unit 1)
         )
       )
       (project "LF_1"
@@ -7260,74 +6167,10 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 232.41 115.57 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid f9f32eb5-dbfa-448a-b09b-a08868b43c9c)
-    (property "Reference" "R36" (at 234.95 114.3 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "110R" (at 234.95 116.84 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0201_0603Metric" (at 230.632 115.57 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 232.41 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f6dcb589-db5e-4a92-ac58-2bb80c117c47))
-    (pin "2" (uuid ec74f014-3417-4ed9-81cc-10a2be516b85))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "R36") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "R29") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Sensor_Proximity:ITR8307-S17-TR8") (at 201.93 104.14 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid fa704dca-e293-4816-b445-cecb4ed5198c)
-    (property "Reference" "U15" (at 201.93 95.25 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "ITR8307-S17-TR8" (at 201.93 97.79 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "OptoDevice:Everlight_ITR1201SR10AR" (at 201.93 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1810010232_Everlight-Elec-ITR8307-S17-TR8-B_C81632.pdf" (at 201.93 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d6aaf76f-d5fc-40c8-bf13-915a5fbd1a3c))
-    (pin "2" (uuid ca491944-6b29-4c6a-8662-2a491e1b91a2))
-    (pin "3" (uuid 946333ff-c926-4912-b07d-31647a9d23a7))
-    (pin "4" (uuid f22322c0-9db5-4f05-a24c-bc2971d761d3))
-    (instances
-      (project "Płytka z czujnikami"
-        (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "U15") (unit 1)
-        )
-      )
-      (project "LF_1"
-        (path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
-          (reference "U9") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 15.24 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid feec264d-3bcd-458e-9133-846e406125c9)
-    (property "Reference" "#PWR061" (at 15.24 125.73 0)
+    (property "Reference" "#PWR057" (at 15.24 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 15.24 124.46 0)
@@ -7343,7 +6186,7 @@
     (instances
       (project "Płytka z czujnikami"
         (path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR057") (unit 1)
         )
       )
       (project "LF_1"
