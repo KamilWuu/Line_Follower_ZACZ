@@ -114,9 +114,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "../../../../../Desktop/plytka_z_czujnikami/")
 		)
 	)
 	(net 0 "")
@@ -3733,7 +3733,7 @@
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "c0ba38ce-2f2a-4a80-a536-a8e693377bd5")
+			(uuid "d1047319-6d2f-41de-a1b8-1a12039a843a")
 			(effects
 				(font
 					(size 1.5 1.5)
@@ -3745,7 +3745,7 @@
 			(at 0.75 0 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "4bc44e29-d343-4004-942d-c93867b64158")
+			(uuid "87e6290f-8b05-436e-a300-8a9b7cf4afc5")
 			(effects
 				(font
 					(size 1.5 1.5)
@@ -3801,7 +3801,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "d5edda5d-5c23-4193-ba3c-ca3d3557f1a5")
+			(uuid "c955d014-f33b-40f1-a4c3-844f2e3093d9")
 		)
 		(fp_poly
 			(pts
@@ -3814,7 +3814,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "8ca78fcd-77fd-4b52-a051-de3b1504d2d0")
+			(uuid "2f727182-42ac-4e4a-aa85-df0eb292f81d")
 		)
 		(fp_poly
 			(pts
@@ -3828,7 +3828,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "751aa9eb-1d2d-40f2-8ea6-071e564c75ac")
+			(uuid "f927dcd4-b750-42c0-87be-8108aa8170c3")
 		)
 		(fp_poly
 			(pts
@@ -3842,7 +3842,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "6ea29553-db37-467d-9dcf-aca733550eb2")
+			(uuid "fb27747d-65d6-4eae-a0c2-ce7de8f796e6")
 		)
 		(fp_poly
 			(pts
@@ -3856,7 +3856,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "60c6fc42-cf60-48da-83f4-65d4e5dc01ed")
+			(uuid "e05823c3-4e03-4c00-a52d-e0841b63f446")
 		)
 		(fp_poly
 			(pts
@@ -3871,7 +3871,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "7ca83917-0244-4677-bbaf-3f96b1d20f17")
+			(uuid "0615d645-03c4-4c45-b8f9-11d2fc919a5a")
 		)
 		(fp_poly
 			(pts
@@ -3890,7 +3890,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "f2a03334-7b5a-4bc3-93ca-0d8a5ce390f2")
+			(uuid "ee163dde-dd58-4815-8edc-391dbf79db33")
 		)
 		(fp_poly
 			(pts
@@ -3910,7 +3910,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "a1b154cc-fe10-492c-a54f-3edf73a0f50a")
+			(uuid "29fb73a9-87a9-4ea8-b45e-4d89068357fd")
 		)
 		(fp_poly
 			(pts
@@ -3930,7 +3930,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "63c66718-a91e-41bc-aa64-9dfa9c069441")
+			(uuid "b8174361-3407-4a84-acc7-05b2334429d4")
 		)
 		(fp_poly
 			(pts
@@ -3951,7 +3951,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "97fd8641-d2ad-4887-a0be-594ea7074cb9")
+			(uuid "0d49e5e5-d3e1-4bf7-90fc-7832d7fc0b6a")
 		)
 		(fp_poly
 			(pts
@@ -3977,7 +3977,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "22c8803b-2b2b-4c73-9364-329f7f8f45e5")
+			(uuid "3caed1f4-954a-45e8-a638-204269e94ba8")
 		)
 		(fp_poly
 			(pts
@@ -4001,7 +4001,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "f8aca13b-0c2a-4808-81e1-f8a4768fc64c")
+			(uuid "8efa21c1-cc3a-496d-9bf3-4846ba440178")
 		)
 		(fp_poly
 			(pts
@@ -4142,7 +4142,7 @@
 			)
 			(fill solid)
 			(layer "F.SilkS")
-			(uuid "1fc3f17a-cad5-482f-9e0f-40dd36d7d5f5")
+			(uuid "47825a89-3d42-42a9-a4c8-73c1af5e55c2")
 		)
 	)
 	(footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"

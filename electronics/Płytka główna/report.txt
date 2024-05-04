@@ -1,0 +1,22 @@
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Cu.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Cu.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Paste.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Paste.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Mask.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Mask.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-Edge_Cuts.gbr'.
+Utworzono plik zadań Gerber 'C:\Users\kamil\Desktop\Płytka główna-job.gbrjob'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Cu.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Cu.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Paste.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Paste.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-F_Mask.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-B_Mask.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\Płytka główna-Edge_Cuts.gbr'.
+Utworzono plik zadań Gerber 'C:\Users\kamil\Desktop\Płytka główna-job.gbrjob'.
+Informacja: Gotowe.
+Informacja: Gotowe.

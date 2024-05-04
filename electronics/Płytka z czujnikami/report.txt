@@ -1,0 +1,11 @@
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-F_Cu.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-B_Cu.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-F_Paste.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-B_Paste.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-F_Mask.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-B_Mask.gbr'.
+Plotted to 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-Edge_Cuts.gbr'.
+Utworzono plik zadań Gerber 'C:\Users\kamil\Desktop\plytka_z_czujnikami\Płytka z czujnikami-job.gbrjob'.
+Informacja: Gotowe.

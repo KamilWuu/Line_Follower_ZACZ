@@ -5169,6 +5169,76 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 226.06 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "23f5b368-afd4-462e-98bd-3c119ea33755")
+		(property "Reference" "R61"
+			(at 228.6 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 228.6 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 224.282 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 226.06 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "59c879e5-cedd-434e-9639-01baa448e059")
+		)
+		(pin "1"
+			(uuid "574b565c-04ef-4485-9ed9-76607946f63a")
+		)
+		(instances
+			(project "Płytka z czujnikami"
+				(path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
+					(reference "R61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 214.63 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10115,6 +10185,76 @@
 			(project "LF_1"
 				(path "/c1761465-48f9-4521-8599-c1543780359e/d4981787-e473-42f9-a6d0-660fffd341de"
 					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 236.22 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9b1ffb5e-200d-40ed-9911-ca0c49c60d9a")
+		(property "Reference" "R62"
+			(at 238.76 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 238.76 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 234.442 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 236.22 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 236.22 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e4f847a2-c79e-4ae7-a2a4-2149de99ec69")
+		)
+		(pin "1"
+			(uuid "a5e84636-a6c0-4f0b-869d-339ea749f8a2")
+		)
+		(instances
+			(project "Płytka z czujnikami"
+				(path "/1ccb63a8-95a9-4b10-9ea3-67d5c60a9303/22f15c11-a7d9-42e5-938c-5c92a472649c"
+					(reference "R62")
 					(unit 1)
 				)
 			)
