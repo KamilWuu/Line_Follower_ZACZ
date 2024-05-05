@@ -8842,6 +8842,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push_Dual_x2")
+		(at 123.19 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "25a2adfb-2561-4128-8ffe-4e8531911221")
+		(property "Reference" "SW6"
+			(at 123.19 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push_Dual_x2"
+			(at 123.19 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A"
+			(at 123.19 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, separate symbols, four pins"
+			(at 123.19 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "36c61f17-79b2-4326-a995-45b40bbe6712")
+		)
+		(pin "3"
+			(uuid "bad57fdd-6d66-4f3b-980a-1aa4d5f18caa")
+		)
+		(pin "2"
+			(uuid "63e99f3b-ea4d-47aa-a719-f150f5a6bd2a")
+		)
+		(pin "1"
+			(uuid "e586bb7e-b93c-4b72-93c2-670426d9bab2")
+		)
+		(instances
+			(project "Płytka główna"
+				(path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f/4da3fa82-dae7-4ff0-bb87-1448ee4d8070"
+					(reference "SW6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 158.75 137.922 0)
 		(unit 1)
@@ -13188,6 +13262,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push_Dual_x2")
+		(at 151.13 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "add247a9-99f8-489c-b9d7-531d73ee25cd")
+		(property "Reference" "SW7"
+			(at 151.13 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push_Dual_x2"
+			(at 151.13 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A"
+			(at 151.13 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, separate symbols, four pins"
+			(at 151.13 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "36c61f17-79b2-4326-a995-45b40bbe6712")
+		)
+		(pin "3"
+			(uuid "bad57fdd-6d66-4f3b-980a-1aa4d5f18caa")
+		)
+		(pin "2"
+			(uuid "667ee3ce-2278-403a-b93d-20d07704e291")
+		)
+		(pin "1"
+			(uuid "70a354eb-501f-44e8-b297-ba29fddc4192")
+		)
+		(instances
+			(project "Płytka główna"
+				(path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f/4da3fa82-dae7-4ff0-bb87-1448ee4d8070"
+					(reference "SW7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+BATT")
 		(at 26.67 172.212 0)
 		(unit 1)
@@ -14111,154 +14259,6 @@
 			(project "Płytka główna"
 				(path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f/4da3fa82-dae7-4ff0-bb87-1448ee4d8070"
 					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push_Dual_x2")
-		(at 151.13 142.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f46b009e-06ac-4de0-b1df-e649fd00edcc")
-		(property "Reference" "SW3"
-			(at 151.13 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_Dual_x2"
-			(at 151.13 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H7.3mm"
-			(at 151.13 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 151.13 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, separate symbols, four pins"
-			(at 151.13 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "36c61f17-79b2-4326-a995-45b40bbe6710")
-		)
-		(pin "3"
-			(uuid "bad57fdd-6d66-4f3b-980a-1aa4d5f18ca8")
-		)
-		(pin "2"
-			(uuid "4998ea80-b138-44e3-af12-ad24971b1aa3")
-		)
-		(pin "1"
-			(uuid "3f19c249-9ef9-45e6-a37b-72d52ec7fccb")
-		)
-		(instances
-			(project "Płytka główna"
-				(path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f/4da3fa82-dae7-4ff0-bb87-1448ee4d8070"
-					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push_Dual_x2")
-		(at 123.19 139.7 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fbb26675-3645-4e9d-b84f-51f0894eddc0")
-		(property "Reference" "SW5"
-			(at 123.19 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push_Dual_x2"
-			(at 123.19 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H7.3mm"
-			(at 123.19 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, separate symbols, four pins"
-			(at 123.19 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "36c61f17-79b2-4326-a995-45b40bbe6710")
-		)
-		(pin "3"
-			(uuid "bad57fdd-6d66-4f3b-980a-1aa4d5f18ca8")
-		)
-		(pin "2"
-			(uuid "1da9aa58-8110-4591-b155-9c2c9788c9dc")
-		)
-		(pin "1"
-			(uuid "23a1073b-0b7b-4867-abcc-3f58c5eb418c")
-		)
-		(instances
-			(project "Płytka główna"
-				(path "/5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f/4da3fa82-dae7-4ff0-bb87-1448ee4d8070"
-					(reference "SW5")
 					(unit 1)
 				)
 			)
