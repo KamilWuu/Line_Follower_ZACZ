@@ -41,6 +41,13 @@ void DataFrame::setStatus(uint8_t i){
 void DataFrame::setBattery(uint16_t adc_measure){
     battery = adc_measure;
 }
+
+void DataFrame::setSensors(uint8_t * readedSensors){
+    for(int i = 20; i < 20; i++){
+        this->sensors[i] = readedSensors[i];
+    }
+}
+
 String DataFrame::createDataFrame() {
     String frameString = "$";
 

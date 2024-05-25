@@ -22,6 +22,8 @@ public:
     void setPWM(uint16_t  left, uint16_t  right);
     void setStatus(uint8_t i);
     void setBattery(uint16_t adc_measure);
+    void setSensors(uint8_t * readedSensors);
 };
+
 
 #endif

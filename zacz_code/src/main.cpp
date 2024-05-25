@@ -3,25 +3,18 @@
 
 #include "DataFrame.h"
 #include "ReceivedData.h"
+#include "defines.h"
+#include "Wire.h"
+#include "Sensors.h"
 
-
-#define NETWORK     "internet2"
-#define PASSWORD    "tak123pl"
-#define HOST        "10.42.0.1"
-#define PORT        8888
-
-#define LEFT_PWM 40
-#define RIGHT_PWM 6
-#define BUTTON 2
-#define BATTERY 1
 
 WiFiServer server(8888);
 WiFiClient client;
 
 
-DataFrame data_frame;
+DataFrame data_to_send;
 ReceivedData received_data;
-
+Sensors IR_Sensors;
 
 
 
@@ -69,18 +62,40 @@ void clientRead(){
 }
 
 
+void GPIOSetup(){
+  
+  pinMode(BATTERY, INPUT);
+  pinMode(BUTTON, INPUT);
 
+
+  /*MOTORS*/
+  pinMode(LEFT_ENC_1, INPUT);
+  pinMode(LEFT_ENC_2, INPUT);
+
+  pinMode(RIGHT_ENC_1, INPUT);
+  pinMode(RIGHT_ENC_2, INPUT);
+
+  pinMode(LEFT_PWM, OUTPUT);
+  pinMode(RIGHT_PWM, OUTPUT);
+
+  /*IR SENSORS*/
+  for(int i = 0; i < 20; i++){
+    pinMode(IR_Sensors.getSensorsPins()[i],INPUT);
+  }
+
+  //Wire.setPins(SDA_I2C, SCL_I2C);
+
+
+
+  
+
+}
 
 void setup() {
-    pinMode(LEFT_PWM, OUTPUT);
-    pinMode(RIGHT_PWM, OUTPUT);
-    pinMode(BUTTON, INPUT);
-    pinMode(BATTERY, INPUT);
-
     Serial.begin(115200);
-
+    GPIOSetup();
     setupWifi();
-  
+    //Wire.begin();
 
 
 
@@ -95,26 +110,31 @@ void loop() {
     
 
 
-    clientRead();
+    clientRead(); // <== Odbiera dane od clienta (aplikacji Qt) i zapisuje odczytane wartosci w strukturze received_data
 
-    switch (received_data.getInstruction())
+
+
+
+    switch (received_data.getInstruction()) 
     {
-    case 'S':
+    case 'S': //S czyli start jazdy
       analogWrite(LEFT_PWM, received_data.getVMax() ); 
       analogWrite(RIGHT_PWM, received_data.getVMax() ); 
 
-      data_frame.setAxialVelocity(random(1001) ,random(1001));
+      data_to_send.setAxialVelocity(random(1001) ,random(1001));
       //frame.setAxialVelocity(1000 ,1000);
-      data_frame.setPWM(random(received_data.getVMax()+1), random(received_data.getVMax() + 1));
-      data_frame.setStatus(1);
+      data_to_send.setPWM(random(received_data.getVMax()+1), random(received_data.getVMax() + 1));
+      
+      data_to_send.setStatus(1);//<== status 1 czyli jedzie
+
       break;
 
-    case 'M':
+    case 'M': //M czyli stop jazdy
       analogWrite(LEFT_PWM,0);
       analogWrite(RIGHT_PWM,0); 
-      data_frame.setAxialVelocity(0,0);
-      data_frame.setPWM(random(0), random(0));
-      data_frame.setStatus(0);
+      data_to_send.setAxialVelocity(0,0);
+      data_to_send.setPWM(random(0), random(0));
+      data_to_send.setStatus(0); //<== status 0 czyli stoi
       break;
 
 
@@ -122,11 +142,17 @@ void loop() {
       break;
     }
 
-    data_frame.generateRandomData(); //<= tymczasowo
+    data_to_send.generateRandomData(); //<= tymczasowo
 
-    data_frame.setBattery(analogRead(BATTERY));
+    data_to_send.setBattery(analogRead(BATTERY));
+    IR_Sensors.readSensors();
+    IR_Sensors.printSensorsMeasures();
 
-    client.println(data_frame.createDataFrame());    
+
+    data_to_send.setSensors(IR_Sensors.getSensorsMeasures());
+
+
+    client.println(data_to_send.createDataFrame());    // <== wysyla utworzona ramke danych ze struktury data_to_send do clienta (aplikacji Qt)
     
 
 
