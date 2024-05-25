@@ -20,7 +20,8 @@ public:
     String createDataFrame();
     void setAxialVelocity(uint16_t  left, uint16_t  right);
     void setPWM(uint16_t  left, uint16_t  right);
-    void setStatus(int i);
+    void setStatus(uint8_t i);
+    void setBattery(uint16_t adc_measure);
 };
 
 #endif

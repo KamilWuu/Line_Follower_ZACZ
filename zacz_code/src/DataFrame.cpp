@@ -21,7 +21,7 @@ void DataFrame::generateRandomData() {
     //w_L = random(9999); 
     //w_R = random(9999); 
     z_rotation = random(361); 
-    battery = random(3140,3476); 
+    battery = random(3160,3474); 
 }
 
 void DataFrame::setAxialVelocity(uint16_t  left, uint16_t  right){
@@ -34,11 +34,13 @@ void DataFrame::setPWM(uint16_t  left, uint16_t  right){
     pwm_R = right;
 }
 
-void DataFrame::setStatus(int i){
+void DataFrame::setStatus(uint8_t i){
     status = i;
 }
 
-
+void DataFrame::setBattery(uint16_t adc_measure){
+    battery = adc_measure;
+}
 String DataFrame::createDataFrame() {
     String frameString = "$";
 

@@ -48,10 +48,12 @@ void ReceivedData::setData(String data) {
         V_MAX = parts[4].toInt();
 
         for(int i = 0; i < 3; i++){
-            digitalWrite(2,HIGH);
-            delay(200);
-            digitalWrite(2,LOW);
-            delay(200);
+            analogWrite(40,256);
+            analogWrite(6,256);
+            delay(100);
+            analogWrite(40,0);
+            analogWrite(6,0);
+            delay(100);
         }
         instruction = 'M';
 

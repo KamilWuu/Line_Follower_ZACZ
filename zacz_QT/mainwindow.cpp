@@ -12,9 +12,9 @@ QElapsedTimer distance_timer;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , robot_bkgnd("/home/kamil/Applications/LineFollower/images/background.png")
-    , main_bkgnd("/home/kamil/Applications/LineFollower/images/main_background.png")
-    , compas_bkgnd("/home/kamil/Applications/LineFollower/images/kompas.png")
+    , robot_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/background.png")
+    , main_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/main_background.png")
+    , compas_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/kompas.png")
 
 
 {
@@ -205,27 +205,7 @@ void MainWindow::cutString(const QString& input) {
 void MainWindow::on_connectButton_clicked()
 {
     qDebug() << "Connect button clicked";
-    transmit("prawda wiedza rezulataty\n");
-    /*
-    // Sprawdź, czy port jest już otwarty
-    if (COMPORT->isOpen()) {
-        // Zamykamy port, aby można było go ponownie otworzyć
-        COMPORT->close();
-        qDebug() << "Serial port was already open. Closed.";
-    }
-
-    // Otwórz połączenie z portem COM
-    if (COMPORT->open(QIODevice::ReadWrite)) {
-        qDebug() << "Serial port is connected";
-        qDebug() << COMPORT->error();
-        ui->statusLabel_1->setText("ROBOT IS CONNECTED");
-        ui->statusLabel_1->setStyleSheet("QLabel { color : green; }");
-    } else {
-        qDebug() << "Failed to connect to serial port";
-        qDebug() << COMPORT->error();
-        ui->statusLabel_1->setText("ROBOT IS DISCONNECTED");
-        ui->statusLabel_1->setStyleSheet("QLabel { color : red; }");
-    }*/
+    //transmit("prawda wiedza rezulataty\n");
 }
 
 void MainWindow::transmit(QString msg){
@@ -240,8 +220,14 @@ void MainWindow::transmit(QString msg){
 void MainWindow::myReadSocket(){
     QByteArray data = socket.readAll();
     qDebug() << "data: " << data;
+    ui->label_10->setText(QString(data));
+
+    cutString(QString(data));
+    displayData();
+
 }
 
+/*
 void MainWindow::readData()
 {
     if(COMPORT->isOpen())
@@ -268,25 +254,10 @@ void MainWindow::readData()
         ui->statusLabel_1->setStyleSheet("QLabel { color : red; }");
     }
 }
-
-
-/*
-
-
-
-
-
-
 */
 
 
-
-
-
-
-
-
-QByteArray MainWindow::makeDataFrame(char instruction)
+QString MainWindow::makeDataFrame(char instruction)
 {
 
     QString frame, data_string[4];
@@ -316,32 +287,20 @@ QByteArray MainWindow::makeDataFrame(char instruction)
 
     qDebug() << "utworzona ramka danych to: " << frame.toUtf8();
 
-    return frame.toUtf8();
+    return frame;
 }
 
 
 
 void MainWindow::on_startButton_clicked()
 {
-    if(COMPORT->isOpen()){
-        COMPORT->write(makeDataFrame('S') + char(10) );
-        qDebug() << "ins S, data frame from Qt" << makeDataFrame('S');
-    }else{
-        qDebug() << "cant send start 'S', COMPORT is closed";
-    }
-
-
+        transmit(makeDataFrame('S') + char(10));
 }
 
 
 void MainWindow::on_stopButton_clicked()
 {
-    if(COMPORT->isOpen()){
-        COMPORT->write(makeDataFrame('M') + char(10));
-        qDebug() << "ins M, data frame from Qt : " << makeDataFrame('M');
-    }else{
-        qDebug() << "cant send stop 'M', COMPORT is closed";
-    }
+    transmit(makeDataFrame('M') + char(10));
 
 }
 
@@ -408,11 +367,7 @@ void MainWindow::on_updateButton_clicked()
         qDebug() << "parameter to send: " << coms[i] << "= " << data_to_send[i] ;
     }
 
-
-    if(COMPORT->isOpen()){
-        COMPORT->write(makeDataFrame('U') + char(10));
-        qDebug() << "ins U, data frame from Qt" << makeDataFrame('U');
-    }
+    transmit(makeDataFrame('U') + char(10));
 }
 
 
@@ -468,7 +423,7 @@ void MainWindow::displaySensors()
         index++;
     }
 
-    foreach(QFrame* frame, frameList) {
+    /*foreach(QFrame* frame, frameList) {
         // Tutaj możesz wykonywać operacje na każdym obiekcie QFrame
         // Na przykład:
 
@@ -477,7 +432,7 @@ void MainWindow::displaySensors()
 
         index++;
     }
-    frameList[10]->setStyleSheet("background-color: black;"); // Ustawienie koloru tła dla każdego QFrame
+    frameList[10]->setStyleSheet("background-color: black;"); // Ustawienie koloru tła dla każdego QFrame*/
 }
 
 void MainWindow::displayEncoders()

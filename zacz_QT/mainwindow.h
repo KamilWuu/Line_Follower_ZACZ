@@ -59,8 +59,8 @@ private slots:
 
     /*!
      * \brief Odczytuje dane z portu szeregowego/bluetooth.
-     */
-    void readData();
+
+    void readData();*/
 
     /*!
      * \brief Obsługuje kliknięcie przycisku start.
@@ -91,7 +91,7 @@ private slots:
 private:
     Ui::MainWindow *ui; /*!< Interfejs użytkownika. */
     QSerialPort * COMPORT; /*!< Port szeregowy. */
-    QString data_from_serialPort; /*!< Dane z portu szeregowego. */
+    //QString data_from_serialPort; /*!< Dane z portu szeregowego. */
     bool is_data_received = false; /*!< Flaga otrzymania danych. */
 
     /*!
@@ -105,7 +105,7 @@ private:
      * \param instruction Instrukcja ktora ma zostac przeslana do robota.
      * \return Ramka danych.
      */
-    QByteArray makeDataFrame(char instruction);
+    QString makeDataFrame(char instruction);
 
     /*!
      * \brief Wyświetla stan baterii.
