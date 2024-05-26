@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map For LoRa
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+bindArgVoidFunc_t	KEYWORD1
+bindArgProcArg_t	KEYWORD1
+bindArgProcFunc_t	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+bindArgGateThisAllocate	KEYWORD2
+bindArgGateFuncAllocate	KEYWORD2
+bindArgGateVoidAllocate	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
