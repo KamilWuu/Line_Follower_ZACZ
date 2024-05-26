@@ -6,25 +6,25 @@
 #include "defines.h"
 #include "Wire.h"
 #include "Sensors.h"
-
+#include "Encoder.h"
 
 WiFiServer server(8888);
 WiFiClient client;
 
-
 DataFrame data_to_send;
 ReceivedData received_data;
 Sensors IR_Sensors;
+Encoder Left_enc;
+Encoder Right_enc;
 
-
-
-void setupWifi(){
+void setupWifi()
+{
   WiFi.useStaticBuffers(true);
   WiFi.mode(WIFI_STA);
   WiFi.begin(NETWORK, PASSWORD);
 
-
-  while(WiFi.status() != WL_CONNECTED) {
+  while (WiFi.status() != WL_CONNECTED)
+  {
     delay(500);
     Serial.println(WiFi.status());
   }
@@ -33,128 +33,116 @@ void setupWifi(){
 
   server.begin();
 
-    Serial.println("waiting for client...");
-    while(!server.hasClient()) {}
-    client = server.available();
-    Serial.println("client found");
-
+  Serial.println("waiting for client...");
+  while (!server.hasClient())
+  {
+  }
+  client = server.available();
+  Serial.println("client found");
 }
 
-void clientRead(){
+void clientRead()
+{
 
-    String msg = "";
-    while(client.available()) {
-        char c = client.read();
+  String msg = "";
+  while (client.available())
+  {
+    char c = client.read();
 
-        if(c=='\n') {
-            break;
-        } else {
-            msg +=c;
-        }
+    if (c == '\n')
+    {
+      break;
     }
-
-    if(msg!="") {
-        Serial.println(msg);
-        received_data.setData(msg);
-
+    else
+    {
+      msg += c;
     }
+  }
 
+  if (msg != "")
+  {
+    Serial.println(msg);
+    received_data.setData(msg);
+  }
 }
 
+void GPIOSetup()
+{
 
-void GPIOSetup(){
-  
   pinMode(BATTERY, INPUT);
   pinMode(BUTTON, INPUT);
 
-
   /*MOTORS*/
-  pinMode(LEFT_ENC_1, INPUT);
-  pinMode(LEFT_ENC_2, INPUT);
 
-  pinMode(RIGHT_ENC_1, INPUT);
-  pinMode(RIGHT_ENC_2, INPUT);
-
+  Left_enc.begin(LEFT_ENC_2, LEFT_ENC_1);
+  Right_enc.begin(RIGHT_ENC_1,RIGHT_ENC_2);
   pinMode(LEFT_PWM, OUTPUT);
   pinMode(RIGHT_PWM, OUTPUT);
 
   /*IR SENSORS*/
-  for(int i = 0; i < 20; i++){
-    pinMode(IR_Sensors.getSensorsPins()[i],INPUT);
+  for (int i = 0; i < 20; i++)
+  {
+    pinMode(IR_Sensors.getSensorsPins()[i], INPUT);
   }
 
-  //Wire.setPins(SDA_I2C, SCL_I2C);
-
-
-
-  
-
+  // Wire.setPins(SDA_I2C, SCL_I2C);
 }
 
-void setup() {
-    Serial.begin(115200);
-    GPIOSetup();
-    setupWifi();
-    //Wire.begin();
-
-
-
-
-
-
+void setup()
+{
+  Serial.begin(115200);
+  GPIOSetup();
+  //setupWifi();
+  // Wire.begin();
 }
 
-void loop() {
-    
+void loop()
+{
+  String out;
+  out="Enkodery::\tL:  ";
+  out+=Left_enc.get_rotations();
+  out+="\tR:  ";
+  out+=Right_enc.get_rotations();
+  Serial.println(out);
+  IR_Sensors.readSensors();
+  IR_Sensors.printSensorsMeasures();
+  delay(500);
+  /*clientRead(); // <== Odbiera dane od clienta (aplikacji Qt) i zapisuje odczytane wartosci w strukturze received_data
 
-    
+  switch (received_data.getInstruction())
+  {
+  case 'S': // S czyli start jazdy
+    analogWrite(LEFT_PWM, received_data.getVMax());
+    analogWrite(RIGHT_PWM, received_data.getVMax());
 
+    data_to_send.setAxialVelocity(random(1001), random(1001));
+    // frame.setAxialVelocity(1000 ,1000);
+    data_to_send.setPWM(random(received_data.getVMax() + 1), random(received_data.getVMax() + 1));
 
-    clientRead(); // <== Odbiera dane od clienta (aplikacji Qt) i zapisuje odczytane wartosci w strukturze received_data
+    data_to_send.setStatus(1); //<== status 1 czyli jedzie
 
+    break;
 
+  case 'M': // M czyli stop jazdy
+    analogWrite(LEFT_PWM, 0);
+    analogWrite(RIGHT_PWM, 0);
+    data_to_send.setAxialVelocity(0, 0);
+    data_to_send.setPWM(random(0), random(0));
+    data_to_send.setStatus(0); //<== status 0 czyli stoi
+    break;
 
+  default:
+    break;
+  }
 
-    switch (received_data.getInstruction()) 
-    {
-    case 'S': //S czyli start jazdy
-      analogWrite(LEFT_PWM, received_data.getVMax() ); 
-      analogWrite(RIGHT_PWM, received_data.getVMax() ); 
+  data_to_send.generateRandomData(); //<= tymczasowo
 
-      data_to_send.setAxialVelocity(random(1001) ,random(1001));
-      //frame.setAxialVelocity(1000 ,1000);
-      data_to_send.setPWM(random(received_data.getVMax()+1), random(received_data.getVMax() + 1));
-      
-      data_to_send.setStatus(1);//<== status 1 czyli jedzie
+  data_to_send.setBattery(analogRead(BATTERY));
+  IR_Sensors.readSensors();
+  IR_Sensors.printSensorsMeasures();
 
-      break;
+  data_to_send.setSensors(IR_Sensors.getSensorsMeasures());
 
-    case 'M': //M czyli stop jazdy
-      analogWrite(LEFT_PWM,0);
-      analogWrite(RIGHT_PWM,0); 
-      data_to_send.setAxialVelocity(0,0);
-      data_to_send.setPWM(random(0), random(0));
-      data_to_send.setStatus(0); //<== status 0 czyli stoi
-      break;
-
-
-    default:
-      break;
-    }
-
-    data_to_send.generateRandomData(); //<= tymczasowo
-
-    data_to_send.setBattery(analogRead(BATTERY));
-    IR_Sensors.readSensors();
-    IR_Sensors.printSensorsMeasures();
-
-
-    data_to_send.setSensors(IR_Sensors.getSensorsMeasures());
-
-
-    client.println(data_to_send.createDataFrame());    // <== wysyla utworzona ramke danych ze struktury data_to_send do clienta (aplikacji Qt)
-    
-
-
-
+  client.println(data_to_send.createDataFrame()); // <== wysyla utworzona ramke danych ze struktury data_to_send do clienta (aplikacji Qt)
+  */
 }

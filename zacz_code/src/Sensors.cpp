@@ -23,14 +23,14 @@ uint8_t * Sensors::getSensorsMeasures(){
 void Sensors::printSensorsMeasures(){
     Serial.print("PIN:");
     for(int i = 0; i < 20; i++){
-        Serial.print("/t");
+        Serial.print("\t");
         Serial.print(this->IR_SENSORS_PINS[i]);
     }
     Serial.print("\n");
 
     Serial.print("MEASURE:");
     for(int i = 0; i < 20; i++){
-        Serial.print("/t");
+        Serial.print("\t");
         Serial.print(this->measures[i]);
     }
     Serial.print("\n");
