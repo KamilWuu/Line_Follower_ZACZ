@@ -2,7 +2,7 @@
 #define RECEIVEDDATA_H
 
 #include <Arduino.h>
-#include <BluetoothSerial.h>
+
 
 class ReceivedData {
 private:
@@ -14,12 +14,10 @@ private:
     uint8_t V_MAX;
 
  
-
 public:
     ReceivedData();
     void setData(String data);
     void displayData(HardwareSerial * serial);
-    void displayDataBT(BluetoothSerial * serial);
     char getInstruction();
     uint8_t getVMax();
     String getString();

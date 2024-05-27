@@ -95,20 +95,3 @@ void ReceivedData::displayData(HardwareSerial * serial){
     serial->println(V_MAX);
 }
 
-void ReceivedData::displayDataBT(BluetoothSerial  * serial){
-
-    serial->print("otrzymano dane: ");
-    serial->println(debugString);
-
-    // Debug - wyświetlenie odczytanych wartości
-    serial->print("instruction: ");
-    serial->println(instruction);
-    serial->print("PID_P: ");
-    serial->println(PID_P);
-    serial->print("PID_I: ");
-    serial->println(PID_I);
-    serial->print("PID_D: ");
-    serial->println(PID_D);
-    serial->print("V_MAX: ");
-    serial->println(V_MAX);
-}
