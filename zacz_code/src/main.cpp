@@ -9,7 +9,7 @@
 #include "Encoder.h"
 #include "ESP32TimerInterrupt.h"
 
-
+//Zmienna określająca częstotliwość pomiaru czasu
 #define TIMER0_INTERVAL_MS        100
 
 WiFiServer server(8888);
@@ -80,8 +80,14 @@ void GPIOSetup()
 
   /*MOTORS*/
 
+  /*
+    !!!NIE ZMIENIAĆ UŁOŻENIA!!!
+  Tak zainicjowane enkodery poprawnie zliczają kroki i kierunek obrotów
+  */
   Left_enc.begin(LEFT_ENC_2, LEFT_ENC_1);
   Right_enc.begin(RIGHT_ENC_1,RIGHT_ENC_2);
+
+
   pinMode(LEFT_PWM, OUTPUT);
   pinMode(RIGHT_PWM, OUTPUT);
 
@@ -94,6 +100,7 @@ void GPIOSetup()
   // Wire.setPins(SDA_I2C, SCL_I2C);
 }
 
+/*Funkcja do obsługi liczenia prędkości co określony czas*/
 bool IRAM_ATTR TimerHandler0(void * timerNo){
   Left_enc.calc_speed();
   Right_enc.calc_speed();
@@ -104,6 +111,7 @@ void setup()
 {
   Serial.begin(115200);
   GPIOSetup();
+  //Wywołanie przerwania do wyzwalania pomiaru prędkości
   if (Timer0.attachInterruptInterval(TIMER0_INTERVAL_MS*1000,TimerHandler0))
   {
 		Serial.print(F("Starting  ITimer0 OK, millis() = "));
@@ -117,11 +125,11 @@ void setup()
 void loop()
 {
   Serial.print("Enkodery: L:\t");
-  Serial.print(Left_enc.get_speed(),10);
+  Serial.print(Left_enc.get_speed(),6);
   Serial.print("\trotations: ");
   Serial.print(Left_enc.get_rotations());
   Serial.print(" R:\t");
-  Serial.print(Right_enc.get_speed(),10);
+  Serial.print(Right_enc.get_speed(),6);
   Serial.print("\trotations: ");
   Serial.print(Right_enc.get_rotations());
   Serial.print("\n");

@@ -37,10 +37,18 @@ private:
 public:
     Encoder();
     ~Encoder();
+
+    //Inicjalizacja Enkodera
     void begin(uint8_t pin_a, uint8_t pin_b);
+    
+    //Funkcja wewnątrz przerwania, zmieniać adekwatnie do stosowanej metody pomiaru prędkości
     void update();
-    int get_rotations();
+
+    // Funkcja przepisująca ilość obrotów do poprzedniej komórki w tablicy
     void calc_speed();
+
+    int get_rotations();
+    
     float get_speed();
 };
 

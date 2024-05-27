@@ -56,13 +56,13 @@ int Encoder::get_rotations(){
     return this->rotations[0];
 }
 
-//Zliczanie impulsów w czasie
+//Zliczanie impulsów w czasie, z okresowym przerwaniem
 void Encoder::calc_speed(){
     rotations[0] = rotations[1];
     rotations[1] = 0;
 }
 
-//Zliczanie czasu pomiędzy impilsami
+//Zliczanie czasu pomiędzy impilsami, bez dodatkowego przerwania
 /*void Encoder::calc_speed(){
     speed = 1.00/(impulseTime[1]-impulseTime[0]);
     if (dir!=0)
@@ -72,6 +72,6 @@ void Encoder::calc_speed(){
 }*/
 
 float Encoder::get_speed(){
-    speed = ((float)rotations[0])/100000; 
+    speed = ((float)rotations[0])/100000; //Ususnąć jeśli korzystamy z czasu pomiędzy impulsami
     return speed;
 }
