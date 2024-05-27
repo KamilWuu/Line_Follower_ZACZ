@@ -7,6 +7,10 @@
 #include "Wire.h"
 #include "Sensors.h"
 #include "Encoder.h"
+#include "ESP32TimerInterrupt.h"
+
+
+#define TIMER0_INTERVAL_MS        100
 
 WiFiServer server(8888);
 WiFiClient client;
@@ -16,6 +20,8 @@ ReceivedData received_data;
 Sensors IR_Sensors;
 Encoder Left_enc;
 Encoder Right_enc;
+
+ESP32Timer Timer0(0);
 
 void setupWifi()
 {
@@ -88,25 +94,42 @@ void GPIOSetup()
   // Wire.setPins(SDA_I2C, SCL_I2C);
 }
 
+bool IRAM_ATTR TimerHandler0(void * timerNo){
+  Left_enc.calc_speed();
+  Right_enc.calc_speed();
+  return true;
+}
+
 void setup()
 {
   Serial.begin(115200);
   GPIOSetup();
+  if (Timer0.attachInterruptInterval(TIMER0_INTERVAL_MS*1000,TimerHandler0))
+  {
+		Serial.print(F("Starting  ITimer0 OK, millis() = "));
+		Serial.println(millis());  
+    }
+  
   //setupWifi();
   // Wire.begin();
 }
 
 void loop()
 {
-  String out;
-  out="Enkodery::\tL:  ";
-  out+=Left_enc.get_rotations();
-  out+="\tR:  ";
-  out+=Right_enc.get_rotations();
-  Serial.println(out);
-  IR_Sensors.readSensors();
-  IR_Sensors.printSensorsMeasures();
-  delay(500);
+  Serial.print("Enkodery: L:\t");
+  Serial.print(Left_enc.get_speed(),10);
+  Serial.print("\trotations: ");
+  Serial.print(Left_enc.get_rotations());
+  Serial.print(" R:\t");
+  Serial.print(Right_enc.get_speed(),10);
+  Serial.print("\trotations: ");
+  Serial.print(Right_enc.get_rotations());
+  Serial.print("\n");
+
+  //IR_Sensors.readSensors();
+  //IR_Sensors.printSensorsMeasures();
+
+  delay(100);
   /*clientRead(); // <== Odbiera dane od clienta (aplikacji Qt) i zapisuje odczytane wartosci w strukturze received_data
 
   switch (received_data.getInstruction())
