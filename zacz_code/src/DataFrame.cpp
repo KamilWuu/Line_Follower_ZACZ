@@ -2,26 +2,27 @@
 
 
 DataFrame::DataFrame() {
-    randomSeed(analogRead(0)); // Inicjalizacja generatora liczb losowych
+    //randomSeed(analogRead(0)); // Inicjalizacja generatora liczb losowych
 }
 
-void DataFrame::generateRandomData() {
-    // Generowanie losowego statusu
-    //status = random(2); // Random z zakresu 0-1
 
-    // Generowanie losowych danych dla tablicy sensors
-    for (int i = 0; i < 20; ++i) {
-        sensors[i] = random(2); // Random z zakresu 0-1
-        
+
+void DataFrame::setData(uint8_t status_, uint8_t * sensors_, uint8_t pwm_L_, uint8_t pwm_R_, uint16_t w_L_, uint16_t w_R_ ,uint16_t z_rotation_ ,uint16_t battery_)
+{
+    this->status = status_;
+
+    for(int i = 0; i < 20; i++){
+        this->sensors[i] = sensors_[i];
     }
+    
 
-    // Generowanie losowych wartości dla pwm_L, pwm_R, w_L, w_R, z_rotation i battery
-    //pwm_L = random(101); // Random z zakresu 0-100
-    //pwm_R = random(101); 
-    //w_L = random(9999); 
-    //w_R = random(9999); 
-    z_rotation = random(361); 
-    battery = random(3160,3474); 
+
+    this->pwm_L = pwm_L_;
+    this->pwm_R = pwm_R_;
+    this->w_L = w_L_;
+    this->w_R = w_R_;
+    this->z_rotation = z_rotation_;
+    this->battery = battery_;
 }
 
 void DataFrame::setAxialVelocity(uint16_t  left, uint16_t  right){

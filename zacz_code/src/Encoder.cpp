@@ -53,7 +53,7 @@ void Encoder::update(){
 }
 
 int Encoder::get_rotations(){
-    return this->rotations[0];
+    return this->rotations[1];
 }
 
 //Zliczanie impulsów w czasie, z okresowym przerwaniem
@@ -71,7 +71,8 @@ void Encoder::calc_speed(){
     } 
 }*/
 
-float Encoder::get_speed(){
-    speed = ((float)rotations[0])/100000; //Ususnąć jeśli korzystamy z czasu pomiędzy impulsami
+uint16_t Encoder::get_speed(){
+    speed = (rotations[0])*20; //Ususnąć jeśli korzystamy z czasu pomiędzy impulsami
+    speed = (speed * 2 * M_PI)/TICK_PER_ROTATION;
     return speed;
 }

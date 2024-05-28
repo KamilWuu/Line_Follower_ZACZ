@@ -3,6 +3,10 @@
 
 #include <Arduino.h>
 
+/**
+ * PRZYJMUJEMY ZE ODCZYT 1 OZNACZA ZNALEZIENIE LINI W SENSIE ZE CZUJNIK WYKRYWA CZARNE JESLI BEDZIE INACZEJ TO ZROBIMY NEGACJE ZEBY ZAWSZE 1 OZNACZALO ZNALEZIENIE LINI
+*/
+
 class Sensors{
 private:
     /*trzeba ustawic piny tak aby odpowiadaly one rzeczywistym czujnikom od lewej strony, a ten jeden przedni jako ostatni*/
@@ -10,13 +14,15 @@ private:
     //Już odpowiadają
     const int8_t SENSORS_WEIGHTS[20] = {-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,0}; /*PID WEIGHTS*/
     uint8_t measures[20];
-
+    uint8_t last_measures[20];
+    int16_t sensors_error;
 public:
     Sensors();
     void readSensors();
     const uint8_t * getSensorsPins();
     uint8_t * getSensorsMeasures();
     void printSensorsMeasures();
+    uint16_t getSensorsError();
 };
 
 

@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 #include <BindArg.h>
+#include <math.h>
+#define TICK_PER_ROTATION 29
 
 /*enum rotation_dir{
     backward=-1,
@@ -31,7 +33,7 @@ private:
     //Kierunek obrotu: 0 - przód, 1 - tył
     //bool dir;
 
-    float speed;
+    uint16_t speed; //rad/s
 
 
 public:
@@ -49,7 +51,7 @@ public:
 
     int get_rotations();
     
-    float get_speed();
+    uint16_t get_speed();
 };
 
 

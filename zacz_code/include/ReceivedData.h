@@ -3,6 +3,11 @@
 
 #include <Arduino.h>
 
+enum pidParameter{
+    K_P,
+    K_I,
+    K_D
+};
 
 class ReceivedData {
 private:
@@ -21,6 +26,8 @@ public:
     char getInstruction();
     uint8_t getVMax();
     String getString();
+    uint16_t getPID_parameter(enum pidParameter param);
+
 };
 
 

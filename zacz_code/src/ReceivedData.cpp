@@ -78,6 +78,24 @@ uint8_t ReceivedData::getVMax(){
 }
 
 
+uint16_t ReceivedData::getPID_parameter(enum pidParameter param){
+    switch (param)
+    {
+    case K_P:
+        return this->PID_P;
+        break;
+    case K_I:
+        return this->PID_I;
+        break;
+    case K_D:
+        return this->PID_D;
+        break;
+    default:
+        return 0;
+        break;
+    }
+}
+
 void ReceivedData::displayData(HardwareSerial * serial){
     serial->print("otrzymano dane: ");
     serial->println(debugString);

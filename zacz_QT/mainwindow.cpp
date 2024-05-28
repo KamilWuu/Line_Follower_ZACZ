@@ -79,26 +79,27 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     // Dodawanie istniejących obiektów QFrame do listy
-    frameList.append(ui->sensor_1);
-    frameList.append(ui->sensor_2);
-    frameList.append(ui->sensor_3);
-    frameList.append(ui->sensor_4);
-    frameList.append(ui->sensor_5);
-    frameList.append(ui->sensor_6);
-    frameList.append(ui->sensor_7);
-    frameList.append(ui->sensor_8);
-    frameList.append(ui->sensor_9);
-    frameList.append(ui->sensor_10);
-    frameList.append(ui->sensor_11);
-    frameList.append(ui->sensor_12);
-    frameList.append(ui->sensor_13);
-    frameList.append(ui->sensor_14);
-    frameList.append(ui->sensor_15);
-    frameList.append(ui->sensor_16);
-    frameList.append(ui->sensor_17);
-    frameList.append(ui->sensor_18);
-    frameList.append(ui->sensor_21);
-    frameList.append(ui->sensor_22);
+    frameList.append(ui->sensor0);
+    frameList.append(ui->sensor1);
+    frameList.append(ui->sensor2);
+    frameList.append(ui->sensor3);
+    frameList.append(ui->sensor4);
+    frameList.append(ui->sensor5);
+    frameList.append(ui->sensor6);
+    frameList.append(ui->sensor7);
+    frameList.append(ui->sensor8);
+    frameList.append(ui->sensor9);
+    frameList.append(ui->sensor10);
+    frameList.append(ui->sensor11);
+    frameList.append(ui->sensor12);
+    frameList.append(ui->sensor13);
+    frameList.append(ui->sensor14);
+    frameList.append(ui->sensor15);
+    frameList.append(ui->sensor16);
+    frameList.append(ui->sensor17);
+    frameList.append(ui->sensor18);
+    frameList.append(ui->sensor19);
+
 
     foreach(QFrame* frame, frameList) {
         frame->setStyleSheet("background-color: white;"); // Ustawienie koloru tła dla każdego QFrame

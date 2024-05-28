@@ -6023,7 +6023,7 @@
                  <number>34</number>
                 </property>
                 <item row="0" column="0">
-                 <widget class="QFrame" name="sensor_21">
+                 <widget class="QFrame" name="sensor0">
                   <property name="palette">
                    <palette>
                     <active>
@@ -6523,7 +6523,7 @@
                  <number>15</number>
                 </property>
                 <item row="0" column="0">
-                 <widget class="QFrame" name="sensor_22">
+                 <widget class="QFrame" name="sensor1">
                   <property name="palette">
                    <palette>
                     <active>
@@ -7073,7 +7073,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QFrame" name="sensor_13">
+                 <widget class="QFrame" name="sensor2">
                   <property name="palette">
                    <palette>
                     <active>
@@ -7555,7 +7555,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_12">
+                 <widget class="QFrame" name="sensor3">
                   <property name="palette">
                    <palette>
                     <active>
@@ -8037,7 +8037,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_10">
+                 <widget class="QFrame" name="sensor4">
                   <property name="palette">
                    <palette>
                     <active>
@@ -8519,7 +8519,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_9">
+                 <widget class="QFrame" name="sensor5">
                   <property name="palette">
                    <palette>
                     <active>
@@ -9001,7 +9001,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_7">
+                 <widget class="QFrame" name="sensor6">
                   <property name="palette">
                    <palette>
                     <active>
@@ -9483,7 +9483,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_11">
+                 <widget class="QFrame" name="sensor7">
                   <property name="palette">
                    <palette>
                     <active>
@@ -9965,7 +9965,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_14">
+                 <widget class="QFrame" name="sensor8">
                   <property name="palette">
                    <palette>
                     <active>
@@ -10447,7 +10447,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_3">
+                 <widget class="QFrame" name="sensor9">
                   <property name="palette">
                    <palette>
                     <active>
@@ -10929,7 +10929,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_16">
+                 <widget class="QFrame" name="sensor10">
                   <property name="palette">
                    <palette>
                     <active>
@@ -11411,7 +11411,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_15">
+                 <widget class="QFrame" name="sensor11">
                   <property name="palette">
                    <palette>
                     <active>
@@ -11893,7 +11893,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_6">
+                 <widget class="QFrame" name="sensor12">
                   <property name="palette">
                    <palette>
                     <active>
@@ -12375,7 +12375,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_2">
+                 <widget class="QFrame" name="sensor13">
                   <property name="palette">
                    <palette>
                     <active>
@@ -12857,7 +12857,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_5">
+                 <widget class="QFrame" name="sensor14">
                   <property name="palette">
                    <palette>
                     <active>
@@ -13339,7 +13339,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_4">
+                 <widget class="QFrame" name="sensor15">
                   <property name="palette">
                    <palette>
                     <active>
@@ -13821,7 +13821,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QFrame" name="sensor_8">
+                 <widget class="QFrame" name="sensor16">
                   <property name="palette">
                    <palette>
                     <active>
@@ -14361,7 +14361,7 @@
                     <number>21</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QFrame" name="sensor_1">
+                    <widget class="QFrame" name="sensor19">
                      <property name="palette">
                       <palette>
                        <active>
@@ -14925,7 +14925,7 @@
                     <number>29</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QFrame" name="sensor_17">
+                    <widget class="QFrame" name="sensor18">
                      <property name="palette">
                       <palette>
                        <active>
@@ -15425,7 +15425,7 @@
                     <number>49</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QFrame" name="sensor_18">
+                    <widget class="QFrame" name="sensor17">
                      <property name="palette">
                       <palette>
                        <active>

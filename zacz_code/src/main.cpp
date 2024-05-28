@@ -8,9 +8,10 @@
 #include "Sensors.h"
 #include "Encoder.h"
 #include "ESP32TimerInterrupt.h"
+#include "PID.h"
 
 //Zmienna określająca częstotliwość pomiaru czasu
-#define TIMER0_INTERVAL_MS        100
+#define TIMER0_INTERVAL_MS        50
 
 WiFiServer server(8888);
 WiFiClient client;
@@ -22,6 +23,17 @@ Encoder Left_enc;
 Encoder Right_enc;
 
 ESP32Timer Timer0(0);
+
+
+int8_t robot_status = 0;
+
+uint8_t Left_pwm_percent_value = 0;
+uint8_t Right_pwm_percent_value = 0;
+
+uint16_t Left_pwm_value = 0;
+uint16_t Right_pwm_value = 0;
+
+int16_t robot_z_position = 0;
 
 void setupWifi()
 {
@@ -72,6 +84,31 @@ void clientRead()
   }
 }
 
+
+
+
+
+
+void makeMeasuresAndCalculations(){
+
+  uint16_t battery = analogRead(BATTERY);
+  IR_Sensors.readSensors();
+  
+  //tu trzeba potem dodac jeszcze pomiar z imu 
+  if(robot_status == 1){
+  PCalculatePWM(IR_Sensors.getSensorsError(), received_data.getPID_parameter(K_P), received_data.getVMax(), &Left_pwm_percent_value, &Right_pwm_percent_value, &Left_pwm_value, &Right_pwm_value);
+  }else if(robot_status == 0){
+    Left_pwm_percent_value = 0;
+    Right_pwm_percent_value = 0;
+
+    Left_pwm_value = 0;
+    Right_pwm_value = 0;
+  }
+
+  data_to_send.setData(robot_status, IR_Sensors.getSensorsMeasures(), Left_pwm_percent_value, Right_pwm_percent_value, Left_enc.get_speed(), Right_enc.get_speed(), robot_z_position, battery );
+
+}
+
 void GPIOSetup()
 {
 
@@ -118,12 +155,15 @@ void setup()
 		Serial.println(millis());  
     }
   
-  //setupWifi();
-  // Wire.begin();
+  setupWifi();
+  //Wire.begin();
 }
 
 void loop()
 {
+
+  
+/*
   Serial.print("Enkodery: L:\t");
   Serial.print(Left_enc.get_speed(),6);
   Serial.print("\trotations: ");
@@ -134,46 +174,31 @@ void loop()
   Serial.print(Right_enc.get_rotations());
   Serial.print("\n");
 
-  //IR_Sensors.readSensors();
-  //IR_Sensors.printSensorsMeasures();
+*/
 
-  delay(100);
-  /*clientRead(); // <== Odbiera dane od clienta (aplikacji Qt) i zapisuje odczytane wartosci w strukturze received_data
+  clientRead(); // <== Odbiera dane od clienta (aplikacji Qt) i zapisuje odczytane wartosci w strukturze received_data
 
   switch (received_data.getInstruction())
   {
   case 'S': // S czyli start jazdy
-    analogWrite(LEFT_PWM, received_data.getVMax());
-    analogWrite(RIGHT_PWM, received_data.getVMax());
-
-    data_to_send.setAxialVelocity(random(1001), random(1001));
-    // frame.setAxialVelocity(1000 ,1000);
-    data_to_send.setPWM(random(received_data.getVMax() + 1), random(received_data.getVMax() + 1));
-
-    data_to_send.setStatus(1); //<== status 1 czyli jedzie
-
+    robot_status = 1; //<== status 1 czyli jedzie
     break;
 
   case 'M': // M czyli stop jazdy
-    analogWrite(LEFT_PWM, 0);
-    analogWrite(RIGHT_PWM, 0);
-    data_to_send.setAxialVelocity(0, 0);
-    data_to_send.setPWM(random(0), random(0));
-    data_to_send.setStatus(0); //<== status 0 czyli stoi
-    break;
-
-  default:
+    robot_status = 0;
     break;
   }
-
-  data_to_send.generateRandomData(); //<= tymczasowo
-
-  data_to_send.setBattery(analogRead(BATTERY));
-  IR_Sensors.readSensors();
-  IR_Sensors.printSensorsMeasures();
-
-  data_to_send.setSensors(IR_Sensors.getSensorsMeasures());
+  
+  makeMeasuresAndCalculations();
 
   client.println(data_to_send.createDataFrame()); // <== wysyla utworzona ramke danych ze struktury data_to_send do clienta (aplikacji Qt)
-  */
+
+
+
+  analogWrite(LEFT_PWM, Left_pwm_value);
+  analogWrite(RIGHT_PWM, Right_pwm_value);
+ 
+
+
+
 }
