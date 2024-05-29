@@ -631,6 +631,12 @@
                <property name="autoFillBackground">
                 <bool>false</bool>
                </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="frame">
+                <bool>true</bool>
+               </property>
                <property name="clearButtonEnabled">
                 <bool>false</bool>
                </property>
