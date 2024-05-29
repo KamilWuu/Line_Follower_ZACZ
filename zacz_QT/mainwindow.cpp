@@ -6,6 +6,8 @@
 #include <QDebug>
 #include <QTcpSocket>
 
+#define ESP_IP "10.42.0.44"
+#define TCP_PORT 8888
 QElapsedTimer timer1;
 QElapsedTimer distance_timer;
 
@@ -47,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     connect(&socket, &QTcpSocket::readyRead,this, &MainWindow::myReadSocket);
-    socket.connectToHost("10.42.0.44",8888);
+    socket.connectToHost(ESP_IP,TCP_PORT);
 
 
 
@@ -220,6 +222,12 @@ void MainWindow::transmit(QString msg){
 
 void MainWindow::myReadSocket(){
     QByteArray data = socket.readAll();
+
+    //tutaj prawdopodobnie bedzie trzeba dac cos takiego: tak jak w readData ponizej, jakis rodzaj zabezpieczenia
+    /*if(data_from_serialPort.at(data_from_serialPort.length() - 1) == char(10)){
+        is_data_received = true;
+    }*/
+
     qDebug() << "data: " << data;
     ui->label_10->setText(QString(data));
 
@@ -424,16 +432,6 @@ void MainWindow::displaySensors()
         index++;
     }
 
-    /*foreach(QFrame* frame, frameList) {
-        // Tutaj możesz wykonywać operacje na każdym obiekcie QFrame
-        // Na przykład:
-
-            frame->setStyleSheet("background-color: white;"); // Ustawienie koloru tła dla każdego QFrame
-
-
-        index++;
-    }
-    frameList[10]->setStyleSheet("background-color: black;"); // Ustawienie koloru tła dla każdego QFrame*/
 }
 
 void MainWindow::displayEncoders()
