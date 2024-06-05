@@ -21,6 +21,7 @@ ReceivedData received_data;
 Sensors IR_Sensors;
 Encoder Left_enc;
 Encoder Right_enc;
+Regulator Controller;
 
 ESP32Timer Timer0(0);
 
@@ -34,6 +35,8 @@ uint16_t Left_pwm_value = 0;
 uint16_t Right_pwm_value = 0;
 
 int16_t robot_z_position = 0;
+
+
 
 void setupWifi()
 {
@@ -96,7 +99,12 @@ void makeMeasuresAndCalculations(){
   
   //tu trzeba potem dodac jeszcze pomiar z imu 
   if(robot_status == 1){
-  PCalculatePWM(IR_Sensors.getSensorsError(), received_data.getPID_parameter(K_P), received_data.getVMax(), &Left_pwm_percent_value, &Right_pwm_percent_value, &Left_pwm_value, &Right_pwm_value);
+  Controller.set_pid(received_data.getPID_parameter(K_P),received_data.getPID_parameter(K_I), received_data.getPID_parameter(K_D));
+  Controller.set_base_speed(received_data.getVMax());
+  Controller.regulator(IR_Sensors.getSensorsError());
+  Left_pwm_percent_value=Controller.get_left_percent();
+  Right_pwm_percent_value= Controller.get_right_percent();
+  //PCalculatePWM(IR_Sensors.getSensorsError(), received_data.getPID_parameter(K_P), received_data.getVMax(), &Left_pwm_percent_value, &Right_pwm_percent_value, &Left_pwm_value, &Right_pwm_value);
   }else if(robot_status == 0){
     Left_pwm_percent_value = 0;
     Right_pwm_percent_value = 0;
@@ -124,9 +132,9 @@ void GPIOSetup()
   Left_enc.begin(LEFT_ENC_2, LEFT_ENC_1);
   Right_enc.begin(RIGHT_ENC_1,RIGHT_ENC_2);
 
-
-  pinMode(LEFT_PWM, OUTPUT);
-  pinMode(RIGHT_PWM, OUTPUT);
+  Controller.begin();
+  //pinMode(LEFT_PWM, OUTPUT);
+  //pinMode(RIGHT_PWM, OUTPUT);
 
   /*IR SENSORS*/
   for (int i = 0; i < 20; i++)
@@ -193,12 +201,7 @@ void loop()
 
   client.println(data_to_send.createDataFrame()); // <== wysyla utworzona ramke danych ze struktury data_to_send do clienta (aplikacji Qt)
 
-
-
-  analogWrite(LEFT_PWM, Left_pwm_value);
-  analogWrite(RIGHT_PWM, Right_pwm_value);
+  //analogWrite(LEFT_PWM, Left_pwm_value);
+  //analogWrite(RIGHT_PWM, Right_pwm_value);
  
-
-
-
 }

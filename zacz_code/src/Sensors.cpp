@@ -7,12 +7,7 @@ Sensors::Sensors(){
 }
 
 
-void Sensors::readSensors(){
-
-    
-
-
-
+int16_t Sensors::readSensors(){
     uint8_t founds_counter = 0; 
     int16_t weights_sum = 0;
 
@@ -29,17 +24,17 @@ void Sensors::readSensors(){
     if(founds_counter > 0){ //jezeli linia zostala znaleziona
         for(int i = 0; i < 20; i++){
             last_measures[i] = measures[i];
-        }
-        
+        } 
     }
 
     if(founds_counter != 0){
         this->sensors_error = weights_sum / founds_counter;
     }else{
+        //Zmienić na graniczne położenie z ostatniego odczytu
         this->sensors_error = 0; 
     }
 
-
+    return this->sensors_error;
 }
 
 

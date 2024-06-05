@@ -18,7 +18,7 @@ private:
     int16_t sensors_error;
 public:
     Sensors();
-    void readSensors();
+    int16_t readSensors();
     const uint8_t * getSensorsPins();
     uint8_t * getSensorsMeasures();
     void printSensorsMeasures();
