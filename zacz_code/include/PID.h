@@ -6,9 +6,8 @@
 #include "Sensors.h"
 #include "defines.h"
 
-#define BASE_SPEED 127
 #define MAX_PWM_VALUE_CPU 255
-#define SAMPLING_TIME 50 //ms 
+#define SAMPLING_TIME 2 //ms 
 
 class Regulator{
 

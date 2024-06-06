@@ -24,6 +24,9 @@ Regulator PD -- sterowany kątem odchylenia i sterujący silnikami, modyfikuje w
         int16_t pid_val = Proportional + Integral + Differencial;
 
         last_ang_err=ang_error;
+        Serial.print(ang_error);
+        Serial.print("\t");
+        Serial.println(pid_val);
 
         return pid_val;
     }
@@ -47,13 +50,14 @@ Regulator PD -- sterowany kątem odchylenia i sterujący silnikami, modyfikuje w
     }
 
     void Regulator::set_base_speed(uint8_t speed){
-        this->baseSpeed=speed;
+        if (speed!=0)   this->baseSpeed=speed;
+        else this->baseSpeed=127;
     }
 
     void Regulator::regulator(const int16_t ang_error){
 
     int16_t pid_val = PID(ang_error);
-    int16_t leftPWM=BASE_SPEED-pid_val, rightPWM=BASE_SPEED+pid_val;
+    int16_t leftPWM=this->baseSpeed-pid_val, rightPWM=this->baseSpeed+pid_val;
     if (leftPWM<0)  leftPWM=0;
     if (rightPWM<0)  rightPWM=0;
     if (leftPWM> MAX_PWM_VALUE_CPU) leftPWM = MAX_PWM_VALUE_CPU;
@@ -64,8 +68,8 @@ Regulator PD -- sterowany kątem odchylenia i sterujący silnikami, modyfikuje w
     this->leftPWM_value = leftPWM;
     this->rightPWM_value=rightPWM;
 
-    analogWrite(leftPWM,LEFT_PWM);
-    analogWrite(rightPWM,RIGHT_PWM); 
+    analogWrite(LEFT_PWM,leftPWM);
+    analogWrite(RIGHT_PWM, rightPWM); 
 
     }
 
@@ -74,7 +78,6 @@ Regulator PD -- sterowany kątem odchylenia i sterujący silnikami, modyfikuje w
     }
     uint8_t Regulator::get_left_percent(){
         return this->leftPWM_percent;
-
     }
     
     uint8_t Regulator::get_right_value(){

@@ -36,6 +36,9 @@ uint16_t Right_pwm_value = 0;
 
 int16_t robot_z_position = 0;
 
+unsigned long last_time;
+
+
 
 
 void setupWifi()
@@ -106,6 +109,7 @@ void makeMeasuresAndCalculations(){
   Right_pwm_percent_value= Controller.get_right_percent();
   //PCalculatePWM(IR_Sensors.getSensorsError(), received_data.getPID_parameter(K_P), received_data.getVMax(), &Left_pwm_percent_value, &Right_pwm_percent_value, &Left_pwm_value, &Right_pwm_value);
   }else if(robot_status == 0){
+    Controller.set_pid(0,0,0);
     Left_pwm_percent_value = 0;
     Right_pwm_percent_value = 0;
 
@@ -165,6 +169,8 @@ void setup()
   
   setupWifi();
   //Wire.begin();
+
+  last_time = millis();
 }
 
 void loop()
@@ -200,7 +206,6 @@ void loop()
   makeMeasuresAndCalculations();
 
   client.println(data_to_send.createDataFrame()); // <== wysyla utworzona ramke danych ze struktury data_to_send do clienta (aplikacji Qt)
-
   //analogWrite(LEFT_PWM, Left_pwm_value);
   //analogWrite(RIGHT_PWM, Right_pwm_value);
  
