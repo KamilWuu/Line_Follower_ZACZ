@@ -4,6 +4,10 @@
 	(generator_version "8.0")
 	(uuid "a3ac904b-56c3-4998-8f81-e433a9dcb1b5")
 	(paper "A4")
+	(title_block
+		(title "Płytka główna")
+		(date "01.05.2024")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x06_Socket"
 			(pin_names

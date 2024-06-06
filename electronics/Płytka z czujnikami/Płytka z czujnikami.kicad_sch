@@ -4,6 +4,10 @@
 	(generator_version "8.0")
 	(uuid "1ccb63a8-95a9-4b10-9ea3-67d5c60a9303")
 	(paper "A4")
+	(title_block
+		(title "Płytka z czujnikami")
+		(date "01.05.2024")
+	)
 	(lib_symbols)
 	(sheet
 		(at 20.32 19.05)

@@ -4,6 +4,10 @@
 	(generator_version "8.0")
 	(uuid "5e4b8d89-a8bf-4d25-a1e4-f91dc5e88f4f")
 	(paper "A4")
+	(title_block
+		(title "Płytka główna")
+		(date "01.05.2024")
+	)
 	(lib_symbols)
 	(sheet
 		(at 27.94 20.32)

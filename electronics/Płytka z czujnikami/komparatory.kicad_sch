@@ -4,6 +4,10 @@
 	(generator_version "8.0")
 	(uuid "7d6bbb98-3611-4d60-a0eb-f722002135e9")
 	(paper "A4")
+	(title_block
+		(title "Płytka z czujnikami")
+		(date "01.05.2024")
+	)
 	(lib_symbols
 		(symbol "Comparator:LM2901"
 			(pin_names
