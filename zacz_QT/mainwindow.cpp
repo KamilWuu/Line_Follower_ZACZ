@@ -83,7 +83,23 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->plotsButton, &QPushButton::clicked, this, &MainWindow::on_plotsButton_clicked);
 
-    // Dodawanie istniejących obiektów QFrame do listy
+
+
+    compasPixmap.load("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/robot_kompas.png");
+
+
+    // Inicjalizuj QLabel do wyświetlania kompasu
+    compassLabel = new QLabel(this);
+
+    // Ustawienie rozmiaru QLabel (opcjonalnie)
+    compassLabel->setFixedSize(160, 160); // Rozmiar QLabel, dostosuj do potrzeb
+
+    // Zmniejszenie obrazka do rozmiarów QLabel
+    QPixmap scaledPixmap = compasPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio);
+    compassLabel->setPixmap(scaledPixmap);
+    ui->compas_frame->layout()->addWidget(compassLabel);
+
+
     frameList.append(ui->sensor0);
     frameList.append(ui->sensor1);
     frameList.append(ui->sensor2);
@@ -550,6 +566,20 @@ void MainWindow::displayStats()
     //distance =
 }
 
+void MainWindow::displayCompass()
+{
+    // Tworzenie obiektu QTransform do obracania obrazka
+    QTransform transform;
+    transform.rotate(z_rotation);
+
+    // Obracanie obrazka
+    QPixmap rotatedPixmap = compasPixmap.transformed(transform, Qt::SmoothTransformation);
+
+    // Zmniejszenie obrazka do rozmiarów QLabel
+    QPixmap scaledPixmap = rotatedPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    compassLabel->setPixmap(scaledPixmap);
+    compassLabel->update(); // Odświeżenie QLabel
+}
 
 void MainWindow::displayData(){
 
@@ -567,12 +597,12 @@ void MainWindow::displayData(){
     ui->rightPWMProgresBar->setValue(pwm_R);
     ui->rightPWMLabel->setText(QString::number(pwm_R)+ "%");
 
-
+    ui->statusLabel_1->setText(QString::number(z_rotation));
     displayBattery();
     displaySensors();
     displayEncoders();
     displayStats();
-
+    displayCompass();
     //
 
 }

@@ -16,6 +16,8 @@
 #include <QList>
 #include <QElapsedTimer>
 #include <QTcpSocket>
+#include <QTransform>
+#include <QPixmap>
 #include "plotwindow.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -49,6 +51,8 @@ public:
      * \brief Destruktor głównego okna aplikacji.
      */
     ~MainWindow();
+
+    void displayCompass();
 public slots:
     void transmit(QString msg);
 private slots:
@@ -91,9 +95,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui; /*!< Interfejs użytkownika. */
-    PlotWindow *plotWindow; // Add a member for PlotWindow
+    PlotWindow *plotWindow; /*!< Add a member for PlotWindow*/
     QSerialPort * COMPORT; /*!< Port szeregowy. */
-    //QString data_from_serialPort; /*!< Dane z portu szeregowego. */
+    QPixmap compasPixmap; /*!< Obrazek kompasu */
+    QLabel *compassLabel; /*!< QLabel do wyświetlania kompasu*/
     bool is_data_received = false; /*!< Flaga otrzymania danych. */
 
     /*!
