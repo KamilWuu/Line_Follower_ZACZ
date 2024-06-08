@@ -16,7 +16,7 @@
 #include <QList>
 #include <QElapsedTimer>
 #include <QTcpSocket>
-
+#include "plotwindow.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -36,6 +36,7 @@ class MainWindow : public QMainWindow
     QPixmap compas_bkgnd; /*!< Tło dla kompasu. */
     QLabel* label_10 = new QLabel( this ); /*!< Etykieta wyswietlajaca odebrana ramke danych. */
     QTcpSocket socket;
+
 
 public:
     /*!
@@ -90,6 +91,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui; /*!< Interfejs użytkownika. */
+    PlotWindow *plotWindow; // Add a member for PlotWindow
     QSerialPort * COMPORT; /*!< Port szeregowy. */
     //QString data_from_serialPort; /*!< Dane z portu szeregowego. */
     bool is_data_received = false; /*!< Flaga otrzymania danych. */
@@ -157,6 +159,7 @@ private:
 
 private slots:
     void myReadSocket();
+    void on_plotsButton_clicked();
 };
 
 #endif // MAINWINDOW_H

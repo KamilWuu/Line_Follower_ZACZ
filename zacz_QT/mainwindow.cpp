@@ -5,8 +5,9 @@
 #include <QLabel>
 #include <QDebug>
 #include <QTcpSocket>
+#include <QWindow>
 
-#define ESP_IP "10.42.0.44"
+#define ESP_IP "10.42.0.203" // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
 #define TCP_PORT 8888
 QElapsedTimer timer1;
 QElapsedTimer distance_timer;
@@ -14,6 +15,7 @@ QElapsedTimer distance_timer;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , plotWindow(new PlotWindow(this)) // Initialize PlotWindow
     , robot_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/background.png")
     , main_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/main_background.png")
     , compas_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/kompas.png")
@@ -79,6 +81,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(this->ui->compas_frame, SIGNAL(resized()), this, SLOT(resizeEvent()));
 
+    connect(ui->plotsButton, &QPushButton::clicked, this, &MainWindow::on_plotsButton_clicked);
 
     // Dodawanie istniejących obiektów QFrame do listy
     frameList.append(ui->sensor0);
@@ -122,6 +125,18 @@ MainWindow::MainWindow(QWidget *parent)
     linear_velocity = 0;
     distanceFloat = 0.0;
     average_velocity = 0;
+
+    status = 0;
+    pwm_L = 0;
+    pwm_R = 0;
+    w_L = 0;
+    w_R = 0;
+    z_rotation = 0;
+    battery = 4095;
+
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -131,6 +146,7 @@ MainWindow::~MainWindow()
     }
     delete COMPORT;
     delete ui;
+    delete plotWindow; // Clean up
 
 }
 
@@ -234,6 +250,9 @@ void MainWindow::myReadSocket(){
     cutString(QString(data));
     displayData();
 
+    /*if(status == 1){
+        plotWindow->updatePlot(time, pwm_L, pwm_R, sensors);
+    }*/
 }
 
 /*
@@ -303,7 +322,10 @@ QString MainWindow::makeDataFrame(char instruction)
 
 void MainWindow::on_startButton_clicked()
 {
-        transmit(makeDataFrame('S') + char(10));
+    transmit(makeDataFrame('S') + char(10));
+    if(status == 0){
+    plotWindow-> clearPlot();
+    }
 }
 
 
@@ -495,6 +517,12 @@ void MainWindow::displayStats()
     ui->timeLCD->display(QString::number(time/1000, 'f', 2)); //time in s
 
 
+    float battery_voltage = (battery * MAX_ADC_VOLTAGE * VOLTAGE_DIVIDER)/MAX_ADC_VALUE;
+
+    if(status == 1){
+        plotWindow->updatePlot(time/1000, pwm_L, pwm_R, sensors, linear_velocity, battery_voltage);
+    }
+
 
     if(status){
          ui->averageVelocityLCD->display(QString::number(average_velocity, 'f', 2));
@@ -551,3 +579,14 @@ void MainWindow::displayData(){
 
 
 
+
+
+
+void MainWindow::on_plotsButton_clicked()
+{
+    /*if(status == 1){
+        plotWindow->updatePlot(time, pwm_L, pwm_R, sensors);
+    }*/
+    plotWindow->show();
+
+}
