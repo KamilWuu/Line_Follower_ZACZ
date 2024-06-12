@@ -7,7 +7,7 @@
 #include <QTcpSocket>
 #include <QWindow>
 
-#define ESP_IP "10.42.0.203" // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
+#define ESP_IP "10.42.0.44"  // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
 #define TCP_PORT 8888
 QElapsedTimer timer1;
 QElapsedTimer distance_timer;
@@ -311,10 +311,10 @@ QString MainWindow::makeDataFrame(char instruction)
             data_string[i] = QString::number(data_to_send[i]);
         }else if(data_to_send[i] > 9){
             data_string[i] = "0" + QString::number(data_to_send[i]);
-        }else if(data_to_send[i] > 0){
+        }else if(data_to_send[i] >= 0){
             data_string[i] = "00" + QString::number(data_to_send[i]);
         }else{
-            qDebug() << "Wystapill blad przy wartosci data_to_send [ " << i << " ]" << "== " << data_to_send[i];
+            qDebug() << "Wystapil blad przy wartosci data_to_send [ " << i << " ]" << "== " << data_to_send[i];
         }
     }
 

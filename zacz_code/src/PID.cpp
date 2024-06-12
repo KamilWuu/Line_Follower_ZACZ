@@ -50,8 +50,7 @@ Regulator PD -- sterowany kątem odchylenia i sterujący silnikami, modyfikuje w
     }
 
     void Regulator::set_base_speed(uint8_t speed){
-        if (speed!=0)   this->baseSpeed=speed;
-        else this->baseSpeed=127;
+        this->baseSpeed=speed;
     }
 
     void Regulator::regulator(const int16_t ang_error){

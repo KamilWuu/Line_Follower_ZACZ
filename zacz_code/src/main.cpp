@@ -115,6 +115,8 @@ void makeMeasuresAndCalculations(){
 
     Left_pwm_value = 0;
     Right_pwm_value = 0;
+    Controller.regulator(IR_Sensors.getSensorsError());
+    Controller.set_base_speed(0);
   }
 
   data_to_send.setData(robot_status, IR_Sensors.getSensorsMeasures(), Left_pwm_percent_value, Right_pwm_percent_value, Left_enc.get_speed(), Right_enc.get_speed(), robot_z_position, battery );
