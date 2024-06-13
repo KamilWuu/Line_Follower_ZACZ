@@ -21,7 +21,8 @@ FORMS += \
     mainwindow.ui
 
 TRANSLATIONS += \
-    LineFollower_en_150.ts
+    LineFollower_en_150.ts \
+    LineFollower_pl.ts
 CONFIG += lrelease
 CONFIG += embed_translations
 

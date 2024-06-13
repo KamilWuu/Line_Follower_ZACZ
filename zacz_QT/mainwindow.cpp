@@ -6,6 +6,8 @@
 #include <QDebug>
 #include <QTcpSocket>
 #include <QWindow>
+#include <QLocale>
+#include <QTranslator>
 
 #define ESP_IP "10.42.0.44"  // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
 #define TCP_PORT 8888
@@ -23,6 +25,15 @@ MainWindow::MainWindow(QWidget *parent)
 
 {
     ui->setupUi(this);
+
+
+    connect(ui->englishButton, &QPushButton::clicked, this, [this]() {
+        changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_en_150.qm");
+    });
+
+    connect(ui->polishButton, &QPushButton::clicked, this, [this]() {
+        changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_pl.qm");
+    });
 
     /*COMPORT = new QSerialPort();
     COMPORT -> setPortName("ttyUSB0");
@@ -98,6 +109,8 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap scaledPixmap = compasPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio);
     compassLabel->setPixmap(scaledPixmap);
     ui->compas_frame->layout()->addWidget(compassLabel);
+
+
 
 
     frameList.append(ui->sensor0);
@@ -189,6 +202,27 @@ void MainWindow::resizeEvent(QResizeEvent * event){
     this->ui->compas_frame->setPalette(compas_palette);
 }
 
+void MainWindow::changeLanguage(const QString &language)
+{
+
+
+    if (translator.load(language)) {
+        qApp->installTranslator(&translator);
+        retranslateUi();
+        qDebug() << "Translation file loaded successfully.";
+    } else {
+    qDebug() << "Failed to load translation file.";
+    }
+}
+
+void MainWindow::retranslateUi()
+{
+    ui->retranslateUi(this);
+
+    // Update any other texts that are not part of the ui file
+    // e.g., if you have dynamic texts or texts set programmatically
+    setWindowTitle(tr("MainWindow"));
+}
 
 void MainWindow::cutString(const QString& input) {
     if (!input.startsWith('$') || !input.endsWith("#\r\n")) {
@@ -237,11 +271,7 @@ void MainWindow::cutString(const QString& input) {
 }
 
 
-void MainWindow::on_connectButton_clicked()
-{
-    qDebug() << "Connect button clicked";
-    //transmit("prawda wiedza rezulataty\n");
-}
+
 
 void MainWindow::transmit(QString msg){
     if(socket.state()!=QAbstractSocket::ConnectedState){
@@ -420,7 +450,7 @@ void MainWindow::on_updateButton_clicked()
 
 void MainWindow::on_batteryProgressBar_valueChanged(int value)
 {
-    /*if(value < 14){
+    /*if(value < 15){
        QMessageBox::critical(this, "BATTERY WARNING!", "Battery is less than 15%. Please charge!");
     }*/
     if (value < 35) {
@@ -584,10 +614,10 @@ void MainWindow::displayCompass()
 void MainWindow::displayData(){
 
     if(status){
-        ui->statusLabel_2->setText("ROBOT IS MOVING");
+        ui->statusLabel_2->setText(tr("ROBOT IS MOVING"));
         ui->statusLabel_2->setStyleSheet("QLabel { color : green; }");
     }else{
-        ui->statusLabel_2->setText("ROBOT IS NOT MOVING");
+        ui->statusLabel_2->setText(tr("ROBOT IS NOT MOVING"));
         ui->statusLabel_2->setStyleSheet("QLabel { color : red; }");
     }
     //PWMs
@@ -620,3 +650,12 @@ void MainWindow::on_plotsButton_clicked()
     plotWindow->show();
 
 }
+
+
+
+
+void MainWindow::on_polishButton_clicked()
+{
+
+}
+

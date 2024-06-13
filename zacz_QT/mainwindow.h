@@ -88,10 +88,8 @@ private slots:
      */
     void on_batteryProgressBar_valueChanged(int value);
 
-    /*!
-     * \brief Obsługuje kliknięcie przycisku połączenia.
-     */
-    void on_connectButton_clicked();
+    void changeLanguage(const QString &language);
+
 
 private:
     Ui::MainWindow *ui; /*!< Interfejs użytkownika. */
@@ -99,6 +97,10 @@ private:
     QSerialPort * COMPORT; /*!< Port szeregowy. */
     QPixmap compasPixmap; /*!< Obrazek kompasu */
     QLabel *compassLabel; /*!< QLabel do wyświetlania kompasu*/
+
+    QTranslator translator;
+    void retranslateUi();
+
     bool is_data_received = false; /*!< Flaga otrzymania danych. */
 
     /*!
@@ -165,6 +167,7 @@ private:
 private slots:
     void myReadSocket();
     void on_plotsButton_clicked();
+    void on_polishButton_clicked();
 };
 
 #endif // MAINWINDOW_H

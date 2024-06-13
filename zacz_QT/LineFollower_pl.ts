@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_150">
+<TS version="2.1" language="pl_PL">
 <context>
     <name>MainWindow</name>
     <message>
@@ -37,7 +37,7 @@
     <message>
         <location filename="mainwindow.ui" line="802"/>
         <source>update_button</source>
-        <translation>UPDATE</translation>
+        <translation>AKTUALIZUJ</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1310"/>
@@ -79,17 +79,17 @@
     <message>
         <location filename="mainwindow.ui" line="3469"/>
         <source>plots_button</source>
-        <translation>PLOTS</translation>
+        <translation>WYKRESY</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="4111"/>
         <source>start_button</source>
-        <translation>START</translation>
+        <translation>ROZPOCZNIJ</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="4173"/>
         <source>stop_button</source>
-        <translation>STOP</translation>
+        <translation>ZATRZYMAJ</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="4375"/>
@@ -116,7 +116,7 @@
     <message>
         <location filename="mainwindow.ui" line="4846"/>
         <source>conn_label</source>
-        <translation>unknown</translation>
+        <translation>nieznany</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="4897"/>
@@ -126,7 +126,7 @@
     <message>
         <location filename="mainwindow.ui" line="5457"/>
         <source>status_label</source>
-        <translation>unknown</translation>
+        <translation>nieznany</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="5482"/>
@@ -141,12 +141,12 @@
     <message>
         <location filename="mainwindow.cpp" line="585"/>
         <source>ROBOT IS MOVING</source>
-        <translation>ROBOT IS MOVING</translation>
+        <translation>ROBOT JEDZIE</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="588"/>
         <source>ROBOT IS NOT MOVING</source>
-        <translation>ROBOT IS NOT MOVING</translation>
+        <translation>ROBOT NIE JEDZIE</translation>
     </message>
 </context>
 </TS>
