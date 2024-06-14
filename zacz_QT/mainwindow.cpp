@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     , plotWindow(new PlotWindow(this)) // Initialize PlotWindow
     , robot_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/background.png")
     , main_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/main_background.png")
-    , compas_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/kompas.png")
+    , compass_bkgnd("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/kompas.png")
 
 
 {
@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(this->ui->robot_frame, SIGNAL(resized()), this, SLOT(resizeEvent()));
 
 
-    QPixmap compas_scaled = compas_bkgnd.scaled(this->ui->compas_frame->size(), Qt::IgnoreAspectRatio);
+    QPixmap compas_scaled = compass_bkgnd.scaled(this->ui->compas_frame->size(), Qt::IgnoreAspectRatio);
     QPalette compas_palette;
     compas_palette.setBrush(QPalette::Window, compas_scaled);
 
@@ -72,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 
-    compasPixmap.load("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/robot_kompas.png");
+    compassPixmap.load("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/robot_kompas.png");
 
 
 
@@ -82,7 +82,7 @@ MainWindow::MainWindow(QWidget *parent)
     compassLabel->setFixedSize(160, 160);
 
 
-    QPixmap scaledPixmap = compasPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio);
+    QPixmap scaledPixmap = compassPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio);
     compassLabel->setPixmap(scaledPixmap);
     ui->compas_frame->layout()->addWidget(compassLabel);
 
@@ -172,7 +172,7 @@ void MainWindow::resizeEvent(QResizeEvent * event){
     robot_palette.setBrush(QPalette::Window, robot_scaled);
     this->ui->robot_frame->setPalette(robot_palette);
 
-    QPixmap compas_scaled = compas_bkgnd.scaled(this->ui->compas_frame->size(), Qt::IgnoreAspectRatio);
+    QPixmap compas_scaled = compass_bkgnd.scaled(this->ui->compas_frame->size(), Qt::IgnoreAspectRatio);
 
     QPalette compas_palette;
     compas_palette.setBrush(QPalette::Window, compas_scaled);
@@ -546,7 +546,7 @@ void MainWindow::displayStats()
 void MainWindow::displayCompass()
 {
 
-    QPixmap scaledPixmap = compasPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    QPixmap scaledPixmap = compassPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
     QPixmap pixmap(compassLabel->size());
     pixmap.fill(Qt::transparent);

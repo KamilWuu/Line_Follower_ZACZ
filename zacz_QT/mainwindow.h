@@ -11,7 +11,6 @@
 #include <QMessageBox>
 #include <QString>
 #include <QResizeEvent>
-
 #include <QLabel>
 #include <QList>
 #include <QElapsedTimer>
@@ -21,12 +20,12 @@
 #include <QPainter>
 #include <QPaintEvent>
 #include "plotwindow.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
-
 
 /*!
  * \brief Główne okno aplikacji.
@@ -35,18 +34,11 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-    QPixmap robot_bkgnd; /*!< Tło dla obrazu robota. */
-    QPixmap main_bkgnd; /*!< Główne tło aplikacji. */
-    QPixmap compas_bkgnd; /*!< Tło dla kompasu. */
-    QLabel* label_10 = new QLabel( this ); /*!< Etykieta wyswietlajaca odebrana ramke danych. */
-    QTcpSocket socket;
-
-
 public:
     /*!
-    * \brief Konstruktor klasy MainWindow.
-    * \param parent Wskaźnik na obiekt rodzica.
-    */
+     * \brief Konstruktor klasy MainWindow.
+     * \param parent Wskaźnik na obiekt rodzica.
+     */
     explicit MainWindow(QWidget *parent = nullptr);
 
     /*!
@@ -54,10 +46,18 @@ public:
      */
     ~MainWindow();
 
-    void displayCompass();
+    /*!
+     * \brief Metoda do wysyłania ramek danych przez WiFi.
+     * \param msg ramka do wysłania.
+     */
+    void transmit(QString msg);
 
 public slots:
-    void transmit(QString msg);
+    /*!
+     * \brief Slot obsługujący odbiór danych z WiFi.
+     */
+    void myReadSocket();
+
 private slots:
     /*!
      * \brief Obsługuje zmianę rozmiaru okna.
@@ -81,38 +81,81 @@ private slots:
     void on_updateButton_clicked();
 
     /*!
-     * \brief Zmienia kolor wypelnienia baterii.
+     * \brief Obsługuje zmianę wartości paska postępu baterii.
      * \param value Nowa wartość paska postępu.
      */
     void on_batteryProgressBar_valueChanged(int value);
 
-    void changeLanguage(const QString &language);
+    /*!
+     * \brief Obsługuje kliknięcie przycisku wykresów.
+     */
+    void on_plotsButton_clicked();
 
+    /*!
+     * \brief Zmienia język interfejsu.
+     * \param language sciezka do pliku tlumaczen z rozszerzeniem qm.
+     */
+    void changeLanguage(const QString &language);
 
 private:
     Ui::MainWindow *ui; /*!< Interfejs użytkownika. */
-    PlotWindow *plotWindow; /*!< Add a member for PlotWindow*/
+    PlotWindow *plotWindow; /*!< Okno wykresów. */
 
-    QPixmap compasPixmap; /*!< Obrazek kompasu */
-    QLabel *compassLabel; /*!< QLabel do wyświetlania kompasu*/
+    // Grafika i etykiety
+    QPixmap robot_bkgnd; /*!< Tło dla obrazu robota. */
+    QPixmap main_bkgnd; /*!< Główne tło aplikacji. */
+    QPixmap compass_bkgnd; /*!< Tło dla kompasu. */
+    QPixmap compassPixmap; /*!< Obrazek kompasu. */
+    QLabel *compassLabel; /*!< Etykieta wyświetlająca kompas. */
 
-    QTranslator translator;
 
+    // Elementy interfejsu sieciowego
+    QTcpSocket socket; /*!< Socket TCP. */
 
+    // Tłumaczenie interfejsu
+    QTranslator translator; /*!< Tłumacz interfejsu. */
 
+    // Dane robota i aplikacji
+    int status; /*!< Stan robota. */
+    int sensors[20]; /*!< Dane z czujników odbiciowych. */
+    int pwm_L; /*!< PWM dla lewego silnika. */
+    int pwm_R; /*!< PWM dla prawego silnika. */
+    float w_L; /*!< Prędkość kątowa lewego koła. */
+    float w_R; /*!< Prędkość kątowa prawego koła. */
+    int z_rotation; /*!< Pozycja robota względem osi Z. */
+    int battery; /*!< Poziom naładowania baterii. */
 
+    // Dane do wysłania
+    char instruction; /*!< Instrukcja do wysłania do robota. */
+    int data_to_send[4]; /*!< Dane do wysłania. */
+
+    // Dane obliczone
+    float left_linear_V; /*!< Aktualna prędkość liniowa lewego koła. */
+    float right_linear_V; /*!< Aktualna prędkość liniowa prawego koła. */
+    float linear_velocity; /*!< Prędkość liniowa. */
+    float max_linear_velocity; /*!< Maksymalna prędkość liniowa. */
+    float average_velocity; /*!< Średnia prędkość liniowa. */
+    float distanceFloat; /*!< Przebyty dystans. */
+    float time; /*!< Czas trwania. */
+
+    // Metody prywatne
     /*!
-     * \brief Przetwarza otrzymane dane z portu szeregowego.
-     * \param input Dane wejściowe odczytane z robota.
+     * \brief Przetwarza otrzymane dane z WiFi.
+     * \param input Dane wejściowe odczytane z WiFi.
      */
-    void cutString(const QString& input);
+    void cutString(const QString &input);
 
     /*!
-     * \brief Tworzy ramkę danych do wysłania przez port szeregowy.
-     * \param instruction Instrukcja ktora ma zostac przeslana do robota.
+     * \brief Tworzy ramkę danych do wysłania przez WiFi.
+     * \param instruction Instrukcja do wysłania do robota.
      * \return Ramka danych.
      */
     QString makeDataFrame(char instruction);
+
+    /*!
+     * \brief Wyświetla kompas.
+     */
+    void displayCompass();
 
     /*!
      * \brief Wyświetla stan baterii.
@@ -129,7 +172,12 @@ private:
      */
     void displayEncoders();
 
-    void drawArrow(QLabel* label, float velocity);
+    /*!
+     * \brief Rysuje strzałkę na etykiecie.
+     * \param label Etykieta, na której ma być narysowana strzałka.
+     * \param velocity Prędkość, reprezentowana przez dlugosc strzałki.
+     */
+    void drawArrow(QLabel *label, float velocity);
 
     /*!
      * \brief Wyświetla wszystkie dane.
@@ -141,38 +189,7 @@ private:
      */
     void displayStats();
 
-
-    QList<QFrame*> frameList; /*!< Lista obiektow QFrame (czujnikow odbiciowych). */
-
-    int status; /*!< Stan w jakim znajduje sie robot. */
-    int sensors[20]; /*!< Dane z czujników odbiciowych. */
-    int pwm_L; /*!< PWM dla lewego silnika. */
-    int pwm_R; /*!< PWM dla prawego silnika. */
-    float w_L; /*!< Prędkość kątowa lewego koła. */
-    float w_R; /*!< Prędkość kątowa prawego koła. */
-    int z_rotation; /*!< Pozycja robota wzgledem osi Z. */
-    int battery; /*!< Odczyt napiecia baterii. */
-
-    //data to send
-    char instruction; /*!< Instrukcja do przekazania do robota */
-    int data_to_send[4]; /*!< Dane do wysłania. */
-
-    //calculated data
-    float left_linear_V; /*!< Aktualna prędkość liniowa lewego kola. */
-    float right_linear_V; /*!< Aktualna prędkość liniowa prawego kola. */
-    float linear_velocity; /*!< Prędkość liniowa. */
-    float max_linear_velocity; /*!< Maksymalna prędkość liniowa. */
-    float average_velocity; /*!< Średnia prędkość liniowa. */
-    float distanceFloat; /*!< Przebyty dystans. */
-    float time; /*!< Czas trwania. */
-
-
-
-
-private slots:
-    void myReadSocket();
-    void on_plotsButton_clicked();
+    QList<QFrame *> frameList; /*!< Lista obiektów QFrame (czujników odbiciowych). */
 
 };
-
 #endif // MAINWINDOW_H
