@@ -18,6 +18,8 @@
 #include <QTcpSocket>
 #include <QTransform>
 #include <QPixmap>
+#include <QPainter>
+#include <QPaintEvent>
 #include "plotwindow.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -53,6 +55,7 @@ public:
     ~MainWindow();
 
     void displayCompass();
+
 public slots:
     void transmit(QString msg);
 private slots:
@@ -131,6 +134,8 @@ private:
      */
     void displayEncoders();
 
+    void drawArrow(QLabel* label, float velocity);
+
     /*!
      * \brief Wyświetla wszystkie dane.
      */
@@ -164,10 +169,15 @@ private:
     float distanceFloat; /*!< Przebyty dystans. */
     float time; /*!< Czas trwania. */
 
+   // QLabel *arrow_left;
+   // QLabel *arrow_right;
+    float left_linear_V;
+    float right_linear_V;
+
 private slots:
     void myReadSocket();
     void on_plotsButton_clicked();
-    void on_polishButton_clicked();
+
 };
 
 #endif // MAINWINDOW_H

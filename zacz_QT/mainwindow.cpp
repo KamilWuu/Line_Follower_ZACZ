@@ -9,7 +9,7 @@
 #include <QLocale>
 #include <QTranslator>
 
-#define ESP_IP "10.42.0.44"  // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
+#define ESP_IP "10.42.0.203" // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
 #define TCP_PORT 8888
 QElapsedTimer timer1;
 QElapsedTimer distance_timer;
@@ -139,6 +139,10 @@ MainWindow::MainWindow(QWidget *parent)
         frame->setStyleSheet("background-color: white;"); // Ustawienie koloru tła dla każdego QFrame
     }
 
+    ui->pidPLineEdit->setText("5");
+    ui->pidILineEdit->setText("0");
+    ui->pidDLineEdit->setText("1");
+    ui->vMaxLineEdit->setText("50");
 
     ui->batteryProgressBar->setStyleSheet("QProgressBar::chunk { background-color: green; }");
     ui->leftPWMProgresBar->setStyleSheet("QProgressBar::chunk { background-color: green; }");
@@ -149,7 +153,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->timeLCD->display(0);
     ui->distanceLCD->display(0);
 
-    max_linear_velocity = 0;
+    max_linear_velocity = 100;
     time = 0;
     linear_velocity = 0;
     distanceFloat = 0.0;
@@ -285,50 +289,16 @@ void MainWindow::transmit(QString msg){
 void MainWindow::myReadSocket(){
     QByteArray data = socket.readAll();
 
-    //tutaj prawdopodobnie bedzie trzeba dac cos takiego: tak jak w readData ponizej, jakis rodzaj zabezpieczenia
-    /*if(data_from_serialPort.at(data_from_serialPort.length() - 1) == char(10)){
-        is_data_received = true;
-    }*/
-
-    qDebug() << "data: " << data;
-    ui->label_10->setText(QString(data));
+    //qDebug() << "data: " << data;
+    //ui->label_10->setText(QString(data));
 
     cutString(QString(data));
     displayData();
 
-    /*if(status == 1){
-        plotWindow->updatePlot(time, pwm_L, pwm_R, sensors);
-    }*/
+
 }
 
-/*
-void MainWindow::readData()
-{
-    if(COMPORT->isOpen())
-    {
-        while(COMPORT->bytesAvailable()){
-            data_from_serialPort += COMPORT->readAll();
-            if(data_from_serialPort.at(data_from_serialPort.length() - 1) == char(10)){
-                is_data_received = true;
-            }
-        }
-        if(is_data_received == true){
-            //qDebug() << "data froms serial: " << data_from_serialPort;
-            ui->label_10->setText(data_from_serialPort);
-            cutString(data_from_serialPort);
-            displayData();
-            data_from_serialPort = "";
-            is_data_received = false;
 
-        }
-        ui->statusLabel_1->setText("ROBOT IS CONNECTED");
-        ui->statusLabel_1->setStyleSheet("QLabel { color : green; }");
-    }else{
-        ui->statusLabel_1->setText("ROBOT IS DISCONNECTED");
-        ui->statusLabel_1->setStyleSheet("QLabel { color : red; }");
-    }
-}
-*/
 
 
 QString MainWindow::makeDataFrame(char instruction)
@@ -426,7 +396,7 @@ void MainWindow::on_updateButton_clicked()
 
                 data_to_send[i] = data_from_line_edit[i];
 
-                qDebug() << coms[i] << "data to send: " << data_to_send[i] << " data from line edit : " << data_from_line_edit[i];
+                //qDebug() << coms[i] << "data to send: " << data_to_send[i] << " data from line edit : " << data_from_line_edit[i];
             }
             else{
                 qDebug() << "Wpisywany parametr: " << coms[i] << " nie moze byc ujemny!";
@@ -441,7 +411,7 @@ void MainWindow::on_updateButton_clicked()
 
 
     for(int i = 0; i < 4; i++ ){
-        qDebug() << "parameter to send: " << coms[i] << "= " << data_to_send[i] ;
+        //qDebug() << "parameter to send: " << coms[i] << "= " << data_to_send[i] ;
     }
 
     transmit(makeDataFrame('U') + char(10));
@@ -450,9 +420,9 @@ void MainWindow::on_updateButton_clicked()
 
 void MainWindow::on_batteryProgressBar_valueChanged(int value)
 {
-    /*if(value < 15){
+    if(value < 15){
        QMessageBox::critical(this, "BATTERY WARNING!", "Battery is less than 15%. Please charge!");
-    }*/
+    }
     if (value < 35) {
         ui->batteryProgressBar->setStyleSheet("QProgressBar::chunk { background-color: red; }");
     } else if (value < 60) {
@@ -506,24 +476,43 @@ void MainWindow::displayEncoders()
 {
     int wheel_radius = 10; //mm
 
-    float left_linear_V;
-    float right_linear_V;
+    left_linear_V = wheel_radius * w_L / 1000;
+    right_linear_V = wheel_radius * w_R / 1000;
+
+    ui->leftAxialVelocityLabel->setText(QString::number(w_L) + " RAD/S");
+    ui->rightAxialVelocityLabel->setText(QString::number(w_R) + " RAD/S");
+
+    ui->leftLinearVelocityLabel->setText(QString::number(left_linear_V, 'f', 2) + " M/S");
+    ui->rightLinearVelocityLabel->setText(QString::number(right_linear_V, 'f', 2) + " M/S");
+
+    this->linear_velocity = (left_linear_V + right_linear_V) / 2;
 
 
-    ui->leftAxialVelocityLabel->setText(QString::number(w_L) + "RAD/S");
-    ui->rightAxialVelocityLabel->setText(QString::number(w_R) + "RAD/S");
-
-    left_linear_V = wheel_radius*w_L/1000;
-    right_linear_V = wheel_radius*w_R/1000;
-
-
-
-    ui->leftLinearVelocityLabel->setText(QString::number(left_linear_V, 'f',2 ) + "M/S");
-    ui->rightLinearVelocityLabel->setText(QString::number(right_linear_V, 'f',2  ) + "M/S");
-
-    this->linear_velocity = (left_linear_V + right_linear_V)/2;
-
+    drawArrow(ui->arrow_left, left_linear_V);
+    drawArrow(ui->arrow_right, right_linear_V);
 }
+
+void MainWindow::drawArrow(QLabel* label, float velocity)
+{
+    QPixmap pixmap(label->size());
+    pixmap.fill(Qt::transparent);  // Wypełnienie tła na przezroczysto
+
+    QPainter painter(&pixmap);
+    painter.setRenderHint(QPainter::Antialiasing);
+    painter.setPen(QPen(Qt::red, 4));  // Ustawienie pędzla na czerwony kolor z grubością 4
+
+    // Obliczenie długości strzałki w zależności od prędkości
+    int arrow_length = static_cast<int>((velocity / max_linear_velocity) * label->width());
+    int arrow_height = label->height() / 2;
+    arrow_length = arrow_length - 30;
+    // Rysowanie strzałki
+    painter.drawLine(0, arrow_height, arrow_length, arrow_height);
+    painter.drawLine(arrow_length, arrow_height, arrow_length - 10, arrow_height - 5);
+    painter.drawLine(arrow_length, arrow_height, arrow_length - 10, arrow_height + 5);
+
+    label->setPixmap(pixmap);
+}
+
 
 
 void MainWindow::displayStats()
@@ -579,11 +568,7 @@ void MainWindow::displayStats()
 
         distanceFloat += distanceQuant;
 
-
-
         ui->distanceLCD->display(QString::number(distanceFloat/1000, 'f', 2));
-
-
 
         distance_timer.start();
     }else{
@@ -591,23 +576,33 @@ void MainWindow::displayStats()
         distanceFloat = 0;
     }
 
-    /*/*/
-
-    //distance =
 }
 
 void MainWindow::displayCompass()
 {
-    // Tworzenie obiektu QTransform do obracania obrazka
-    QTransform transform;
-    transform.rotate(z_rotation);
+    // Skala dla QPixmap, aby dopasować go do QLabel z zachowaniem proporcji
+    QPixmap scaledPixmap = compasPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
-    // Obracanie obrazka
-    QPixmap rotatedPixmap = compasPixmap.transformed(transform, Qt::SmoothTransformation);
+    // Tworzenie QPixmap o takich samych wymiarach jak QLabel
+    QPixmap pixmap(compassLabel->size());
+    pixmap.fill(Qt::transparent); // Wypełnienie przezroczystym tłem
 
-    // Zmniejszenie obrazka do rozmiarów QLabel
-    QPixmap scaledPixmap = rotatedPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-    compassLabel->setPixmap(scaledPixmap);
+    // Tworzenie QPainter do rysowania na QPixmap
+    QPainter painter(&pixmap);
+
+    // Ustawienie antyaliasingu dla lepszej jakości
+    painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
+
+    // Przenoszenie środka obrotu do środka pixmapy
+    painter.translate(pixmap.width() / 2, pixmap.height() / 2);
+    painter.rotate(z_rotation);
+    painter.translate(-scaledPixmap.width() / 2, -scaledPixmap.height() / 2);
+
+    // Rysowanie obróconego i przeskalowanego obrazka
+    painter.drawPixmap(0, 0, scaledPixmap);
+
+    // Ustawienie obróconego obrazka do QLabel
+    compassLabel->setPixmap(pixmap);
     compassLabel->update(); // Odświeżenie QLabel
 }
 
@@ -627,7 +622,7 @@ void MainWindow::displayData(){
     ui->rightPWMProgresBar->setValue(pwm_R);
     ui->rightPWMLabel->setText(QString::number(pwm_R)+ "%");
 
-    ui->statusLabel_1->setText(QString::number(z_rotation));
+
     displayBattery();
     displaySensors();
     displayEncoders();
@@ -644,9 +639,7 @@ void MainWindow::displayData(){
 
 void MainWindow::on_plotsButton_clicked()
 {
-    /*if(status == 1){
-        plotWindow->updatePlot(time, pwm_L, pwm_R, sensors);
-    }*/
+
     plotWindow->show();
 
 }
@@ -654,8 +647,5 @@ void MainWindow::on_plotsButton_clicked()
 
 
 
-void MainWindow::on_polishButton_clicked()
-{
 
-}
 
