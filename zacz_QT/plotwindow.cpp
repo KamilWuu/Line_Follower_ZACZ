@@ -114,15 +114,15 @@ void PlotWindow::updatePlot(float time, int pwmL, int pwmR, const int sensors[],
     QValueAxis *batteryAxisX = qobject_cast<QValueAxis*>(batteryChartView->chart()->axisX());
 
     if (pwmAxisX && time > pwmAxisX->max()) {
-        pwmAxisX->setRange(0, time);
+        pwmAxisX->setRange(time - basicAxisXTime , time);
     }
 
     if (speedAxisX && time > speedAxisX->max()) {
-        speedAxisX->setRange(0, time);
+        speedAxisX->setRange(time - basicAxisXTime, time);
     }
 
     if (batteryAxisX && time > batteryAxisX->max()) {
-        batteryAxisX->setRange(0, time);
+        batteryAxisX->setRange(time - basicAxisXTime, time);
     }
 }
 

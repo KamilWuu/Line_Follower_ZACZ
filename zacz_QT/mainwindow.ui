@@ -642,10 +642,23 @@
          <property name="lineWidth">
           <number>4</number>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,0,0,0">
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,0,0,0,0">
           <property name="sizeConstraint">
            <enum>QLayout::SetNoConstraint</enum>
           </property>
+          <item>
+           <widget class="QLabel" name="pid_label">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>pid controller</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QFrame" name="frame_15">
             <property name="frameShape">
@@ -1336,7 +1349,17 @@
          <property name="lineWidth">
           <number>4</number>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0">
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0">
+          <item>
+           <widget class="QLabel" name="statistics_label">
+            <property name="text">
+             <string>statistics</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QFrame" name="frame_10">
             <property name="frameShape">

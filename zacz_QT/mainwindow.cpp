@@ -29,10 +29,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->englishButton, &QPushButton::clicked, this, [this]() {
         changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_en_150.qm");
+        ui->englishButton->setEnabled(false);
+        ui->polishButton->setEnabled(true);
     });
 
     connect(ui->polishButton, &QPushButton::clicked, this, [this]() {
         changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_pl.qm");
+        ui->polishButton->setEnabled(false);
+        ui->englishButton->setEnabled(true);
     });
 
 
@@ -114,6 +118,23 @@ MainWindow::MainWindow(QWidget *parent)
     foreach(QFrame* frame, frameList) {
         frame->setStyleSheet("background-color: white;"); // Ustawienie koloru tła dla każdego QFrame
     }
+
+
+    changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_en_150.qm");
+
+
+
+    ui->statistics_label->setText(tr("statistics"));
+    ui->statistics_label->setStyleSheet("QLabel { color : black; }");
+
+    ui->pid_label->setText(tr("PID CONTROLER"));
+    ui->pid_label->setStyleSheet("QLabel { color : black; }");
+
+    ui->startButton->setEnabled(true);
+    ui->stopButton->setEnabled(false);
+
+    ui->polishButton->setEnabled(true);
+    ui->englishButton->setEnabled(false);
 
     ui->pidPLineEdit->setText("5");
     ui->pidILineEdit->setText("0");
@@ -307,15 +328,19 @@ void MainWindow::on_startButton_clicked()
 {
     transmit(makeDataFrame('S') + char(10));
     if(status == 0){
-    plotWindow-> clearPlot();
+        plotWindow-> clearPlot();
     }
+    ui->startButton->setEnabled(false);
+    ui->stopButton->setEnabled(true);
+
 }
 
 
 void MainWindow::on_stopButton_clicked()
 {
     transmit(makeDataFrame('M') + char(10));
-
+    ui->startButton->setEnabled(true);
+    ui->stopButton->setEnabled(false);
 }
 
 
