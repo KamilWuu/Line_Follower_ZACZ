@@ -1,0 +1,443 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{classMainWindow}{}\label{classMainWindow}\index{MainWindow@{MainWindow}}
+
+
+Główne okno aplikacji.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMainWindow}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMainWindow_ab6d2aa48b4808195f23250a8dd132d11}\label{classMainWindow_ab6d2aa48b4808195f23250a8dd132d11} 
+void {\bfseries my\+Read\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Slot obsługujący odbiór danych z Wi\+Fi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{classMainWindow}{Main\+Window}. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destruktor głównego okna aplikacji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a8279b1c4c14dd99964f680581bb7c3fb}{transmit}} (QString msg)
+\begin{DoxyCompactList}\small\item\em Metoda do wysyłania ramek danych przez Wi\+Fi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_ae12f8f63791595567b6250f8bb002bda}{resize\+Event}} (QResize\+Event \texorpdfstring{$\ast$}{*}event)
+\begin{DoxyCompactList}\small\item\em Obsługuje zmianę rozmiaru okna. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_abcc096120205197b50fa55cb603acb95}\label{classMainWindow_abcc096120205197b50fa55cb603acb95} 
+void {\bfseries on\+\_\+start\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Obsługuje kliknięcie przycisku start. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_abf27a1e863dc2350626ba16c83e925f4}\label{classMainWindow_abf27a1e863dc2350626ba16c83e925f4} 
+void {\bfseries on\+\_\+stop\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Obsługuje kliknięcie przycisku stop. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a359777657f443a037a150890a3881817}\label{classMainWindow_a359777657f443a037a150890a3881817} 
+void {\bfseries on\+\_\+update\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Obsługuje kliknięcie przycisku aktualizacji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a3bb90d53719881467fd5228d9d61e7b9}{on\+\_\+battery\+Progress\+Bar\+\_\+value\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em Obsługuje zmianę wartości paska postępu baterii. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_aff823d2e5981b333a3c98c806ceb381d}\label{classMainWindow_aff823d2e5981b333a3c98c806ceb381d} 
+void {\bfseries on\+\_\+plots\+Button\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Obsługuje kliknięcie przycisku wykresów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a9e0dd54aecbe2e3af6306c3a005d43d2}{change\+Language}} (const QString \&language)
+\begin{DoxyCompactList}\small\item\em Zmienia język interfejsu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_ab2fc370ad3f940696f6a38d77440f581}{cut\+String}} (const QString \&input)
+\begin{DoxyCompactList}\small\item\em Przetwarza otrzymane dane z Wi\+Fi. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classMainWindow_a4609df54b6e8511f07b7a871b0331359}{make\+Data\+Frame}} (char \mbox{\hyperlink{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b}{instruction}})
+\begin{DoxyCompactList}\small\item\em Tworzy ramkę danych do wysłania przez Wi\+Fi. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a1c74cc1babb32c3a1cdf660c6e152f6c}\label{classMainWindow_a1c74cc1babb32c3a1cdf660c6e152f6c} 
+void {\bfseries display\+Compass} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla kompas. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_addfa795db909e820768daf1d82d553bc}\label{classMainWindow_addfa795db909e820768daf1d82d553bc} 
+void {\bfseries display\+Battery} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla stan baterii. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a80f2c3d13ada7ec59ad5361f7aff3344}\label{classMainWindow_a80f2c3d13ada7ec59ad5361f7aff3344} 
+void {\bfseries display\+Sensors} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla dane z czujników. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a787c0f8ede4475a462d8fce56c52bcda}\label{classMainWindow_a787c0f8ede4475a462d8fce56c52bcda} 
+void {\bfseries display\+Encoders} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla dane z enkoderów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_ad2344fed099ebaece9ab5716ac4fb358}{draw\+Arrow}} (QLabel \texorpdfstring{$\ast$}{*}label, float velocity)
+\begin{DoxyCompactList}\small\item\em Rysuje strzałkę na etykiecie. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a5a6969888a7e3f0d93c3aa34c772fca8}\label{classMainWindow_a5a6969888a7e3f0d93c3aa34c772fca8} 
+void {\bfseries display\+Data} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla wszystkie dane. \end{DoxyCompactList}\item 
+\Hypertarget{classMainWindow_a1e0da9e6f299623ba381e636eda244a3}\label{classMainWindow_a1e0da9e6f299623ba381e636eda244a3} 
+void {\bfseries display\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla statystyki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Main\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}}
+\item 
+\mbox{\hyperlink{classPlotWindow}{Plot\+Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_a2d2cd5fd6400ac4b4b4ea9575d4a7796}{plot\+Window}}
+\item 
+QPixmap \mbox{\hyperlink{classMainWindow_ae6899a8f6e28c5d4f7234f30334316f9}{robot\+\_\+bkgnd}}
+\item 
+QPixmap \mbox{\hyperlink{classMainWindow_a6199882f3eaacb81f587d10a79862f84}{main\+\_\+bkgnd}}
+\item 
+QPixmap \mbox{\hyperlink{classMainWindow_a63e6435491f3e6d87ee1126ec0ae1c5e}{compass\+\_\+bkgnd}}
+\item 
+QPixmap \mbox{\hyperlink{classMainWindow_ac3c0a99d7c97e99067824e77b8f2817f}{compass\+Pixmap}}
+\item 
+QLabel \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_acd7a5aba848d91bab71d7232588c4ddf}{compass\+Label}}
+\item 
+QTcp\+Socket \mbox{\hyperlink{classMainWindow_af255402a2421bc084ffe11af910ddf68}{socket}}
+\item 
+QTranslator \mbox{\hyperlink{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}{translator}}
+\item 
+int \mbox{\hyperlink{classMainWindow_a023e946345221635d8b9b65ef213e562}{status}}
+\item 
+int \mbox{\hyperlink{classMainWindow_a6932df976d366d130758818dc02ac513}{sensors}} \mbox{[}20\mbox{]}
+\item 
+int \mbox{\hyperlink{classMainWindow_a85a9cf65a9b13e313856be22f62e6cc0}{pwm\+\_\+L}}
+\item 
+int \mbox{\hyperlink{classMainWindow_ad6b11bd43e241e460f449a47a23ca8d3}{pwm\+\_\+R}}
+\item 
+float \mbox{\hyperlink{classMainWindow_af982bdd360f7b26e28bcebb79091c9c5}{w\+\_\+L}}
+\item 
+float \mbox{\hyperlink{classMainWindow_a291e9389db0a4932351d1c814b313de4}{w\+\_\+R}}
+\item 
+int \mbox{\hyperlink{classMainWindow_ae095f9505d9c5797fdd8a7a61c66931a}{z\+\_\+rotation}}
+\item 
+int \mbox{\hyperlink{classMainWindow_af07d80a16b22158dabcc9915dae20903}{battery}}
+\item 
+char \mbox{\hyperlink{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b}{instruction}}
+\item 
+int \mbox{\hyperlink{classMainWindow_a2ddd5620ed5b8cf984a4b805b2861e5e}{data\+\_\+to\+\_\+send}} \mbox{[}4\mbox{]}
+\item 
+float \mbox{\hyperlink{classMainWindow_a462b644a389894d4a02edcb71818724a}{left\+\_\+linear\+\_\+V}}
+\item 
+float \mbox{\hyperlink{classMainWindow_a4217a1e00f85cf30ff93360ffbe1ba91}{right\+\_\+linear\+\_\+V}}
+\item 
+float \mbox{\hyperlink{classMainWindow_af4378f07cd7d16811b8b4e43ab62c1c5}{linear\+\_\+velocity}}
+\item 
+float \mbox{\hyperlink{classMainWindow_a62aeda2c3dec711af2c36a0ea3621406}{max\+\_\+linear\+\_\+velocity}}
+\item 
+float \mbox{\hyperlink{classMainWindow_a77ac54d3c685d7acf55caefde634fa3d}{average\+\_\+velocity}}
+\item 
+float \mbox{\hyperlink{classMainWindow_a68a14acd455b5917809eca9bee99bafa}{distance\+Float}}
+\item 
+float \mbox{\hyperlink{classMainWindow_af98ca63a8c5bce7ccfccb49d2b56f519}{time}}
+\item 
+QList$<$ QFrame \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMainWindow_a8e6dfbba17e678bd773104615faa75d6}{frame\+List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Główne okno aplikacji. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{classMainWindow}{Main\+Window}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Wskaźnik na obiekt rodzica. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMainWindow_a9e0dd54aecbe2e3af6306c3a005d43d2}\label{classMainWindow_a9e0dd54aecbe2e3af6306c3a005d43d2} 
+\index{MainWindow@{MainWindow}!changeLanguage@{changeLanguage}}
+\index{changeLanguage@{changeLanguage}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{changeLanguage}{changeLanguage}}
+{\footnotesize\ttfamily void Main\+Window\+::change\+Language (\begin{DoxyParamCaption}\item[{const QString \&}]{language }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Zmienia język interfejsu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em language} & sciezka do pliku tlumaczen z rozszerzeniem qm. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_ab2fc370ad3f940696f6a38d77440f581}\label{classMainWindow_ab2fc370ad3f940696f6a38d77440f581} 
+\index{MainWindow@{MainWindow}!cutString@{cutString}}
+\index{cutString@{cutString}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{cutString()}{cutString()}}
+{\footnotesize\ttfamily void Main\+Window\+::cut\+String (\begin{DoxyParamCaption}\item[{const QString \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przetwarza otrzymane dane z Wi\+Fi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Dane wejściowe odczytane z Wi\+Fi. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_ad2344fed099ebaece9ab5716ac4fb358}\label{classMainWindow_ad2344fed099ebaece9ab5716ac4fb358} 
+\index{MainWindow@{MainWindow}!drawArrow@{drawArrow}}
+\index{drawArrow@{drawArrow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{drawArrow()}{drawArrow()}}
+{\footnotesize\ttfamily void Main\+Window\+::draw\+Arrow (\begin{DoxyParamCaption}\item[{QLabel \texorpdfstring{$\ast$}{*}}]{label,  }\item[{float}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rysuje strzałkę na etykiecie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & Etykieta, na której ma być narysowana strzałka. \\
+\hline
+{\em velocity} & Prędkość, reprezentowana przez dlugosc strzałki. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_a4609df54b6e8511f07b7a871b0331359}\label{classMainWindow_a4609df54b6e8511f07b7a871b0331359} 
+\index{MainWindow@{MainWindow}!makeDataFrame@{makeDataFrame}}
+\index{makeDataFrame@{makeDataFrame}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{makeDataFrame()}{makeDataFrame()}}
+{\footnotesize\ttfamily QString Main\+Window\+::make\+Data\+Frame (\begin{DoxyParamCaption}\item[{char}]{instruction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tworzy ramkę danych do wysłania przez Wi\+Fi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instruction} & Instrukcja do wysłania do robota. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ramka danych. 
+\end{DoxyReturn}
+\Hypertarget{classMainWindow_a3bb90d53719881467fd5228d9d61e7b9}\label{classMainWindow_a3bb90d53719881467fd5228d9d61e7b9} 
+\index{MainWindow@{MainWindow}!on\_batteryProgressBar\_valueChanged@{on\_batteryProgressBar\_valueChanged}}
+\index{on\_batteryProgressBar\_valueChanged@{on\_batteryProgressBar\_valueChanged}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_batteryProgressBar\_valueChanged}{on\_batteryProgressBar\_valueChanged}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+battery\+Progress\+Bar\+\_\+value\+Changed (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Obsługuje zmianę wartości paska postępu baterii. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Nowa wartość paska postępu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_ae12f8f63791595567b6250f8bb002bda}\label{classMainWindow_ae12f8f63791595567b6250f8bb002bda} 
+\index{MainWindow@{MainWindow}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{resizeEvent}{resizeEvent}}
+{\footnotesize\ttfamily void Main\+Window\+::resize\+Event (\begin{DoxyParamCaption}\item[{QResize\+Event \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Obsługuje zmianę rozmiaru okna. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Zdarzenie zmiany rozmiaru. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_a8279b1c4c14dd99964f680581bb7c3fb}\label{classMainWindow_a8279b1c4c14dd99964f680581bb7c3fb} 
+\index{MainWindow@{MainWindow}!transmit@{transmit}}
+\index{transmit@{transmit}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{transmit()}{transmit()}}
+{\footnotesize\ttfamily void Main\+Window\+::transmit (\begin{DoxyParamCaption}\item[{QString}]{msg }\end{DoxyParamCaption})}
+
+
+
+Metoda do wysyłania ramek danych przez Wi\+Fi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & ramka do wysłania. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classMainWindow_a77ac54d3c685d7acf55caefde634fa3d}\label{classMainWindow_a77ac54d3c685d7acf55caefde634fa3d} 
+\index{MainWindow@{MainWindow}!average\_velocity@{average\_velocity}}
+\index{average\_velocity@{average\_velocity}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{average\_velocity}{average\_velocity}}
+{\footnotesize\ttfamily float Main\+Window\+::average\+\_\+velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+Średnia prędkość liniowa. \Hypertarget{classMainWindow_af07d80a16b22158dabcc9915dae20903}\label{classMainWindow_af07d80a16b22158dabcc9915dae20903} 
+\index{MainWindow@{MainWindow}!battery@{battery}}
+\index{battery@{battery}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{battery}{battery}}
+{\footnotesize\ttfamily int Main\+Window\+::battery\hspace{0.3cm}{\ttfamily [private]}}
+
+Poziom naładowania baterii. \Hypertarget{classMainWindow_a63e6435491f3e6d87ee1126ec0ae1c5e}\label{classMainWindow_a63e6435491f3e6d87ee1126ec0ae1c5e} 
+\index{MainWindow@{MainWindow}!compass\_bkgnd@{compass\_bkgnd}}
+\index{compass\_bkgnd@{compass\_bkgnd}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{compass\_bkgnd}{compass\_bkgnd}}
+{\footnotesize\ttfamily QPixmap Main\+Window\+::compass\+\_\+bkgnd\hspace{0.3cm}{\ttfamily [private]}}
+
+Tło dla kompasu. \Hypertarget{classMainWindow_acd7a5aba848d91bab71d7232588c4ddf}\label{classMainWindow_acd7a5aba848d91bab71d7232588c4ddf} 
+\index{MainWindow@{MainWindow}!compassLabel@{compassLabel}}
+\index{compassLabel@{compassLabel}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{compassLabel}{compassLabel}}
+{\footnotesize\ttfamily QLabel\texorpdfstring{$\ast$}{*} Main\+Window\+::compass\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+Etykieta wyświetlająca kompas. \Hypertarget{classMainWindow_ac3c0a99d7c97e99067824e77b8f2817f}\label{classMainWindow_ac3c0a99d7c97e99067824e77b8f2817f} 
+\index{MainWindow@{MainWindow}!compassPixmap@{compassPixmap}}
+\index{compassPixmap@{compassPixmap}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{compassPixmap}{compassPixmap}}
+{\footnotesize\ttfamily QPixmap Main\+Window\+::compass\+Pixmap\hspace{0.3cm}{\ttfamily [private]}}
+
+Obrazek kompasu. \Hypertarget{classMainWindow_a2ddd5620ed5b8cf984a4b805b2861e5e}\label{classMainWindow_a2ddd5620ed5b8cf984a4b805b2861e5e} 
+\index{MainWindow@{MainWindow}!data\_to\_send@{data\_to\_send}}
+\index{data\_to\_send@{data\_to\_send}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{data\_to\_send}{data\_to\_send}}
+{\footnotesize\ttfamily int Main\+Window\+::data\+\_\+to\+\_\+send\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+Dane do wysłania. \Hypertarget{classMainWindow_a68a14acd455b5917809eca9bee99bafa}\label{classMainWindow_a68a14acd455b5917809eca9bee99bafa} 
+\index{MainWindow@{MainWindow}!distanceFloat@{distanceFloat}}
+\index{distanceFloat@{distanceFloat}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{distanceFloat}{distanceFloat}}
+{\footnotesize\ttfamily float Main\+Window\+::distance\+Float\hspace{0.3cm}{\ttfamily [private]}}
+
+Przebyty dystans. \Hypertarget{classMainWindow_a8e6dfbba17e678bd773104615faa75d6}\label{classMainWindow_a8e6dfbba17e678bd773104615faa75d6} 
+\index{MainWindow@{MainWindow}!frameList@{frameList}}
+\index{frameList@{frameList}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{frameList}{frameList}}
+{\footnotesize\ttfamily QList$<$QFrame \texorpdfstring{$\ast$}{*}$>$ Main\+Window\+::frame\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista obiektów QFrame (czujników odbiciowych). \Hypertarget{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b}\label{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b} 
+\index{MainWindow@{MainWindow}!instruction@{instruction}}
+\index{instruction@{instruction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{instruction}{instruction}}
+{\footnotesize\ttfamily char Main\+Window\+::instruction\hspace{0.3cm}{\ttfamily [private]}}
+
+Instrukcja do wysłania do robota. \Hypertarget{classMainWindow_a462b644a389894d4a02edcb71818724a}\label{classMainWindow_a462b644a389894d4a02edcb71818724a} 
+\index{MainWindow@{MainWindow}!left\_linear\_V@{left\_linear\_V}}
+\index{left\_linear\_V@{left\_linear\_V}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{left\_linear\_V}{left\_linear\_V}}
+{\footnotesize\ttfamily float Main\+Window\+::left\+\_\+linear\+\_\+V\hspace{0.3cm}{\ttfamily [private]}}
+
+Aktualna prędkość liniowa lewego koła. \Hypertarget{classMainWindow_af4378f07cd7d16811b8b4e43ab62c1c5}\label{classMainWindow_af4378f07cd7d16811b8b4e43ab62c1c5} 
+\index{MainWindow@{MainWindow}!linear\_velocity@{linear\_velocity}}
+\index{linear\_velocity@{linear\_velocity}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{linear\_velocity}{linear\_velocity}}
+{\footnotesize\ttfamily float Main\+Window\+::linear\+\_\+velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+Prędkość liniowa. \Hypertarget{classMainWindow_a6199882f3eaacb81f587d10a79862f84}\label{classMainWindow_a6199882f3eaacb81f587d10a79862f84} 
+\index{MainWindow@{MainWindow}!main\_bkgnd@{main\_bkgnd}}
+\index{main\_bkgnd@{main\_bkgnd}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{main\_bkgnd}{main\_bkgnd}}
+{\footnotesize\ttfamily QPixmap Main\+Window\+::main\+\_\+bkgnd\hspace{0.3cm}{\ttfamily [private]}}
+
+Główne tło aplikacji. \Hypertarget{classMainWindow_a62aeda2c3dec711af2c36a0ea3621406}\label{classMainWindow_a62aeda2c3dec711af2c36a0ea3621406} 
+\index{MainWindow@{MainWindow}!max\_linear\_velocity@{max\_linear\_velocity}}
+\index{max\_linear\_velocity@{max\_linear\_velocity}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{max\_linear\_velocity}{max\_linear\_velocity}}
+{\footnotesize\ttfamily float Main\+Window\+::max\+\_\+linear\+\_\+velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+Maksymalna prędkość liniowa. \Hypertarget{classMainWindow_a2d2cd5fd6400ac4b4b4ea9575d4a7796}\label{classMainWindow_a2d2cd5fd6400ac4b4b4ea9575d4a7796} 
+\index{MainWindow@{MainWindow}!plotWindow@{plotWindow}}
+\index{plotWindow@{plotWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{plotWindow}{plotWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlotWindow}{Plot\+Window}}\texorpdfstring{$\ast$}{*} Main\+Window\+::plot\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+Okno wykresów. \Hypertarget{classMainWindow_a85a9cf65a9b13e313856be22f62e6cc0}\label{classMainWindow_a85a9cf65a9b13e313856be22f62e6cc0} 
+\index{MainWindow@{MainWindow}!pwm\_L@{pwm\_L}}
+\index{pwm\_L@{pwm\_L}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{pwm\_L}{pwm\_L}}
+{\footnotesize\ttfamily int Main\+Window\+::pwm\+\_\+L\hspace{0.3cm}{\ttfamily [private]}}
+
+PWM dla lewego silnika. \Hypertarget{classMainWindow_ad6b11bd43e241e460f449a47a23ca8d3}\label{classMainWindow_ad6b11bd43e241e460f449a47a23ca8d3} 
+\index{MainWindow@{MainWindow}!pwm\_R@{pwm\_R}}
+\index{pwm\_R@{pwm\_R}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{pwm\_R}{pwm\_R}}
+{\footnotesize\ttfamily int Main\+Window\+::pwm\+\_\+R\hspace{0.3cm}{\ttfamily [private]}}
+
+PWM dla prawego silnika. \Hypertarget{classMainWindow_a4217a1e00f85cf30ff93360ffbe1ba91}\label{classMainWindow_a4217a1e00f85cf30ff93360ffbe1ba91} 
+\index{MainWindow@{MainWindow}!right\_linear\_V@{right\_linear\_V}}
+\index{right\_linear\_V@{right\_linear\_V}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{right\_linear\_V}{right\_linear\_V}}
+{\footnotesize\ttfamily float Main\+Window\+::right\+\_\+linear\+\_\+V\hspace{0.3cm}{\ttfamily [private]}}
+
+Aktualna prędkość liniowa prawego koła. \Hypertarget{classMainWindow_ae6899a8f6e28c5d4f7234f30334316f9}\label{classMainWindow_ae6899a8f6e28c5d4f7234f30334316f9} 
+\index{MainWindow@{MainWindow}!robot\_bkgnd@{robot\_bkgnd}}
+\index{robot\_bkgnd@{robot\_bkgnd}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{robot\_bkgnd}{robot\_bkgnd}}
+{\footnotesize\ttfamily QPixmap Main\+Window\+::robot\+\_\+bkgnd\hspace{0.3cm}{\ttfamily [private]}}
+
+Tło dla obrazu robota. \Hypertarget{classMainWindow_a6932df976d366d130758818dc02ac513}\label{classMainWindow_a6932df976d366d130758818dc02ac513} 
+\index{MainWindow@{MainWindow}!sensors@{sensors}}
+\index{sensors@{sensors}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sensors}{sensors}}
+{\footnotesize\ttfamily int Main\+Window\+::sensors\mbox{[}20\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+Dane z czujników odbiciowych. \Hypertarget{classMainWindow_af255402a2421bc084ffe11af910ddf68}\label{classMainWindow_af255402a2421bc084ffe11af910ddf68} 
+\index{MainWindow@{MainWindow}!socket@{socket}}
+\index{socket@{socket}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily QTcp\+Socket Main\+Window\+::socket\hspace{0.3cm}{\ttfamily [private]}}
+
+Socket TCP. \Hypertarget{classMainWindow_a023e946345221635d8b9b65ef213e562}\label{classMainWindow_a023e946345221635d8b9b65ef213e562} 
+\index{MainWindow@{MainWindow}!status@{status}}
+\index{status@{status}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily int Main\+Window\+::status\hspace{0.3cm}{\ttfamily [private]}}
+
+Stan robota. \Hypertarget{classMainWindow_af98ca63a8c5bce7ccfccb49d2b56f519}\label{classMainWindow_af98ca63a8c5bce7ccfccb49d2b56f519} 
+\index{MainWindow@{MainWindow}!time@{time}}
+\index{time@{time}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Main\+Window\+::time\hspace{0.3cm}{\ttfamily [private]}}
+
+Czas trwania. \Hypertarget{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}\label{classMainWindow_a8e829b3590ccdeeada42625415afc6f3} 
+\index{MainWindow@{MainWindow}!translator@{translator}}
+\index{translator@{translator}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{translator}{translator}}
+{\footnotesize\ttfamily QTranslator Main\+Window\+::translator\hspace{0.3cm}{\ttfamily [private]}}
+
+Tłumacz interfejsu. \Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window\texorpdfstring{$\ast$}{*} Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+Interfejs użytkownika. \Hypertarget{classMainWindow_af982bdd360f7b26e28bcebb79091c9c5}\label{classMainWindow_af982bdd360f7b26e28bcebb79091c9c5} 
+\index{MainWindow@{MainWindow}!w\_L@{w\_L}}
+\index{w\_L@{w\_L}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{w\_L}{w\_L}}
+{\footnotesize\ttfamily float Main\+Window\+::w\+\_\+L\hspace{0.3cm}{\ttfamily [private]}}
+
+Prędkość kątowa lewego koła. \Hypertarget{classMainWindow_a291e9389db0a4932351d1c814b313de4}\label{classMainWindow_a291e9389db0a4932351d1c814b313de4} 
+\index{MainWindow@{MainWindow}!w\_R@{w\_R}}
+\index{w\_R@{w\_R}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{w\_R}{w\_R}}
+{\footnotesize\ttfamily float Main\+Window\+::w\+\_\+R\hspace{0.3cm}{\ttfamily [private]}}
+
+Prędkość kątowa prawego koła. \Hypertarget{classMainWindow_ae095f9505d9c5797fdd8a7a61c66931a}\label{classMainWindow_ae095f9505d9c5797fdd8a7a61c66931a} 
+\index{MainWindow@{MainWindow}!z\_rotation@{z\_rotation}}
+\index{z\_rotation@{z\_rotation}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{z\_rotation}{z\_rotation}}
+{\footnotesize\ttfamily int Main\+Window\+::z\+\_\+rotation\hspace{0.3cm}{\ttfamily [private]}}
+
+Pozycja robota względem osi Z. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kamil/\+Documents/projects-\/repos/\+Line\+\_\+\+Follower\+\_\+\+ZACZ/zacz\+\_\+\+QT/\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+/home/kamil/\+Documents/projects-\/repos/\+Line\+\_\+\+Follower\+\_\+\+ZACZ/zacz\+\_\+\+QT/mainwindow.\+cpp\end{DoxyCompactItemize}

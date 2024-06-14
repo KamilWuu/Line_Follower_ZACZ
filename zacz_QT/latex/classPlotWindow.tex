@@ -1,0 +1,155 @@
+\doxysection{Plot\+Window Class Reference}
+\hypertarget{classPlotWindow}{}\label{classPlotWindow}\index{PlotWindow@{PlotWindow}}
+
+
+Klasa \doxylink{classPlotWindow}{Plot\+Window} odpowiada za wyświetlanie wykresów.  
+
+
+
+
+{\ttfamily \#include $<$plotwindow.\+h$>$}
+
+Inheritance diagram for Plot\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPlotWindow}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlotWindow_aa4cc66ba344978ee91def66ee9703e5c}{Plot\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{classPlotWindow}{Plot\+Window}. \end{DoxyCompactList}\item 
+\Hypertarget{classPlotWindow_a684ea087a646cbe658940098a25ce150}\label{classPlotWindow_a684ea087a646cbe658940098a25ce150} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Plot\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{classPlotWindow}{Plot\+Window}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlotWindow_a9844ac761c3270b6a8b8fe8edea22014}{update\+Plot}} (float time, int pwmL, int pwmR, const int sensors\mbox{[}$\,$\mbox{]}, float speed, float battery)
+\begin{DoxyCompactList}\small\item\em Aktualizuje wykresy danymi. \end{DoxyCompactList}\item 
+\Hypertarget{classPlotWindow_a7ea0899f1f2adc0d544e286d60fed4d5}\label{classPlotWindow_a7ea0899f1f2adc0d544e286d60fed4d5} 
+void {\bfseries clear\+Plot} ()
+\begin{DoxyCompactList}\small\item\em Czyści wykresy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97}{pwm\+Chart\+View}}
+\item 
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_ae2729e3b6b76107b6246317b7946ab14}{speed\+Chart\+View}}
+\item 
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_aa9e0718ac9ee98e57678e024bdbddbf7}{battery\+Chart\+View}}
+\item 
+QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_af2a3a806640bab966ecc892e7c1aa394}{pwm\+LSeries}}
+\item 
+QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a9ae6a7c0d81ba2d33bed0c718b0a230c}{pwm\+RSeries}}
+\item 
+QScatter\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb}{sensor\+Series}}
+\item 
+QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a3f0994205267cafd0f67484b224ed08b}{speed\+Series}}
+\item 
+QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_ad014c9dd8a6a9a4431724d61029031fd}{battery\+Series}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \doxylink{classPlotWindow}{Plot\+Window} odpowiada za wyświetlanie wykresów. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlotWindow_aa4cc66ba344978ee91def66ee9703e5c}\label{classPlotWindow_aa4cc66ba344978ee91def66ee9703e5c} 
+\index{PlotWindow@{PlotWindow}!PlotWindow@{PlotWindow}}
+\index{PlotWindow@{PlotWindow}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{PlotWindow()}{PlotWindow()}}
+{\footnotesize\ttfamily Plot\+Window\+::\+Plot\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{classPlotWindow}{Plot\+Window}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Wskaźnik na obiekt rodzica. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlotWindow_a9844ac761c3270b6a8b8fe8edea22014}\label{classPlotWindow_a9844ac761c3270b6a8b8fe8edea22014} 
+\index{PlotWindow@{PlotWindow}!updatePlot@{updatePlot}}
+\index{updatePlot@{updatePlot}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{updatePlot()}{updatePlot()}}
+{\footnotesize\ttfamily void Plot\+Window\+::update\+Plot (\begin{DoxyParamCaption}\item[{float}]{time,  }\item[{int}]{pwmL,  }\item[{int}]{pwmR,  }\item[{const int}]{sensors\mbox{[}$\,$\mbox{]},  }\item[{float}]{speed,  }\item[{float}]{battery }\end{DoxyParamCaption})}
+
+
+
+Aktualizuje wykresy danymi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Czas. \\
+\hline
+{\em pwmL} & Wartość PWM dla lewego silnika. \\
+\hline
+{\em pwmR} & Wartość PWM dla prawego silnika. \\
+\hline
+{\em sensors} & Tablica z danymi czujników. \\
+\hline
+{\em speed} & Prędkość. \\
+\hline
+{\em battery} & Poziom naładowania baterii. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPlotWindow_aa9e0718ac9ee98e57678e024bdbddbf7}\label{classPlotWindow_aa9e0718ac9ee98e57678e024bdbddbf7} 
+\index{PlotWindow@{PlotWindow}!batteryChartView@{batteryChartView}}
+\index{batteryChartView@{batteryChartView}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{batteryChartView}{batteryChartView}}
+{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Plot\+Window\+::battery\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+Widok wykresu dla baterii. \Hypertarget{classPlotWindow_ad014c9dd8a6a9a4431724d61029031fd}\label{classPlotWindow_ad014c9dd8a6a9a4431724d61029031fd} 
+\index{PlotWindow@{PlotWindow}!batterySeries@{batterySeries}}
+\index{batterySeries@{batterySeries}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{batterySeries}{batterySeries}}
+{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::battery\+Series\hspace{0.3cm}{\ttfamily [private]}}
+
+Seria danych dla baterii. \Hypertarget{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97}\label{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97} 
+\index{PlotWindow@{PlotWindow}!pwmChartView@{pwmChartView}}
+\index{pwmChartView@{pwmChartView}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{pwmChartView}{pwmChartView}}
+{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Plot\+Window\+::pwm\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+Widok wykresu dla PWM. \Hypertarget{classPlotWindow_af2a3a806640bab966ecc892e7c1aa394}\label{classPlotWindow_af2a3a806640bab966ecc892e7c1aa394} 
+\index{PlotWindow@{PlotWindow}!pwmLSeries@{pwmLSeries}}
+\index{pwmLSeries@{pwmLSeries}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{pwmLSeries}{pwmLSeries}}
+{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::pwm\+LSeries\hspace{0.3cm}{\ttfamily [private]}}
+
+Seria danych dla PWM lewego silnika. \Hypertarget{classPlotWindow_a9ae6a7c0d81ba2d33bed0c718b0a230c}\label{classPlotWindow_a9ae6a7c0d81ba2d33bed0c718b0a230c} 
+\index{PlotWindow@{PlotWindow}!pwmRSeries@{pwmRSeries}}
+\index{pwmRSeries@{pwmRSeries}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{pwmRSeries}{pwmRSeries}}
+{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::pwm\+RSeries\hspace{0.3cm}{\ttfamily [private]}}
+
+Seria danych dla PWM prawego silnika. \Hypertarget{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb}\label{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb} 
+\index{PlotWindow@{PlotWindow}!sensorSeries@{sensorSeries}}
+\index{sensorSeries@{sensorSeries}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{sensorSeries}{sensorSeries}}
+{\footnotesize\ttfamily QScatter\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::sensor\+Series\hspace{0.3cm}{\ttfamily [private]}}
+
+Seria danych dla czujników. \Hypertarget{classPlotWindow_ae2729e3b6b76107b6246317b7946ab14}\label{classPlotWindow_ae2729e3b6b76107b6246317b7946ab14} 
+\index{PlotWindow@{PlotWindow}!speedChartView@{speedChartView}}
+\index{speedChartView@{speedChartView}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{speedChartView}{speedChartView}}
+{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Plot\+Window\+::speed\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+Widok wykresu dla prędkości. \Hypertarget{classPlotWindow_a3f0994205267cafd0f67484b224ed08b}\label{classPlotWindow_a3f0994205267cafd0f67484b224ed08b} 
+\index{PlotWindow@{PlotWindow}!speedSeries@{speedSeries}}
+\index{speedSeries@{speedSeries}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{speedSeries}{speedSeries}}
+{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::speed\+Series\hspace{0.3cm}{\ttfamily [private]}}
+
+Seria danych dla prędkości. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kamil/\+Documents/projects-\/repos/\+Line\+\_\+\+Follower\+\_\+\+ZACZ/zacz\+\_\+\+QT/\mbox{\hyperlink{plotwindow_8h}{plotwindow.\+h}}\item 
+/home/kamil/\+Documents/projects-\/repos/\+Line\+\_\+\+Follower\+\_\+\+ZACZ/zacz\+\_\+\+QT/plotwindow.\+cpp\end{DoxyCompactItemize}
