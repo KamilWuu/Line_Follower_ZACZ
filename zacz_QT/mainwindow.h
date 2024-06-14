@@ -11,7 +11,7 @@
 #include <QMessageBox>
 #include <QString>
 #include <QResizeEvent>
-#include <QtSerialPort>
+
 #include <QLabel>
 #include <QList>
 #include <QElapsedTimer>
@@ -66,11 +66,6 @@ private slots:
     void resizeEvent(QResizeEvent *event);
 
     /*!
-     * \brief Odczytuje dane z portu szeregowego/bluetooth.
-
-    void readData();*/
-
-    /*!
      * \brief Obsługuje kliknięcie przycisku start.
      */
     void on_startButton_clicked();
@@ -97,14 +92,14 @@ private slots:
 private:
     Ui::MainWindow *ui; /*!< Interfejs użytkownika. */
     PlotWindow *plotWindow; /*!< Add a member for PlotWindow*/
-    QSerialPort * COMPORT; /*!< Port szeregowy. */
+
     QPixmap compasPixmap; /*!< Obrazek kompasu */
     QLabel *compassLabel; /*!< QLabel do wyświetlania kompasu*/
 
     QTranslator translator;
-    void retranslateUi();
 
-    bool is_data_received = false; /*!< Flaga otrzymania danych. */
+
+
 
     /*!
      * \brief Przetwarza otrzymane dane z portu szeregowego.
@@ -145,12 +140,12 @@ private:
      * \brief Wyświetla statystyki.
      */
     void displayStats();
-    //cleandata from serialPort
+
 
     QList<QFrame*> frameList; /*!< Lista obiektow QFrame (czujnikow odbiciowych). */
 
     int status; /*!< Stan w jakim znajduje sie robot. */
-    int sensors[20]; /*!< Dane z czujników odbiowych. */
+    int sensors[20]; /*!< Dane z czujników odbiciowych. */
     int pwm_L; /*!< PWM dla lewego silnika. */
     int pwm_R; /*!< PWM dla prawego silnika. */
     float w_L; /*!< Prędkość kątowa lewego koła. */
@@ -163,16 +158,16 @@ private:
     int data_to_send[4]; /*!< Dane do wysłania. */
 
     //calculated data
+    float left_linear_V; /*!< Aktualna prędkość liniowa lewego kola. */
+    float right_linear_V; /*!< Aktualna prędkość liniowa prawego kola. */
     float linear_velocity; /*!< Prędkość liniowa. */
     float max_linear_velocity; /*!< Maksymalna prędkość liniowa. */
     float average_velocity; /*!< Średnia prędkość liniowa. */
     float distanceFloat; /*!< Przebyty dystans. */
     float time; /*!< Czas trwania. */
 
-   // QLabel *arrow_left;
-   // QLabel *arrow_right;
-    float left_linear_V;
-    float right_linear_V;
+
+
 
 private slots:
     void myReadSocket();

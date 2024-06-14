@@ -101,14 +101,14 @@ void PlotWindow::updatePlot(float time, int pwmL, int pwmR, const int sensors[],
 
     for(int i = 0; i < 20; ++i) {
         if(sensors[i] == 1) {
-            sensorSeries->append(time, i + 1); // Adding 1 to index to match your requirement
+            sensorSeries->append(time, i + 1);
         }
     }
 
     speedSeries->append(time, speed);
     batterySeries->append(time, battery);
 
-    // Get the current maximum range of the X axis for each chart and update if necessary
+
     QValueAxis *pwmAxisX = qobject_cast<QValueAxis*>(pwmChartView->chart()->axisX());
     QValueAxis *speedAxisX = qobject_cast<QValueAxis*>(speedChartView->chart()->axisX());
     QValueAxis *batteryAxisX = qobject_cast<QValueAxis*>(batteryChartView->chart()->axisX());
@@ -127,7 +127,7 @@ void PlotWindow::updatePlot(float time, int pwmL, int pwmR, const int sensors[],
 }
 
 void PlotWindow::clearPlot(){
-    // Clear data from all series
+
     QValueAxis *pwmAxisX = qobject_cast<QValueAxis*>(pwmChartView->chart()->axisX());
     QValueAxis *speedAxisX = qobject_cast<QValueAxis*>(speedChartView->chart()->axisX());
     QValueAxis *batteryAxisX = qobject_cast<QValueAxis*>(batteryChartView->chart()->axisX());

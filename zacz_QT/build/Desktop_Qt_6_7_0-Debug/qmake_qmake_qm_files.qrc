@@ -1,5 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource prefix="i18n">
-<file alias="LineFollower_en_150.qm">/home/kamil/Applications/LineFollower/build/Desktop_Qt_6_7_0-Debug/.qm/LineFollower_en_150.qm</file>
+<file alias="LineFollower_en_150.qm">/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/build/Desktop_Qt_6_7_0-Debug/.qm/LineFollower_en_150.qm</file>
+<file alias="LineFollower_pl.qm">/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/build/Desktop_Qt_6_7_0-Debug/.qm/LineFollower_pl.qm</file>
 </qresource>
 </RCC>

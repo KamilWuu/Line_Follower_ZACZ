@@ -35,30 +35,6 @@ MainWindow::MainWindow(QWidget *parent)
         changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_pl.qm");
     });
 
-    /*COMPORT = new QSerialPort();
-    COMPORT -> setPortName("ttyUSB0");
-    COMPORT -> setBaudRate(QSerialPort::BaudRate::Baud9600);
-    COMPORT -> setParity(QSerialPort::Parity::NoParity);
-    COMPORT -> setDataBits(QSerialPort::DataBits::Data8);
-    COMPORT -> setStopBits(QSerialPort::StopBits::OneStop);
-    COMPORT -> setFlowControl(QSerialPort::FlowControl::NoFlowControl);
-    COMPORT ->open(QIODevice::ReadWrite);
-
-    if(COMPORT->isOpen()){
-        qDebug() << "Serial port is connected";
-        qDebug() << COMPORT->error();
-        ui->statusLabel_1->setText("ROBOT IS CONNECTED");
-        ui->statusLabel_1->setStyleSheet("QLabel { color : green; }");
-    }
-    else
-    {
-        qDebug() << "Serial Port Is Not Connected";
-        qDebug() << COMPORT->error();
-        ui->statusLabel_1->setText("ROBOT IS DISCONNECTED");
-        ui->statusLabel_1->setStyleSheet("QLabel { color : red; }");
-    }
-
-    connect(COMPORT, SIGNAL(readyRead()), this, SLOT(readData()));*/
 
 
     connect(&socket, &QTcpSocket::readyRead,this, &MainWindow::myReadSocket);
@@ -99,13 +75,13 @@ MainWindow::MainWindow(QWidget *parent)
     compasPixmap.load("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/images/robot_kompas.png");
 
 
-    // Inicjalizuj QLabel do wyświetlania kompasu
+
     compassLabel = new QLabel(this);
 
-    // Ustawienie rozmiaru QLabel (opcjonalnie)
-    compassLabel->setFixedSize(160, 160); // Rozmiar QLabel, dostosuj do potrzeb
 
-    // Zmniejszenie obrazka do rozmiarów QLabel
+    compassLabel->setFixedSize(160, 160);
+
+
     QPixmap scaledPixmap = compasPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio);
     compassLabel->setPixmap(scaledPixmap);
     ui->compas_frame->layout()->addWidget(compassLabel);
@@ -174,10 +150,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    if (COMPORT->isOpen()) {
-        COMPORT->close();
-    }
-    delete COMPORT;
+
     delete ui;
     delete plotWindow; // Clean up
 
@@ -212,21 +185,15 @@ void MainWindow::changeLanguage(const QString &language)
 
     if (translator.load(language)) {
         qApp->installTranslator(&translator);
-        retranslateUi();
-        qDebug() << "Translation file loaded successfully.";
+        ui->retranslateUi(this);
+        setWindowTitle(tr("MainWindow"));
+        //qDebug() << "Translation file loaded successfully.";
     } else {
     qDebug() << "Failed to load translation file.";
     }
 }
 
-void MainWindow::retranslateUi()
-{
-    ui->retranslateUi(this);
 
-    // Update any other texts that are not part of the ui file
-    // e.g., if you have dynamic texts or texts set programmatically
-    setWindowTitle(tr("MainWindow"));
-}
 
 void MainWindow::cutString(const QString& input) {
     if (!input.startsWith('$') || !input.endsWith("#\r\n")) {
@@ -329,7 +296,7 @@ QString MainWindow::makeDataFrame(char instruction)
 
     frame += "#";
 
-    qDebug() << "utworzona ramka danych to: " << frame.toUtf8();
+    //qDebug() << "utworzona ramka danych to: " << frame.toUtf8();
 
     return frame;
 }
@@ -372,7 +339,7 @@ void MainWindow::on_updateButton_clicked()
     data_from_line_edit[3] = ui->vMaxLineEdit->text().toInt(&ok[3]);
 
     for(int i = 0; i < 4; i++ ){
-            qDebug() << "ODCZYTANO: " << data_from_line_edit[i];
+            //qDebug() << "ODCZYTANO: " << data_from_line_edit[i];
     }
 
     for(int i = 0; i < 4; i++ ){
@@ -459,8 +426,6 @@ void MainWindow::displaySensors()
 {
     int index = 0;
     foreach(QFrame* frame, frameList) {
-        // Tutaj możesz wykonywać operacje na każdym obiekcie QFrame
-        // Na przykład:
         if(sensors[index]){
             frame->setStyleSheet("background-color: black;"); // Ustawienie koloru tła dla każdego QFrame
         }else{
@@ -495,17 +460,17 @@ void MainWindow::displayEncoders()
 void MainWindow::drawArrow(QLabel* label, float velocity)
 {
     QPixmap pixmap(label->size());
-    pixmap.fill(Qt::transparent);  // Wypełnienie tła na przezroczysto
+    pixmap.fill(Qt::transparent);
 
     QPainter painter(&pixmap);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setPen(QPen(Qt::red, 4));  // Ustawienie pędzla na czerwony kolor z grubością 4
+    painter.setPen(QPen(Qt::red, 5));
 
-    // Obliczenie długości strzałki w zależności od prędkości
+
     int arrow_length = static_cast<int>((velocity / max_linear_velocity) * label->width());
     int arrow_height = label->height() / 2;
     arrow_length = arrow_length - 30;
-    // Rysowanie strzałki
+
     painter.drawLine(0, arrow_height, arrow_length, arrow_height);
     painter.drawLine(arrow_length, arrow_height, arrow_length - 10, arrow_height - 5);
     painter.drawLine(arrow_length, arrow_height, arrow_length - 10, arrow_height + 5);
@@ -580,30 +545,22 @@ void MainWindow::displayStats()
 
 void MainWindow::displayCompass()
 {
-    // Skala dla QPixmap, aby dopasować go do QLabel z zachowaniem proporcji
+
     QPixmap scaledPixmap = compasPixmap.scaled(compassLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
-    // Tworzenie QPixmap o takich samych wymiarach jak QLabel
     QPixmap pixmap(compassLabel->size());
-    pixmap.fill(Qt::transparent); // Wypełnienie przezroczystym tłem
+    pixmap.fill(Qt::transparent);
 
-    // Tworzenie QPainter do rysowania na QPixmap
     QPainter painter(&pixmap);
 
-    // Ustawienie antyaliasingu dla lepszej jakości
     painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
-
-    // Przenoszenie środka obrotu do środka pixmapy
     painter.translate(pixmap.width() / 2, pixmap.height() / 2);
     painter.rotate(z_rotation);
     painter.translate(-scaledPixmap.width() / 2, -scaledPixmap.height() / 2);
-
-    // Rysowanie obróconego i przeskalowanego obrazka
     painter.drawPixmap(0, 0, scaledPixmap);
 
-    // Ustawienie obróconego obrazka do QLabel
     compassLabel->setPixmap(pixmap);
-    compassLabel->update(); // Odświeżenie QLabel
+    compassLabel->update();
 }
 
 void MainWindow::displayData(){
