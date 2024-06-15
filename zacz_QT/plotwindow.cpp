@@ -36,7 +36,7 @@ PlotWindow::PlotWindow(QWidget *parent) :
     // X Axis
     QValueAxis *axisX = new QValueAxis;
     axisX->setTitleText("Time");
-    axisX->setRange(0, 20);
+    axisX->setRange(0, basicAxisXTime);
     pwmChart->setAxisX(axisX, pwmLSeries);
     pwmChart->setAxisX(axisX, pwmRSeries);
     pwmChart->setAxisX(axisX, sensorSeries);

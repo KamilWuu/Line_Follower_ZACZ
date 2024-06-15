@@ -9,7 +9,7 @@
 #include <QDialog>
 #include <QtCharts>
 
-#define basicAxisXTime 15 /*!< Podstawowy czas osi X dla wykresów. */
+#define basicAxisXTime 10 /*!< Podstawowy czas osi X dla wykresów. */
 
 /*!
  * \brief Klasa PlotWindow odpowiada za wyświetlanie wykresów.

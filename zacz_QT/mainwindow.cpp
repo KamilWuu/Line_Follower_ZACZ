@@ -9,7 +9,7 @@
 #include <QLocale>
 #include <QTranslator>
 
-#define ESP_IP "10.42.0.203" // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
+#define ESP_IP "10.42.0.44" // ZACZ IP = "10.42.0.44" || TEST_ESP IP = "10.42.0.203"
 #define TCP_PORT 8888
 QElapsedTimer timer1;
 QElapsedTimer distance_timer;
@@ -136,10 +136,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->polishButton->setEnabled(true);
     ui->englishButton->setEnabled(false);
 
-    ui->pidPLineEdit->setText("5");
-    ui->pidILineEdit->setText("0");
-    ui->pidDLineEdit->setText("1");
-    ui->vMaxLineEdit->setText("50");
+    data_to_send[0] = 5;
+    data_to_send[1] = 0;
+    data_to_send[2] = 1;
+    data_to_send[3] = 50;
+
+    ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
+    ui->pidILineEdit->setText(QString::number(data_to_send[1]));
+    ui->pidDLineEdit->setText(QString::number(data_to_send[2]));
+    ui->vMaxLineEdit->setText(QString::number(data_to_send[3]));
 
     ui->batteryProgressBar->setStyleSheet("QProgressBar::chunk { background-color: green; }");
     ui->leftPWMProgresBar->setStyleSheet("QProgressBar::chunk { background-color: green; }");
@@ -212,6 +217,11 @@ void MainWindow::changeLanguage(const QString &language)
     } else {
     qDebug() << "Failed to load translation file.";
     }
+
+    ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
+    ui->pidILineEdit->setText(QString::number(data_to_send[1]));
+    ui->pidDLineEdit->setText(QString::number(data_to_send[2]));
+    ui->vMaxLineEdit->setText(QString::number(data_to_send[3]));
 }
 
 
@@ -402,9 +412,15 @@ void MainWindow::on_updateButton_clicked()
     }
 
 
-    for(int i = 0; i < 4; i++ ){
-        //qDebug() << "parameter to send: " << coms[i] << "= " << data_to_send[i] ;
-    }
+    /*for(int i = 0; i < 4; i++ ){
+        qDebug() << "parameter to send: " << coms[i] << "= " << data_to_send[i] ;
+    }*/
+
+
+    ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
+    ui->pidILineEdit->setText(QString::number(data_to_send[1]));
+    ui->pidDLineEdit->setText(QString::number(data_to_send[2]));
+    ui->vMaxLineEdit->setText(QString::number(data_to_send[3]));
 
     transmit(makeDataFrame('U') + char(10));
 }
@@ -603,6 +619,8 @@ void MainWindow::displayData(){
 
     ui->rightPWMProgresBar->setValue(pwm_R);
     ui->rightPWMLabel->setText(QString::number(pwm_R)+ "%");
+
+
 
 
     displayBattery();
