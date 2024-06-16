@@ -49,14 +49,15 @@ Regulator PD -- sterowany kątem odchylenia i sterujący silnikami, modyfikuje w
         this->Kd=k_d;
     }
 
-    void Regulator::set_base_speed(uint8_t speed){
-        this->baseSpeed=speed;
+    void Regulator::set_base_speed(uint32_t speed){
+
+        this->baseSpeed=speed*255/100;
     }
 
     void Regulator::regulator(const int16_t ang_error){
 
     int16_t pid_val = PID(ang_error);
-    int16_t leftPWM=this->baseSpeed-pid_val, rightPWM=this->baseSpeed+pid_val;
+    int16_t leftPWM=this->baseSpeed+pid_val, rightPWM=this->baseSpeed-pid_val;
     if (leftPWM<0)  leftPWM=0;
     if (rightPWM<0)  rightPWM=0;
     if (leftPWM> MAX_PWM_VALUE_CPU) leftPWM = MAX_PWM_VALUE_CPU;

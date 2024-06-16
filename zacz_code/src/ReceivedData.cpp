@@ -96,6 +96,10 @@ uint16_t ReceivedData::getPID_parameter(enum pidParameter param){
     }
 }
 
+void ReceivedData::setInstruction(char ins){
+    instruction = ins;
+}
+
 void ReceivedData::displayData(HardwareSerial * serial){
     serial->print("otrzymano dane: ");
     serial->println(debugString);

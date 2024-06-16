@@ -429,7 +429,7 @@ void MainWindow::on_updateButton_clicked()
 void MainWindow::on_batteryProgressBar_valueChanged(int value)
 {
     if(value < 15){
-       QMessageBox::critical(this, "BATTERY WARNING!", "Battery is less than 15%. Please charge!");
+       //QMessageBox::critical(this, "BATTERY WARNING!", "Battery is less than 15%. Please charge!");
     }
     if (value < 35) {
         ui->batteryProgressBar->setStyleSheet("QProgressBar::chunk { background-color: red; }");
@@ -444,10 +444,10 @@ void MainWindow::displayBattery()
 {
     //battery
 
-    #define MIN_VOLTAGE 7.6
+    #define MIN_VOLTAGE 7.4
     #define MAX_VOLTAGE 8.4
-    #define VOLTAGE_DIVIDER 3
-    #define MAX_ADC_VOLTAGE 2.8 // MAX_VOLATAGE/VOLTAGE_DIVIDER
+    #define VOLTAGE_DIVIDER 2.7
+    #define MAX_ADC_VOLTAGE 3.3 // MAX_VOLATAGE/VOLTAGE_DIVIDER
     #define MAX_ADC_VALUE 3475 // 4096*MAX_ADC_VALUE/3.3
 
     //qDebug() << "bateria" << battery;

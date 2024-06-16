@@ -10,15 +10,21 @@ Sensors::Sensors(){
 int16_t Sensors::readSensors(){
     uint8_t founds_counter = 0; 
     int16_t weights_sum = 0;
-
+    measures[4] = 0;
+    
     for(int i = 0; i < 20; i++){
+        
+        if(i != 4){
         this->measures[i] = !digitalRead(  IR_SENSORS_PINS[i] );
-
+        }
+        
         if(this->measures[i] == 1){
             weights_sum += this->SENSORS_WEIGHTS[i];
             founds_counter++;
         }
     }
+
+
 
 
     if(founds_counter > 0){ //jezeli linia zostala znaleziona

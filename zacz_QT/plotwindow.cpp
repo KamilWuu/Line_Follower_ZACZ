@@ -52,7 +52,7 @@ PlotWindow::PlotWindow(QWidget *parent) :
     speedChart->createDefaultAxes();
     speedChart->axisX()->setTitleText("Time [s]");
     speedChart->axisY()->setTitleText("Velocity[m/s]");
-    speedChart->axisY()->setRange(0, 7.5);
+    speedChart->axisY()->setRange(0, 4);
     speedChart->axisX()->setRange(0, basicAxisXTime);
     speedChart->legend()->hide();
     speedChartView->setChart(speedChart);

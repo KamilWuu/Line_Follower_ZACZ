@@ -27,6 +27,7 @@ public:
     uint8_t getVMax();
     String getString();
     uint16_t getPID_parameter(enum pidParameter param);
+    void setInstruction(char ins);
 
 };
 

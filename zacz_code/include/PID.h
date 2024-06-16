@@ -36,7 +36,7 @@ class Regulator{
     void regulator(const int16_t ang_error);
 
     void set_pid(uint8_t k_p, uint8_t k_i, uint8_t k_d);
-    void set_base_speed(uint8_t speed);
+    void set_base_speed(uint32_t speed);
 
     uint8_t get_right_percent();
     uint8_t get_left_percent();

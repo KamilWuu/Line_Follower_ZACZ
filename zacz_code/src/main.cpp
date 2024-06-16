@@ -191,6 +191,10 @@ void loop()
   Serial.print("\n");
 
 */
+  if (WiFi.status() != WL_CONNECTED)
+  {
+    received_data.setInstruction('M');
+  }
 
   clientRead(); // <== Odbiera dane od clienta (aplikacji Qt) i zapisuje odczytane wartosci w strukturze received_data
 
