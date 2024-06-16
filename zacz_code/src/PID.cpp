@@ -24,9 +24,9 @@ Regulator PD -- sterowany kątem odchylenia i sterujący silnikami, modyfikuje w
         int16_t pid_val = Proportional + Integral + Differencial;
 
         last_ang_err=ang_error;
-        Serial.print(ang_error);
-        Serial.print("\t");
-        Serial.println(pid_val);
+        //Serial.print(ang_error);
+        //Serial.print("\t");
+        //Serial.println(pid_val);
 
         return pid_val;
     }

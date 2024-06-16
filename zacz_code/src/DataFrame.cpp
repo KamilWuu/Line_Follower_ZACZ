@@ -21,7 +21,19 @@ void DataFrame::setData(uint8_t status_, uint8_t * sensors_, uint8_t pwm_L_, uin
     this->pwm_R = pwm_R_;
     this->w_L = w_L_;
     this->w_R = w_R_;
-    this->z_rotation = z_rotation_;
+
+    int16_t z_rot =  z_rotation_;
+    // Normalizacja kąta do zakresu 0-359 stopni
+    if (z_rot >= 360.0) {
+        z_rot -= 360.0;
+    } else if (z_rot < 0.0) {
+        z_rot += 360.0;
+    }
+
+    this->z_rotation = -z_rot;
+
+
+
     this->battery = battery_;
 }
 

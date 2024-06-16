@@ -42,7 +42,7 @@ unsigned long last_time_encoder;
 MPU6050 mpu;
 unsigned long last_time_mpu;
 volatile bool mpuInterrupt = false; // Flaga przerwania
-bool isMpuWorking = false;
+//bool isMpuWorking = false;
 
 
 void setupWifi()
@@ -89,7 +89,7 @@ void clientRead()
 
   if (msg != "")
   {
-    Serial.println(msg);
+    //Serial.println(msg);
     received_data.setData(msg);
   }
 }
@@ -99,28 +99,25 @@ void IRAM_ATTR dmpDataReady() {
     mpuInterrupt = true;
 }
 
+#define Z_MOVE_THRESHOLD 30
+
 void updateAngle() {
-    int16_t angle;
+    
     if (mpuInterrupt) {
         mpuInterrupt = false;
 
-        int16_t gz = mpu.getRotationZ();
-        unsigned long currentTime = millis();
-        float deltaTime = (currentTime - last_time_mpu) / 1000.0;
-        last_time_mpu= currentTime;
+        int32_t gz = mpu.getRotationZ();
+        if((gz > Z_MOVE_THRESHOLD) || (gz < -Z_MOVE_THRESHOLD)){
+          unsigned long currentTime = millis();
+          float deltaTime = (currentTime - last_time_mpu) / 1000.0;
+          last_time_mpu= currentTime;
 
-        float gyroResolution = mpu.get_gyro_resolution();
-        float gyroZ = gz * gyroResolution;
-        angle += gyroZ * deltaTime;
+          float gyroResolution = mpu.get_gyro_resolution();
+          float gyroZ = gz * gyroResolution;
+          robot_z_position += gyroZ * deltaTime;
 
-        // Normalizacja kąta do zakresu 0-359 stopni
-        if (angle>= 360.0) {
-            angle -= 360.0;
-        } else if (angle < 0.0) {
-            angle += 360.0;
+          
         }
-
-        robot_z_position = angle;
     }
 
     Serial.print("Z_ROT = ");
@@ -142,9 +139,9 @@ void makeMeasuresAndCalculations(){
     Controller.regulator(IR_Sensors.getSensorsError());
     Left_pwm_percent_value=Controller.get_left_percent();
     Right_pwm_percent_value= Controller.get_right_percent();
-    if(isMpuWorking){
-      updateAngle();
-    }
+    
+    updateAngle();
+    
   //PCalculatePWM(IR_Sensors.getSensorsError(), received_data.getPID_parameter(K_P), received_data.getVMax(), &Left_pwm_percent_value, &Right_pwm_percent_value, &Left_pwm_value, &Right_pwm_value);
   }else if(robot_status == 0){
     Controller.set_pid(0,0,0);
@@ -226,12 +223,7 @@ void setup()
 
 
   mpu.initialize();
-  for(int i = 0; i < 10; i++){
-    if (mpu.testConnection()) {
-      isMpuWorking = true;
-      break;
-    }
-  }
+  delay(100);
 
   Serial.println("MPU6050 gotowy");
   mpu.CalibrateGyro();
