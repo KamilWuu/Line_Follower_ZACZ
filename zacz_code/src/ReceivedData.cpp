@@ -47,9 +47,9 @@ void ReceivedData::setData(String data) {
         PID_D = parts[3].toInt();
         V_MAX = parts[4].toInt();
 
-        for(int i = 0; i < 3; i++){
-            analogWrite(40,256);
-            analogWrite(6,256);
+        for(int i = 0; i < 2; i++){
+            analogWrite(40,50);
+            analogWrite(6,50);
             delay(100);
             analogWrite(40,0);
             analogWrite(6,0);

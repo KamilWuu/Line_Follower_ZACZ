@@ -123,14 +123,13 @@ MainWindow::MainWindow(QWidget *parent)
     changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_en_150.qm");
 
 
-
     ui->statistics_label->setText(tr("statistics"));
     ui->statistics_label->setStyleSheet("QLabel { color : black; }");
 
     ui->pid_label->setText(tr("PID CONTROLER"));
     ui->pid_label->setStyleSheet("QLabel { color : black; }");
 
-    ui->startButton->setEnabled(true);
+    ui->startButton->setEnabled(false);
     ui->stopButton->setEnabled(false);
 
     ui->polishButton->setEnabled(true);
@@ -168,10 +167,6 @@ MainWindow::MainWindow(QWidget *parent)
     w_R = 0;
     z_rotation = 0;
     battery = 4095;
-
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -340,8 +335,6 @@ void MainWindow::on_startButton_clicked()
     if(status == 0){
         plotWindow-> clearPlot();
     }
-    ui->startButton->setEnabled(false);
-    ui->stopButton->setEnabled(true);
 
 }
 
@@ -349,8 +342,7 @@ void MainWindow::on_startButton_clicked()
 void MainWindow::on_stopButton_clicked()
 {
     transmit(makeDataFrame('M') + char(10));
-    ui->startButton->setEnabled(true);
-    ui->stopButton->setEnabled(false);
+
 }
 
 
@@ -411,11 +403,9 @@ void MainWindow::on_updateButton_clicked()
         }
     }
 
-
     /*for(int i = 0; i < 4; i++ ){
         qDebug() << "parameter to send: " << coms[i] << "= " << data_to_send[i] ;
     }*/
-
 
     ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
     ui->pidILineEdit->setText(QString::number(data_to_send[1]));
@@ -606,12 +596,20 @@ void MainWindow::displayCompass()
 
 void MainWindow::displayData(){
 
-    if(status){
+    if(status == 1){
         ui->statusLabel_2->setText(tr("ROBOT IS MOVING"));
         ui->statusLabel_2->setStyleSheet("QLabel { color : green; }");
-    }else{
+        ui->startButton->setEnabled(false);
+        ui->stopButton->setEnabled(true);
+    }else if(status == 0){
         ui->statusLabel_2->setText(tr("ROBOT IS NOT MOVING"));
         ui->statusLabel_2->setStyleSheet("QLabel { color : red; }");
+        ui->startButton->setEnabled(true);
+        ui->stopButton->setEnabled(false);
+        displayBattery();
+    }else{
+        ui->startButton->setEnabled(false);
+        ui->stopButton->setEnabled(false);
     }
     //PWMs
     ui->leftPWMProgresBar->setValue(pwm_L);
@@ -620,10 +618,6 @@ void MainWindow::displayData(){
     ui->rightPWMProgresBar->setValue(pwm_R);
     ui->rightPWMLabel->setText(QString::number(pwm_R)+ "%");
 
-
-
-
-    displayBattery();
     displaySensors();
     displayEncoders();
     displayStats();
@@ -631,10 +625,6 @@ void MainWindow::displayData(){
     //
 
 }
-
-
-
-
 
 
 void MainWindow::on_plotsButton_clicked()

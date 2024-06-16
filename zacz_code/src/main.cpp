@@ -125,11 +125,27 @@ void updateAngle() {
     
 }
 
+int32_t battery_sum = 0;
+int32_t battery_counter = 0;
 
+#define BATTERY_MEAN_ITERATIONS 5
 
 void makeMeasuresAndCalculations(){
 
-  uint16_t battery = analogRead(BATTERY);
+  uint32_t battery = analogRead(BATTERY);
+  /*
+  if(battery_counter <= BATTERY_MEAN_ITERATIONS){
+    battery_counter++;
+    battery_sum += analogRead(BATTERY);
+  }else{
+    battery = battery_sum/BATTERY_MEAN_ITERATIONS;
+    battery_sum = 0;
+    battery_counter = 0;
+  }
+  */
+
+
+
   IR_Sensors.readSensors();
   
   //tu trzeba potem dodac jeszcze pomiar z imu 
