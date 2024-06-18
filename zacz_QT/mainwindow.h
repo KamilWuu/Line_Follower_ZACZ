@@ -37,7 +37,7 @@ class MainWindow : public QMainWindow
 public:
     /*!
      * \brief Konstruktor klasy MainWindow.
-     * \param parent Wskaźnik na obiekt rodzica.
+     * \param parent [IN] Wskaźnik na obiekt rodzica.
      */
     explicit MainWindow(QWidget *parent = nullptr);
 
@@ -48,7 +48,7 @@ public:
 
     /*!
      * \brief Metoda do wysyłania ramek danych przez WiFi.
-     * \param msg ramka do wysłania.
+     * \param msg [IN] Ramka do wysłania.
      */
     void transmit(QString msg);
 
@@ -61,7 +61,7 @@ public slots:
 private slots:
     /*!
      * \brief Obsługuje zmianę rozmiaru okna.
-     * \param event Zdarzenie zmiany rozmiaru.
+     * \param event [IN] Zdarzenie zmiany rozmiaru.
      */
     void resizeEvent(QResizeEvent *event);
 
@@ -82,7 +82,7 @@ private slots:
 
     /*!
      * \brief Obsługuje zmianę wartości paska postępu baterii.
-     * \param value Nowa wartość paska postępu.
+     * \param value [IN] Nowa wartość paska postępu.
      */
     void on_batteryProgressBar_valueChanged(int value);
 
@@ -93,7 +93,7 @@ private slots:
 
     /*!
      * \brief Zmienia język interfejsu.
-     * \param language sciezka do pliku tlumaczen z rozszerzeniem qm.
+     * \param language [IN] Ścieżka do pliku tłumaczenia z rozszerzeniem qm.
      */
     void changeLanguage(const QString &language);
 
@@ -114,6 +114,8 @@ private:
 
     // Tłumaczenie interfejsu
     QTranslator translator; /*!< Tłumacz interfejsu. */
+
+    QList<QFrame *> frameList; /*!< Lista obiektów QFrame (czujników odbiciowych). */
 
     // Dane robota i aplikacji
     int status; /*!< Stan robota. */
@@ -141,13 +143,13 @@ private:
     // Metody prywatne
     /*!
      * \brief Przetwarza otrzymane dane z WiFi.
-     * \param input Dane wejściowe odczytane z WiFi.
+     * \param input [IN] Dane wejściowe odczytane z WiFi.
      */
     void cutString(const QString &input);
 
     /*!
      * \brief Tworzy ramkę danych do wysłania przez WiFi.
-     * \param instruction Instrukcja do wysłania do robota.
+     * \param instruction [IN] Instrukcja do wysłania do robota.
      * \return Ramka danych.
      */
     QString makeDataFrame(char instruction);
@@ -174,8 +176,8 @@ private:
 
     /*!
      * \brief Rysuje strzałkę na etykiecie.
-     * \param label Etykieta, na której ma być narysowana strzałka.
-     * \param velocity Prędkość, reprezentowana przez dlugosc strzałki.
+     * \param label [IN] Etykieta, na której ma być narysowana strzałka.
+     * \param velocity [IN] Prędkość, reprezentowana przez długość strzałki.
      */
     void drawArrow(QLabel *label, float velocity);
 
@@ -189,7 +191,7 @@ private:
      */
     void displayStats();
 
-    QList<QFrame *> frameList; /*!< Lista obiektów QFrame (czujników odbiciowych). */
+
 
 };
 #endif // MAINWINDOW_H

@@ -791,7 +791,7 @@
              <item>
               <widget class="QLabel" name="label_9">
                <property name="text">
-                <string>Vm</string>
+                <string>S</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -799,7 +799,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="vMaxLineEdit">
+              <widget class="QLineEdit" name="vmLineEdit">
                <property name="maximumSize">
                 <size>
                  <width>100</width>
@@ -2972,7 +2972,7 @@
              <item>
               <widget class="QLabel" name="label_7">
                <property name="text">
-                <string>vm</string>
+                <string>vM</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

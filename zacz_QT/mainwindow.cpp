@@ -143,7 +143,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
     ui->pidILineEdit->setText(QString::number(data_to_send[1]));
     ui->pidDLineEdit->setText(QString::number(data_to_send[2]));
-    ui->vMaxLineEdit->setText(QString::number(data_to_send[3]));
+    ui->vmLineEdit->setText(QString::number(data_to_send[3]));
 
     ui->batteryProgressBar->setStyleSheet("QProgressBar::chunk { background-color: green; }");
     ui->leftPWMProgresBar->setStyleSheet("QProgressBar::chunk { background-color: green; }");
@@ -217,7 +217,7 @@ void MainWindow::changeLanguage(const QString &language)
     ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
     ui->pidILineEdit->setText(QString::number(data_to_send[1]));
     ui->pidDLineEdit->setText(QString::number(data_to_send[2]));
-    ui->vMaxLineEdit->setText(QString::number(data_to_send[3]));
+    ui->vmLineEdit->setText(QString::number(data_to_send[3]));
 }
 
 
@@ -358,13 +358,13 @@ void MainWindow::on_updateButton_clicked()
     coms[0] = "PID_P";
     coms[1] = "PID_I";
     coms[2] = "PID_D";
-    coms[3] = "V_MAX";
+    coms[3] = "V_M";
 
 
     data_from_line_edit[0] = ui->pidPLineEdit->text().toInt(&ok[0]);
     data_from_line_edit[1] = ui->pidILineEdit->text().toInt(&ok[1]);
     data_from_line_edit[2] = ui->pidDLineEdit->text().toInt(&ok[2]);
-    data_from_line_edit[3] = ui->vMaxLineEdit->text().toInt(&ok[3]);
+    data_from_line_edit[3] = ui->vmLineEdit->text().toInt(&ok[3]);
 
     for(int i = 0; i < 4; i++ ){
             //qDebug() << "ODCZYTANO: " << data_from_line_edit[i];
@@ -411,7 +411,7 @@ void MainWindow::on_updateButton_clicked()
     ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
     ui->pidILineEdit->setText(QString::number(data_to_send[1]));
     ui->pidDLineEdit->setText(QString::number(data_to_send[2]));
-    ui->vMaxLineEdit->setText(QString::number(data_to_send[3]));
+    ui->vmLineEdit->setText(QString::number(data_to_send[3]));
 
     transmit(makeDataFrame('U') + char(10));
 }

@@ -21,7 +21,7 @@ class PlotWindow : public QDialog
 public:
     /*!
      * \brief Konstruktor klasy PlotWindow.
-     * \param parent Wskaźnik na obiekt rodzica.
+     * \param parent [IN] Wskaźnik na obiekt rodzica.
      */
     explicit PlotWindow(QWidget *parent = nullptr);
 
@@ -30,15 +30,18 @@ public:
      */
     ~PlotWindow();
 
+    /*!
+     * \brief Metoda do tłumaczenia interfejsu użytkownika.
+     */
     void retranslateUi();
 
     /*!
      * \brief Aktualizuje wykresy danymi.
-     * \param time Czas.
-     * \param pwmL Wartość PWM dla lewego silnika.
-     * \param pwmR Wartość PWM dla prawego silnika.
-     * \param sensors Tablica z danymi czujników.
-     * \param velocity Prędkość.
+     * \param time [IN] Czas.
+     * \param pwmL [IN] Wartość PWM dla lewego silnika.
+     * \param pwmR [IN] Wartość PWM dla prawego silnika.
+     * \param sensors [IN] Tablica z danymi czujników.
+     * \param velocity [IN] Prędkość.
      */
     void updatePlot(float time, int pwmL, int pwmR, const int sensors[], float velocity);
 
@@ -50,13 +53,13 @@ public:
 private:
     QChartView *pwmChartView; /*!< Widok wykresu dla PWM. */
     QChartView *sensorChartView; /*!< Widok wykresu dla czujników. */
-    QChartView *velocityChartView; /*!< Widok wykresu dla prędkości. */  // Changed to velocityChartView
+    QChartView *velocityChartView; /*!< Widok wykresu dla prędkości. */
 
     QLineSeries *pwmLSeries; /*!< Seria danych dla PWM lewego silnika. */
     QLineSeries *pwmRSeries; /*!< Seria danych dla PWM prawego silnika. */
     QScatterSeries *sensorSeries; /*!< Seria danych dla czujników. */
 
-    QLineSeries *velocitySeries; /*!< Seria danych dla prędkości. */  // Changed to velocitySeries
+    QLineSeries *velocitySeries; /*!< Seria danych dla prędkości. */
 };
 
 #endif // PLOTWINDOW_H
