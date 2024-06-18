@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 {
     ui->setupUi(this);
-
+    plotWindow->retranslateUi();
 
     connect(ui->englishButton, &QPushButton::clicked, this, [this]() {
         changeLanguage("/home/kamil/Documents/projects-repos/Line_Follower_ZACZ/zacz_QT/LineFollower_en_150.qm");
@@ -208,6 +208,7 @@ void MainWindow::changeLanguage(const QString &language)
         qApp->installTranslator(&translator);
         ui->retranslateUi(this);
         setWindowTitle(tr("MainWindow"));
+        plotWindow->retranslateUi();  // Add this line to update PlotWindow
         //qDebug() << "Translation file loaded successfully.";
     } else {
     qDebug() << "Failed to load translation file.";
@@ -551,7 +552,7 @@ void MainWindow::displayStats()
     float battery_voltage = (battery * MAX_ADC_VOLTAGE * VOLTAGE_DIVIDER)/MAX_ADC_VALUE;
 
     if(status == 1){
-        plotWindow->updatePlot(time/1000, pwm_L, pwm_R, sensors, linear_velocity, battery_voltage);
+        plotWindow->updatePlot(time/1000, pwm_L, pwm_R, sensors, linear_velocity);
     }
 
 

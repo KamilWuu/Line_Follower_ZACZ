@@ -17,7 +17,7 @@
     <message>
         <location filename="mainwindow.ui" line="680"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">P</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="724"/>
@@ -41,7 +41,7 @@
     </message>
     <message>
         <location filename="mainwindow.ui" line="1356"/>
-        <location filename="mainwindow.cpp" line="127"/>
+        <location filename="mainwindow.cpp" line="126"/>
         <source>statistics</source>
         <translation type="unfinished">STATYSTYKI</translation>
     </message>
@@ -164,19 +164,73 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="130"/>
+        <location filename="mainwindow.cpp" line="129"/>
         <source>PID CONTROLER</source>
         <translation>REGULATOR PID</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="594"/>
+        <location filename="mainwindow.cpp" line="601"/>
         <source>ROBOT IS MOVING</source>
         <translation>ROBOT JEDZIE</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="597"/>
+        <location filename="mainwindow.cpp" line="606"/>
         <source>ROBOT IS NOT MOVING</source>
         <translation>ROBOT NIE JEDZIE</translation>
+    </message>
+</context>
+<context>
+    <name>PlotWindow</name>
+    <message>
+        <location filename="plotwindow.cpp" line="17"/>
+        <location filename="plotwindow.cpp" line="95"/>
+        <source>PWM Values</source>
+        <translation>Wartosci PWM</translation>
+    </message>
+    <message>
+        <location filename="plotwindow.cpp" line="22"/>
+        <location filename="plotwindow.cpp" line="96"/>
+        <source>PWM Values [%]</source>
+        <translation>Wypelnienie [%]</translation>
+    </message>
+    <message>
+        <location filename="plotwindow.cpp" line="29"/>
+        <location filename="plotwindow.cpp" line="51"/>
+        <location filename="plotwindow.cpp" line="64"/>
+        <location filename="plotwindow.cpp" line="97"/>
+        <location filename="plotwindow.cpp" line="101"/>
+        <location filename="plotwindow.cpp" line="105"/>
+        <source>Time [s]</source>
+        <translation>Czas [s]</translation>
+    </message>
+    <message>
+        <location filename="plotwindow.cpp" line="41"/>
+        <location filename="plotwindow.cpp" line="99"/>
+        <source>Sensor Readings</source>
+        <translation>Odczyty czujnikow</translation>
+    </message>
+    <message>
+        <location filename="plotwindow.cpp" line="46"/>
+        <location filename="plotwindow.cpp" line="100"/>
+        <source>Sensors [index]</source>
+        <translation>Czujnik [indeks]</translation>
+    </message>
+    <message>
+        <location filename="plotwindow.cpp" line="62"/>
+        <location filename="plotwindow.cpp" line="103"/>
+        <source>Linear Velocity</source>
+        <translation>Predkosc Liniowa</translation>
+    </message>
+    <message>
+        <location filename="plotwindow.cpp" line="65"/>
+        <location filename="plotwindow.cpp" line="104"/>
+        <source>Velocity [m/s]</source>
+        <translation>Predkosc [m/s]</translation>
+    </message>
+    <message>
+        <location filename="plotwindow.cpp" line="88"/>
+        <source>Plot Window</source>
+        <translation>Wykresy</translation>
     </message>
 </context>
 </TS>

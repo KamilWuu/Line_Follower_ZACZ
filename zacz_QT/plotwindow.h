@@ -30,16 +30,17 @@ public:
      */
     ~PlotWindow();
 
+    void retranslateUi();
+
     /*!
      * \brief Aktualizuje wykresy danymi.
      * \param time Czas.
      * \param pwmL Wartość PWM dla lewego silnika.
      * \param pwmR Wartość PWM dla prawego silnika.
      * \param sensors Tablica z danymi czujników.
-     * \param speed Prędkość.
-     * \param battery Poziom naładowania baterii.
+     * \param velocity Prędkość.
      */
-    void updatePlot(float time, int pwmL, int pwmR, const int sensors[], float speed, float battery);
+    void updatePlot(float time, int pwmL, int pwmR, const int sensors[], float velocity);
 
     /*!
      * \brief Czyści wykresy.
@@ -48,15 +49,14 @@ public:
 
 private:
     QChartView *pwmChartView; /*!< Widok wykresu dla PWM. */
-    QChartView *speedChartView; /*!< Widok wykresu dla prędkości. */
-    QChartView *batteryChartView; /*!< Widok wykresu dla baterii. */
+    QChartView *sensorChartView; /*!< Widok wykresu dla czujników. */
+    QChartView *velocityChartView; /*!< Widok wykresu dla prędkości. */  // Changed to velocityChartView
 
     QLineSeries *pwmLSeries; /*!< Seria danych dla PWM lewego silnika. */
     QLineSeries *pwmRSeries; /*!< Seria danych dla PWM prawego silnika. */
     QScatterSeries *sensorSeries; /*!< Seria danych dla czujników. */
 
-    QLineSeries *speedSeries; /*!< Seria danych dla prędkości. */
-    QLineSeries *batterySeries; /*!< Seria danych dla baterii. */
+    QLineSeries *velocitySeries; /*!< Seria danych dla prędkości. */  // Changed to velocitySeries
 };
 
 #endif // PLOTWINDOW_H
