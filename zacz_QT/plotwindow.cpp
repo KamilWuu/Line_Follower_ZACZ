@@ -4,7 +4,7 @@ PlotWindow::PlotWindow(QWidget *parent) :
     QDialog(parent),
     pwmChartView(new QChartView(this)),
     velocityChartView(new QChartView(this)),
-    sensorChartView(new QChartView(this)),  // Create new chart view for sensor readings
+    sensorChartView(new QChartView(this)),
     pwmLSeries(new QLineSeries),
     pwmRSeries(new QLineSeries),
     sensorSeries(new QScatterSeries),
@@ -12,6 +12,8 @@ PlotWindow::PlotWindow(QWidget *parent) :
 {
     // PWM Chart
     QChart *pwmChart = new QChart();
+    pwmLSeries->setName(tr("PWM Left"));
+    pwmRSeries->setName(tr("PWM Right"));
     pwmChart->addSeries(pwmLSeries);
     pwmChart->addSeries(pwmRSeries);
     pwmChart->setTitle(tr("PWM Values"));
@@ -31,7 +33,10 @@ PlotWindow::PlotWindow(QWidget *parent) :
     pwmChart->setAxisX(axisX, pwmLSeries);
     pwmChart->setAxisX(axisX, pwmRSeries);
 
-    pwmChart->legend()->hide(); // Hide legend
+    // Show legend
+    pwmChart->legend()->setVisible(false);
+    pwmChart->legend()->setAlignment(Qt::AlignBottom);
+
     pwmChartView->setChart(pwmChart);
     pwmChartView->setRenderHint(QPainter::Antialiasing);
 
@@ -43,11 +48,15 @@ PlotWindow::PlotWindow(QWidget *parent) :
 
     // Y Axis (for Sensor Readings)
     QValueAxis *sensorAxisY = new QValueAxis;
+    sensorSeries->setMarkerSize(3.0);
+    sensorSeries->setMarkerShape(QScatterSeries::MarkerShapeRectangle);
+    sensorSeries->setColor(Qt::black);
+    sensorSeries->setBorderColor(Qt::black);
     sensorAxisY->setTitleText(tr("Sensors [index]"));
     sensorAxisY->setRange(0, 20);
     sensorChart->setAxisY(sensorAxisY, sensorSeries);
 
-    QValueAxis *sensorAxisX = new QValueAxis;  // Create a new X axis for the sensor chart
+    QValueAxis *sensorAxisX = new QValueAxis;
     sensorAxisX->setTitleText(tr("Time [s]"));
     sensorAxisX->setRange(0, basicAxisXTime);
     sensorChart->setAxisX(sensorAxisX, sensorSeries);
@@ -63,7 +72,7 @@ PlotWindow::PlotWindow(QWidget *parent) :
     velocityChart->createDefaultAxes();
     velocityChart->axisX()->setTitleText(tr("Time [s]"));
     velocityChart->axisY()->setTitleText(tr("Velocity [m/s]"));
-    velocityChart->axisY()->setRange(0, 4);
+    velocityChart->axisY()->setRange(0, basicAxisYVelocity);
     velocityChart->axisX()->setRange(0, basicAxisXTime);
     velocityChart->legend()->hide();
     velocityChartView->setChart(velocityChart);
@@ -71,9 +80,9 @@ PlotWindow::PlotWindow(QWidget *parent) :
 
     // Layout
     QVBoxLayout *mainLayout = new QVBoxLayout;
-    mainLayout->addWidget(sensorChartView, 1);  // Add sensor chart to layout
+    mainLayout->addWidget(sensorChartView, 1);
     mainLayout->addWidget(pwmChartView, 1);
-    mainLayout->addWidget(velocityChartView, 1);  // Move velocity chart to the main layout
+    mainLayout->addWidget(velocityChartView, 1);
 
     setLayout(mainLayout);
     setMinimumSize(1000, 900);
@@ -121,6 +130,7 @@ void PlotWindow::updatePlot(float time, int pwmL, int pwmR, const int sensors[],
     QValueAxis *pwmAxisX = qobject_cast<QValueAxis*>(pwmChartView->chart()->axisX());
     QValueAxis *sensorAxisX = qobject_cast<QValueAxis*>(sensorChartView->chart()->axisX());
     QValueAxis *velocityAxisX = qobject_cast<QValueAxis*>(velocityChartView->chart()->axisX());
+    QValueAxis *velocityAxisY = qobject_cast<QValueAxis*>(velocityChartView->chart()->axisY());
 
     if (pwmAxisX && time > pwmAxisX->max()) {
         pwmAxisX->setRange(time - basicAxisXTime , time);
@@ -133,6 +143,10 @@ void PlotWindow::updatePlot(float time, int pwmL, int pwmR, const int sensors[],
     if (velocityAxisX && time > velocityAxisX->max()) {
         velocityAxisX->setRange(time - basicAxisXTime, time);
     }
+
+    if(velocityAxisY && velocity > velocityAxisY->max()){
+        velocityAxisY->setRange(0, velocity*2);
+    }
 }
 
 void PlotWindow::clearPlot()
@@ -140,6 +154,7 @@ void PlotWindow::clearPlot()
     QValueAxis *pwmAxisX = qobject_cast<QValueAxis*>(pwmChartView->chart()->axisX());
     QValueAxis *sensorAxisX = qobject_cast<QValueAxis*>(sensorChartView->chart()->axisX());
     QValueAxis *velocityAxisX = qobject_cast<QValueAxis*>(velocityChartView->chart()->axisX());
+    QValueAxis *velocityAxisY = qobject_cast<QValueAxis*>(velocityChartView->chart()->axisY());
 
     pwmLSeries->clear();
     pwmRSeries->clear();
@@ -148,4 +163,5 @@ void PlotWindow::clearPlot()
     pwmAxisX->setRange(0, basicAxisXTime);
     sensorAxisX->setRange(0, basicAxisXTime);
     velocityAxisX->setRange(0, basicAxisXTime);
+    velocityAxisY->setRange(0, basicAxisYVelocity);
 }

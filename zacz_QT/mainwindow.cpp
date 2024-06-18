@@ -138,7 +138,7 @@ MainWindow::MainWindow(QWidget *parent)
     data_to_send[0] = 5;
     data_to_send[1] = 0;
     data_to_send[2] = 1;
-    data_to_send[3] = 50;
+    data_to_send[3] = 10;
 
     ui->pidPLineEdit->setText(QString::number(data_to_send[0]));
     ui->pidILineEdit->setText(QString::number(data_to_send[1]));
@@ -167,13 +167,17 @@ MainWindow::MainWindow(QWidget *parent)
     w_R = 0;
     z_rotation = 0;
     battery = 4095;
+
+
+
+
 }
 
 MainWindow::~MainWindow()
 {
 
     delete ui;
-    delete plotWindow; // Clean up
+    delete plotWindow;
 
 }
 

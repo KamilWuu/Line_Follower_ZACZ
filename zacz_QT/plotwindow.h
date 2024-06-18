@@ -10,7 +10,7 @@
 #include <QtCharts>
 
 #define basicAxisXTime 10 /*!< Podstawowy czas osi X dla wykresów. */
-
+#define basicAxisYVelocity 0.2 /*!< Poczatkowa wartosc osi Y dla wykresu predkosci. */
 /*!
  * \brief Klasa PlotWindow odpowiada za wyświetlanie wykresów.
  */
@@ -60,6 +60,7 @@ private:
     QScatterSeries *sensorSeries; /*!< Seria danych dla czujników. */
 
     QLineSeries *velocitySeries; /*!< Seria danych dla prędkości. */
+
 };
 
 #endif // PLOTWINDOW_H
