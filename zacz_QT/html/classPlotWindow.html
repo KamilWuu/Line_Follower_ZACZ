@@ -97,9 +97,13 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~PlotWindow</b> ()</td></tr>
 <tr class="memdesc:a684ea087a646cbe658940098a25ce150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="classPlotWindow.html" title="Klasa PlotWindow odpowiada za wyświetlanie wykresów.">PlotWindow</a>. <br /></td></tr>
 <tr class="separator:a684ea087a646cbe658940098a25ce150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9844ac761c3270b6a8b8fe8edea22014" id="r_a9844ac761c3270b6a8b8fe8edea22014"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#a9844ac761c3270b6a8b8fe8edea22014">updatePlot</a> (float time, int pwmL, int pwmR, const int sensors[], float speed, float battery)</td></tr>
-<tr class="memdesc:a9844ac761c3270b6a8b8fe8edea22014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualizuje wykresy danymi.  <br /></td></tr>
-<tr class="separator:a9844ac761c3270b6a8b8fe8edea22014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c8af0aa023050f786f568875774d30" id="r_a31c8af0aa023050f786f568875774d30"><td class="memItemLeft" align="right" valign="top"><a id="a31c8af0aa023050f786f568875774d30" name="a31c8af0aa023050f786f568875774d30"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>retranslateUi</b> ()</td></tr>
+<tr class="memdesc:a31c8af0aa023050f786f568875774d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda do tłumaczenia interfejsu użytkownika. <br /></td></tr>
+<tr class="separator:a31c8af0aa023050f786f568875774d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ee5115c9cf3016889b1e59b5262ccd" id="r_af0ee5115c9cf3016889b1e59b5262ccd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#af0ee5115c9cf3016889b1e59b5262ccd">updatePlot</a> (float time, int pwmL, int pwmR, const int sensors[], float velocity)</td></tr>
+<tr class="memdesc:af0ee5115c9cf3016889b1e59b5262ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualizuje wykresy danymi.  <br /></td></tr>
+<tr class="separator:af0ee5115c9cf3016889b1e59b5262ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea0899f1f2adc0d544e286d60fed4d5" id="r_a7ea0899f1f2adc0d544e286d60fed4d5"><td class="memItemLeft" align="right" valign="top"><a id="a7ea0899f1f2adc0d544e286d60fed4d5" name="a7ea0899f1f2adc0d544e286d60fed4d5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearPlot</b> ()</td></tr>
 <tr class="memdesc:a7ea0899f1f2adc0d544e286d60fed4d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Czyści wykresy. <br /></td></tr>
@@ -109,20 +113,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clearPlot</b> ()</td>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4085f16a61bae9a79041fb0b8af1ef97" id="r_a4085f16a61bae9a79041fb0b8af1ef97"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#a4085f16a61bae9a79041fb0b8af1ef97">pwmChartView</a></td></tr>
 <tr class="separator:a4085f16a61bae9a79041fb0b8af1ef97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2729e3b6b76107b6246317b7946ab14" id="r_ae2729e3b6b76107b6246317b7946ab14"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#ae2729e3b6b76107b6246317b7946ab14">speedChartView</a></td></tr>
-<tr class="separator:ae2729e3b6b76107b6246317b7946ab14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9e0718ac9ee98e57678e024bdbddbf7" id="r_aa9e0718ac9ee98e57678e024bdbddbf7"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#aa9e0718ac9ee98e57678e024bdbddbf7">batteryChartView</a></td></tr>
-<tr class="separator:aa9e0718ac9ee98e57678e024bdbddbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafaf6d6bf03904c3e8dea979b4e19d59" id="r_aafaf6d6bf03904c3e8dea979b4e19d59"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#aafaf6d6bf03904c3e8dea979b4e19d59">sensorChartView</a></td></tr>
+<tr class="separator:aafaf6d6bf03904c3e8dea979b4e19d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32346ba98bfcd942f477dcdd1952ffb7" id="r_a32346ba98bfcd942f477dcdd1952ffb7"><td class="memItemLeft" align="right" valign="top">QChartView *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#a32346ba98bfcd942f477dcdd1952ffb7">velocityChartView</a></td></tr>
+<tr class="separator:a32346ba98bfcd942f477dcdd1952ffb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2a3a806640bab966ecc892e7c1aa394" id="r_af2a3a806640bab966ecc892e7c1aa394"><td class="memItemLeft" align="right" valign="top">QLineSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#af2a3a806640bab966ecc892e7c1aa394">pwmLSeries</a></td></tr>
 <tr class="separator:af2a3a806640bab966ecc892e7c1aa394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ae6a7c0d81ba2d33bed0c718b0a230c" id="r_a9ae6a7c0d81ba2d33bed0c718b0a230c"><td class="memItemLeft" align="right" valign="top">QLineSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#a9ae6a7c0d81ba2d33bed0c718b0a230c">pwmRSeries</a></td></tr>
 <tr class="separator:a9ae6a7c0d81ba2d33bed0c718b0a230c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad76d0bba1d975438ad1bb422def386eb" id="r_ad76d0bba1d975438ad1bb422def386eb"><td class="memItemLeft" align="right" valign="top">QScatterSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#ad76d0bba1d975438ad1bb422def386eb">sensorSeries</a></td></tr>
 <tr class="separator:ad76d0bba1d975438ad1bb422def386eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0994205267cafd0f67484b224ed08b" id="r_a3f0994205267cafd0f67484b224ed08b"><td class="memItemLeft" align="right" valign="top">QLineSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#a3f0994205267cafd0f67484b224ed08b">speedSeries</a></td></tr>
-<tr class="separator:a3f0994205267cafd0f67484b224ed08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad014c9dd8a6a9a4431724d61029031fd" id="r_ad014c9dd8a6a9a4431724d61029031fd"><td class="memItemLeft" align="right" valign="top">QLineSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#ad014c9dd8a6a9a4431724d61029031fd">batterySeries</a></td></tr>
-<tr class="separator:ad014c9dd8a6a9a4431724d61029031fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d078660259991b4afb403452c40061" id="r_a64d078660259991b4afb403452c40061"><td class="memItemLeft" align="right" valign="top">QLineSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlotWindow.html#a64d078660259991b4afb403452c40061">velocitySeries</a></td></tr>
+<tr class="separator:a64d078660259991b4afb403452c40061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Klasa <a class="el" href="classPlotWindow.html" title="Klasa PlotWindow odpowiada za wyświetlanie wykresów.">PlotWindow</a> odpowiada za wyświetlanie wykresów. </p>
@@ -154,7 +156,7 @@ Private Attributes</h2></td></tr>
 <p>Konstruktor klasy <a class="el" href="classPlotWindow.html" title="Klasa PlotWindow odpowiada za wyświetlanie wykresów.">PlotWindow</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>Wskaźnik na obiekt rodzica. </td></tr>
+    <tr><td class="paramname">parent</td><td>[IN] Wskaźnik na obiekt rodzica. </td></tr>
   </table>
   </dd>
 </dl>
@@ -162,8 +164,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9844ac761c3270b6a8b8fe8edea22014" name="a9844ac761c3270b6a8b8fe8edea22014"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9844ac761c3270b6a8b8fe8edea22014">&#9670;&#160;</a></span>updatePlot()</h2>
+<a id="af0ee5115c9cf3016889b1e59b5262ccd" name="af0ee5115c9cf3016889b1e59b5262ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ee5115c9cf3016889b1e59b5262ccd">&#9670;&#160;</a></span>updatePlot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,13 +198,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>speed</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>battery</em>&#160;</td>
+          <td class="paramname"><em>velocity</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -215,12 +211,11 @@ Private Attributes</h2></td></tr>
 <p>Aktualizuje wykresy danymi. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">time</td><td>Czas. </td></tr>
-    <tr><td class="paramname">pwmL</td><td>Wartość PWM dla lewego silnika. </td></tr>
-    <tr><td class="paramname">pwmR</td><td>Wartość PWM dla prawego silnika. </td></tr>
-    <tr><td class="paramname">sensors</td><td>Tablica z danymi czujników. </td></tr>
-    <tr><td class="paramname">speed</td><td>Prędkość. </td></tr>
-    <tr><td class="paramname">battery</td><td>Poziom naładowania baterii. </td></tr>
+    <tr><td class="paramname">time</td><td>[IN] Czas. </td></tr>
+    <tr><td class="paramname">pwmL</td><td>[IN] Wartość PWM dla lewego silnika. </td></tr>
+    <tr><td class="paramname">pwmR</td><td>[IN] Wartość PWM dla prawego silnika. </td></tr>
+    <tr><td class="paramname">sensors</td><td>[IN] Tablica z danymi czujników. </td></tr>
+    <tr><td class="paramname">velocity</td><td>[IN] Prędkość. </td></tr>
   </table>
   </dd>
 </dl>
@@ -228,52 +223,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa9e0718ac9ee98e57678e024bdbddbf7" name="aa9e0718ac9ee98e57678e024bdbddbf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9e0718ac9ee98e57678e024bdbddbf7">&#9670;&#160;</a></span>batteryChartView</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QChartView* PlotWindow::batteryChartView</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Widok wykresu dla baterii. </p>
-
-</div>
-</div>
-<a id="ad014c9dd8a6a9a4431724d61029031fd" name="ad014c9dd8a6a9a4431724d61029031fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad014c9dd8a6a9a4431724d61029031fd">&#9670;&#160;</a></span>batterySeries</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QLineSeries* PlotWindow::batterySeries</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Seria danych dla baterii. </p>
-
-</div>
-</div>
 <a id="a4085f16a61bae9a79041fb0b8af1ef97" name="a4085f16a61bae9a79041fb0b8af1ef97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4085f16a61bae9a79041fb0b8af1ef97">&#9670;&#160;</a></span>pwmChartView</h2>
 
@@ -343,6 +292,29 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aafaf6d6bf03904c3e8dea979b4e19d59" name="aafaf6d6bf03904c3e8dea979b4e19d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafaf6d6bf03904c3e8dea979b4e19d59">&#9670;&#160;</a></span>sensorChartView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChartView* PlotWindow::sensorChartView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Widok wykresu dla czujników. </p>
+
+</div>
+</div>
 <a id="ad76d0bba1d975438ad1bb422def386eb" name="ad76d0bba1d975438ad1bb422def386eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad76d0bba1d975438ad1bb422def386eb">&#9670;&#160;</a></span>sensorSeries</h2>
 
@@ -366,8 +338,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae2729e3b6b76107b6246317b7946ab14" name="ae2729e3b6b76107b6246317b7946ab14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2729e3b6b76107b6246317b7946ab14">&#9670;&#160;</a></span>speedChartView</h2>
+<a id="a32346ba98bfcd942f477dcdd1952ffb7" name="a32346ba98bfcd942f477dcdd1952ffb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32346ba98bfcd942f477dcdd1952ffb7">&#9670;&#160;</a></span>velocityChartView</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,7 +348,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QChartView* PlotWindow::speedChartView</td>
+          <td class="memname">QChartView* PlotWindow::velocityChartView</td>
         </tr>
       </table>
   </td>
@@ -389,8 +361,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f0994205267cafd0f67484b224ed08b" name="a3f0994205267cafd0f67484b224ed08b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0994205267cafd0f67484b224ed08b">&#9670;&#160;</a></span>speedSeries</h2>
+<a id="a64d078660259991b4afb403452c40061" name="a64d078660259991b4afb403452c40061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d078660259991b4afb403452c40061">&#9670;&#160;</a></span>velocitySeries</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,7 +371,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QLineSeries* PlotWindow::speedSeries</td>
+          <td class="memname">QLineSeries* PlotWindow::velocitySeries</td>
         </tr>
       </table>
   </td>

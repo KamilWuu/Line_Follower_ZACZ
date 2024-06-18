@@ -100,6 +100,8 @@ QTcp\+Socket \mbox{\hyperlink{classMainWindow_af255402a2421bc084ffe11af910ddf68}
 \item 
 QTranslator \mbox{\hyperlink{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}{translator}}
 \item 
+QList$<$ QFrame \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMainWindow_a8e6dfbba17e678bd773104615faa75d6}{frame\+List}}
+\item 
 int \mbox{\hyperlink{classMainWindow_a023e946345221635d8b9b65ef213e562}{status}}
 \item 
 int \mbox{\hyperlink{classMainWindow_a6932df976d366d130758818dc02ac513}{sensors}} \mbox{[}20\mbox{]}
@@ -133,8 +135,6 @@ float \mbox{\hyperlink{classMainWindow_a77ac54d3c685d7acf55caefde634fa3d}{averag
 float \mbox{\hyperlink{classMainWindow_a68a14acd455b5917809eca9bee99bafa}{distance\+Float}}
 \item 
 float \mbox{\hyperlink{classMainWindow_af98ca63a8c5bce7ccfccb49d2b56f519}{time}}
-\item 
-QList$<$ QFrame \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMainWindow_a8e6dfbba17e678bd773104615faa75d6}{frame\+List}}
 \end{DoxyCompactItemize}
 
 
@@ -154,7 +154,7 @@ Konstruktor klasy \doxylink{classMainWindow}{Main\+Window}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em parent} & Wskaźnik na obiekt rodzica. \\
+{\em parent} & \mbox{[}IN\mbox{]} Wskaźnik na obiekt rodzica. \\
 \hline
 \end{DoxyParams}
 
@@ -172,7 +172,7 @@ Zmienia język interfejsu.
 
 
 \begin{DoxyParams}{Parameters}
-{\em language} & sciezka do pliku tlumaczen z rozszerzeniem qm. \\
+{\em language} & \mbox{[}IN\mbox{]} Ścieżka do pliku tłumaczenia z rozszerzeniem qm. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classMainWindow_ab2fc370ad3f940696f6a38d77440f581}\label{classMainWindow_ab2fc370ad3f940696f6a38d77440f581} 
@@ -187,7 +187,7 @@ Przetwarza otrzymane dane z Wi\+Fi.
 
 
 \begin{DoxyParams}{Parameters}
-{\em input} & Dane wejściowe odczytane z Wi\+Fi. \\
+{\em input} & \mbox{[}IN\mbox{]} Dane wejściowe odczytane z Wi\+Fi. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classMainWindow_ad2344fed099ebaece9ab5716ac4fb358}\label{classMainWindow_ad2344fed099ebaece9ab5716ac4fb358} 
@@ -202,9 +202,9 @@ Rysuje strzałkę na etykiecie.
 
 
 \begin{DoxyParams}{Parameters}
-{\em label} & Etykieta, na której ma być narysowana strzałka. \\
+{\em label} & \mbox{[}IN\mbox{]} Etykieta, na której ma być narysowana strzałka. \\
 \hline
-{\em velocity} & Prędkość, reprezentowana przez dlugosc strzałki. \\
+{\em velocity} & \mbox{[}IN\mbox{]} Prędkość, reprezentowana przez długość strzałki. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classMainWindow_a4609df54b6e8511f07b7a871b0331359}\label{classMainWindow_a4609df54b6e8511f07b7a871b0331359} 
@@ -219,7 +219,7 @@ Tworzy ramkę danych do wysłania przez Wi\+Fi.
 
 
 \begin{DoxyParams}{Parameters}
-{\em instruction} & Instrukcja do wysłania do robota. \\
+{\em instruction} & \mbox{[}IN\mbox{]} Instrukcja do wysłania do robota. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -237,7 +237,7 @@ Obsługuje zmianę wartości paska postępu baterii.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & Nowa wartość paska postępu. \\
+{\em value} & \mbox{[}IN\mbox{]} Nowa wartość paska postępu. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classMainWindow_ae12f8f63791595567b6250f8bb002bda}\label{classMainWindow_ae12f8f63791595567b6250f8bb002bda} 
@@ -252,7 +252,7 @@ Obsługuje zmianę rozmiaru okna.
 
 
 \begin{DoxyParams}{Parameters}
-{\em event} & Zdarzenie zmiany rozmiaru. \\
+{\em event} & \mbox{[}IN\mbox{]} Zdarzenie zmiany rozmiaru. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classMainWindow_a8279b1c4c14dd99964f680581bb7c3fb}\label{classMainWindow_a8279b1c4c14dd99964f680581bb7c3fb} 
@@ -267,7 +267,7 @@ Metoda do wysyłania ramek danych przez Wi\+Fi.
 
 
 \begin{DoxyParams}{Parameters}
-{\em msg} & ramka do wysłania. \\
+{\em msg} & \mbox{[}IN\mbox{]} Ramka do wysłania. \\
 \hline
 \end{DoxyParams}
 

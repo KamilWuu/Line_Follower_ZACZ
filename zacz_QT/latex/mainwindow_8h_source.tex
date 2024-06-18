@@ -69,47 +69,49 @@
 \DoxyCodeLine{00113\ \ \ \ \ QTcpSocket\ \mbox{\hyperlink{classMainWindow_af255402a2421bc084ffe11af910ddf68}{socket}};\ }
 \DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ Tłumaczenie\ interfejsu}}
 \DoxyCodeLine{00116\ \ \ \ \ QTranslator\ \mbox{\hyperlink{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}{translator}};\ }
-\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//\ Dane\ robota\ i\ aplikacji}}
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a023e946345221635d8b9b65ef213e562}{status}};\ }
-\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a6932df976d366d130758818dc02ac513}{sensors}}[20];\ }
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a85a9cf65a9b13e313856be22f62e6cc0}{pwm\_L}};\ }
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_ad6b11bd43e241e460f449a47a23ca8d3}{pwm\_R}};\ }
-\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_af982bdd360f7b26e28bcebb79091c9c5}{w\_L}};\ }
-\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a291e9389db0a4932351d1c814b313de4}{w\_R}};\ }
-\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_ae095f9505d9c5797fdd8a7a61c66931a}{z\_rotation}};\ }
-\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_af07d80a16b22158dabcc9915dae20903}{battery}};\ }
-\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ Dane\ do\ wysłania}}
-\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b}{instruction}};\ }
-\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a2ddd5620ed5b8cf984a4b805b2861e5e}{data\_to\_send}}[4];\ }
-\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//\ Dane\ obliczone}}
-\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a462b644a389894d4a02edcb71818724a}{left\_linear\_V}};\ }
-\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a4217a1e00f85cf30ff93360ffbe1ba91}{right\_linear\_V}};\ }
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_af4378f07cd7d16811b8b4e43ab62c1c5}{linear\_velocity}};\ }
-\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a62aeda2c3dec711af2c36a0ea3621406}{max\_linear\_velocity}};\ }
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a77ac54d3c685d7acf55caefde634fa3d}{average\_velocity}};\ }
-\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a68a14acd455b5917809eca9bee99bafa}{distanceFloat}};\ }
-\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_af98ca63a8c5bce7ccfccb49d2b56f519}{time}};\ }
-\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ Metody\ prywatne}}
-\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ab2fc370ad3f940696f6a38d77440f581}{cutString}}(\textcolor{keyword}{const}\ QString\ \&input);}
-\DoxyCodeLine{00147\ }
-\DoxyCodeLine{00153\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_a4609df54b6e8511f07b7a871b0331359}{makeDataFrame}}(\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b}{instruction}});}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a1c74cc1babb32c3a1cdf660c6e152f6c}{displayCompass}}();}
-\DoxyCodeLine{00159\ }
-\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_addfa795db909e820768daf1d82d553bc}{displayBattery}}();}
-\DoxyCodeLine{00164\ }
-\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a80f2c3d13ada7ec59ad5361f7aff3344}{displaySensors}}();}
-\DoxyCodeLine{00169\ }
-\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a787c0f8ede4475a462d8fce56c52bcda}{displayEncoders}}();}
-\DoxyCodeLine{00174\ }
-\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ad2344fed099ebaece9ab5716ac4fb358}{drawArrow}}(QLabel\ *label,\ \textcolor{keywordtype}{float}\ velocity);}
-\DoxyCodeLine{00181\ }
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a5a6969888a7e3f0d93c3aa34c772fca8}{displayData}}();}
-\DoxyCodeLine{00186\ }
-\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a1e0da9e6f299623ba381e636eda244a3}{displayStats}}();}
-\DoxyCodeLine{00191\ }
-\DoxyCodeLine{00192\ \ \ \ \ QList<QFrame\ *>\ \mbox{\hyperlink{classMainWindow_a8e6dfbba17e678bd773104615faa75d6}{frameList}};\ }
-\DoxyCodeLine{00194\ \};}
-\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+\DoxyCodeLine{00118\ \ \ \ \ QList<QFrame\ *>\ \mbox{\hyperlink{classMainWindow_a8e6dfbba17e678bd773104615faa75d6}{frameList}};\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//\ Dane\ robota\ i\ aplikacji}}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a023e946345221635d8b9b65ef213e562}{status}};\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a6932df976d366d130758818dc02ac513}{sensors}}[20];\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a85a9cf65a9b13e313856be22f62e6cc0}{pwm\_L}};\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_ad6b11bd43e241e460f449a47a23ca8d3}{pwm\_R}};\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_af982bdd360f7b26e28bcebb79091c9c5}{w\_L}};\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a291e9389db0a4932351d1c814b313de4}{w\_R}};\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_ae095f9505d9c5797fdd8a7a61c66931a}{z\_rotation}};\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_af07d80a16b22158dabcc9915dae20903}{battery}};\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ Dane\ do\ wysłania}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b}{instruction}};\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a2ddd5620ed5b8cf984a4b805b2861e5e}{data\_to\_send}}[4];\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ Dane\ obliczone}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a462b644a389894d4a02edcb71818724a}{left\_linear\_V}};\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a4217a1e00f85cf30ff93360ffbe1ba91}{right\_linear\_V}};\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_af4378f07cd7d16811b8b4e43ab62c1c5}{linear\_velocity}};\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a62aeda2c3dec711af2c36a0ea3621406}{max\_linear\_velocity}};\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a77ac54d3c685d7acf55caefde634fa3d}{average\_velocity}};\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_a68a14acd455b5917809eca9bee99bafa}{distanceFloat}};\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classMainWindow_af98ca63a8c5bce7ccfccb49d2b56f519}{time}};\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ Metody\ prywatne}}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ab2fc370ad3f940696f6a38d77440f581}{cutString}}(\textcolor{keyword}{const}\ QString\ \&input);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_a4609df54b6e8511f07b7a871b0331359}{makeDataFrame}}(\textcolor{keywordtype}{char}\ \mbox{\hyperlink{classMainWindow_a3cc3c0c54d1d0ef73325fcaba344aa3b}{instruction}});}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a1c74cc1babb32c3a1cdf660c6e152f6c}{displayCompass}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_addfa795db909e820768daf1d82d553bc}{displayBattery}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a80f2c3d13ada7ec59ad5361f7aff3344}{displaySensors}}();}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a787c0f8ede4475a462d8fce56c52bcda}{displayEncoders}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ad2344fed099ebaece9ab5716ac4fb358}{drawArrow}}(QLabel\ *label,\ \textcolor{keywordtype}{float}\ velocity);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a5a6969888a7e3f0d93c3aa34c772fca8}{displayData}}();}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a1e0da9e6f299623ba381e636eda244a3}{displayStats}}();}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \};}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
 
 \end{DoxyCode}

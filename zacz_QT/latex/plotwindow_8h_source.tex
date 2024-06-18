@@ -9,7 +9,7 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QDialog>}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QtCharts>}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ basicAxisXTime\ 15\ }}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ basicAxisXTime\ 10\ }}
 \DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlotWindow}{PlotWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
 \DoxyCodeLine{00018\ \{}
 \DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
@@ -19,21 +19,22 @@
 \DoxyCodeLine{00027\ }
 \DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classPlotWindow_a684ea087a646cbe658940098a25ce150}{\string~PlotWindow}}();}
 \DoxyCodeLine{00032\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlotWindow_a9844ac761c3270b6a8b8fe8edea22014}{updatePlot}}(\textcolor{keywordtype}{float}\ time,\ \textcolor{keywordtype}{int}\ pwmL,\ \textcolor{keywordtype}{int}\ pwmR,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ sensors[],\ \textcolor{keywordtype}{float}\ speed,\ \textcolor{keywordtype}{float}\ battery);}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlotWindow_a7ea0899f1f2adc0d544e286d60fed4d5}{clearPlot}}();}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00050\ \ \ \ \ QChartView\ *\mbox{\hyperlink{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97}{pwmChartView}};\ }
-\DoxyCodeLine{00051\ \ \ \ \ QChartView\ *\mbox{\hyperlink{classPlotWindow_ae2729e3b6b76107b6246317b7946ab14}{speedChartView}};\ }
-\DoxyCodeLine{00052\ \ \ \ \ QChartView\ *\mbox{\hyperlink{classPlotWindow_aa9e0718ac9ee98e57678e024bdbddbf7}{batteryChartView}};\ }
-\DoxyCodeLine{00054\ \ \ \ \ QLineSeries\ *\mbox{\hyperlink{classPlotWindow_af2a3a806640bab966ecc892e7c1aa394}{pwmLSeries}};\ }
-\DoxyCodeLine{00055\ \ \ \ \ QLineSeries\ *\mbox{\hyperlink{classPlotWindow_a9ae6a7c0d81ba2d33bed0c718b0a230c}{pwmRSeries}};\ }
-\DoxyCodeLine{00056\ \ \ \ \ QScatterSeries\ *\mbox{\hyperlink{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb}{sensorSeries}};\ }
-\DoxyCodeLine{00058\ \ \ \ \ QLineSeries\ *\mbox{\hyperlink{classPlotWindow_a3f0994205267cafd0f67484b224ed08b}{speedSeries}};\ }
-\DoxyCodeLine{00059\ \ \ \ \ QLineSeries\ *\mbox{\hyperlink{classPlotWindow_ad014c9dd8a6a9a4431724d61029031fd}{batterySeries}};\ }
-\DoxyCodeLine{00060\ \};}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLOTWINDOW\_H}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlotWindow_a31c8af0aa023050f786f568875774d30}{retranslateUi}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlotWindow_af0ee5115c9cf3016889b1e59b5262ccd}{updatePlot}}(\textcolor{keywordtype}{float}\ time,\ \textcolor{keywordtype}{int}\ pwmL,\ \textcolor{keywordtype}{int}\ pwmR,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ sensors[],\ \textcolor{keywordtype}{float}\ velocity);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlotWindow_a7ea0899f1f2adc0d544e286d60fed4d5}{clearPlot}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ QChartView\ *\mbox{\hyperlink{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97}{pwmChartView}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ QChartView\ *\mbox{\hyperlink{classPlotWindow_aafaf6d6bf03904c3e8dea979b4e19d59}{sensorChartView}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ QChartView\ *\mbox{\hyperlink{classPlotWindow_a32346ba98bfcd942f477dcdd1952ffb7}{velocityChartView}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ QLineSeries\ *\mbox{\hyperlink{classPlotWindow_af2a3a806640bab966ecc892e7c1aa394}{pwmLSeries}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ QLineSeries\ *\mbox{\hyperlink{classPlotWindow_a9ae6a7c0d81ba2d33bed0c718b0a230c}{pwmRSeries}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ QScatterSeries\ *\mbox{\hyperlink{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb}{sensorSeries}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ QLineSeries\ *\mbox{\hyperlink{classPlotWindow_a64d078660259991b4afb403452c40061}{velocitySeries}};\ }
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLOTWINDOW\_H}}
 
 \end{DoxyCode}

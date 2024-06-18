@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['w_5fl_0',['w_L',['../classMainWindow.html#af982bdd360f7b26e28bcebb79091c9c5',1,'MainWindow']]],
-  ['w_5fr_1',['w_R',['../classMainWindow.html#a291e9389db0a4932351d1c814b313de4',1,'MainWindow']]]
+  ['velocitychartview_0',['velocityChartView',['../classPlotWindow.html#a32346ba98bfcd942f477dcdd1952ffb7',1,'PlotWindow']]],
+  ['velocityseries_1',['velocitySeries',['../classPlotWindow.html#a64d078660259991b4afb403452c40061',1,'PlotWindow']]]
 ];

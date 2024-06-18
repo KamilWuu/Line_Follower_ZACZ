@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updateplot_0',['updatePlot',['../classPlotWindow.html#a9844ac761c3270b6a8b8fe8edea22014',1,'PlotWindow']]]
+  ['updateplot_0',['updatePlot',['../classPlotWindow.html#af0ee5115c9cf3016889b1e59b5262ccd',1,'PlotWindow']]]
 ];

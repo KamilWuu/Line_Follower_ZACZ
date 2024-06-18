@@ -23,7 +23,10 @@ Inheritance diagram for Plot\+Window\+:\begin{figure}[H]
 \Hypertarget{classPlotWindow_a684ea087a646cbe658940098a25ce150}\label{classPlotWindow_a684ea087a646cbe658940098a25ce150} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Plot\+Window} ()
 \begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{classPlotWindow}{Plot\+Window}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classPlotWindow_a9844ac761c3270b6a8b8fe8edea22014}{update\+Plot}} (float time, int pwmL, int pwmR, const int sensors\mbox{[}$\,$\mbox{]}, float speed, float battery)
+\Hypertarget{classPlotWindow_a31c8af0aa023050f786f568875774d30}\label{classPlotWindow_a31c8af0aa023050f786f568875774d30} 
+void {\bfseries retranslate\+Ui} ()
+\begin{DoxyCompactList}\small\item\em Metoda do tłumaczenia interfejsu użytkownika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlotWindow_af0ee5115c9cf3016889b1e59b5262ccd}{update\+Plot}} (float time, int pwmL, int pwmR, const int sensors\mbox{[}$\,$\mbox{]}, float velocity)
 \begin{DoxyCompactList}\small\item\em Aktualizuje wykresy danymi. \end{DoxyCompactList}\item 
 \Hypertarget{classPlotWindow_a7ea0899f1f2adc0d544e286d60fed4d5}\label{classPlotWindow_a7ea0899f1f2adc0d544e286d60fed4d5} 
 void {\bfseries clear\+Plot} ()
@@ -33,9 +36,9 @@ void {\bfseries clear\+Plot} ()
 \item 
 QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97}{pwm\+Chart\+View}}
 \item 
-QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_ae2729e3b6b76107b6246317b7946ab14}{speed\+Chart\+View}}
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_aafaf6d6bf03904c3e8dea979b4e19d59}{sensor\+Chart\+View}}
 \item 
-QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_aa9e0718ac9ee98e57678e024bdbddbf7}{battery\+Chart\+View}}
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a32346ba98bfcd942f477dcdd1952ffb7}{velocity\+Chart\+View}}
 \item 
 QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_af2a3a806640bab966ecc892e7c1aa394}{pwm\+LSeries}}
 \item 
@@ -43,9 +46,7 @@ QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a9ae6a
 \item 
 QScatter\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb}{sensor\+Series}}
 \item 
-QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a3f0994205267cafd0f67484b224ed08b}{speed\+Series}}
-\item 
-QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_ad014c9dd8a6a9a4431724d61029031fd}{battery\+Series}}
+QLine\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlotWindow_a64d078660259991b4afb403452c40061}{velocity\+Series}}
 \end{DoxyCompactItemize}
 
 
@@ -65,17 +66,17 @@ Konstruktor klasy \doxylink{classPlotWindow}{Plot\+Window}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em parent} & Wskaźnik na obiekt rodzica. \\
+{\em parent} & \mbox{[}IN\mbox{]} Wskaźnik na obiekt rodzica. \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classPlotWindow_a9844ac761c3270b6a8b8fe8edea22014}\label{classPlotWindow_a9844ac761c3270b6a8b8fe8edea22014} 
+\Hypertarget{classPlotWindow_af0ee5115c9cf3016889b1e59b5262ccd}\label{classPlotWindow_af0ee5115c9cf3016889b1e59b5262ccd} 
 \index{PlotWindow@{PlotWindow}!updatePlot@{updatePlot}}
 \index{updatePlot@{updatePlot}!PlotWindow@{PlotWindow}}
 \doxysubsubsection{\texorpdfstring{updatePlot()}{updatePlot()}}
-{\footnotesize\ttfamily void Plot\+Window\+::update\+Plot (\begin{DoxyParamCaption}\item[{float}]{time,  }\item[{int}]{pwmL,  }\item[{int}]{pwmR,  }\item[{const int}]{sensors\mbox{[}$\,$\mbox{]},  }\item[{float}]{speed,  }\item[{float}]{battery }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Plot\+Window\+::update\+Plot (\begin{DoxyParamCaption}\item[{float}]{time,  }\item[{int}]{pwmL,  }\item[{int}]{pwmR,  }\item[{const int}]{sensors\mbox{[}$\,$\mbox{]},  }\item[{float}]{velocity }\end{DoxyParamCaption})}
 
 
 
@@ -83,35 +84,21 @@ Aktualizuje wykresy danymi.
 
 
 \begin{DoxyParams}{Parameters}
-{\em time} & Czas. \\
+{\em time} & \mbox{[}IN\mbox{]} Czas. \\
 \hline
-{\em pwmL} & Wartość PWM dla lewego silnika. \\
+{\em pwmL} & \mbox{[}IN\mbox{]} Wartość PWM dla lewego silnika. \\
 \hline
-{\em pwmR} & Wartość PWM dla prawego silnika. \\
+{\em pwmR} & \mbox{[}IN\mbox{]} Wartość PWM dla prawego silnika. \\
 \hline
-{\em sensors} & Tablica z danymi czujników. \\
+{\em sensors} & \mbox{[}IN\mbox{]} Tablica z danymi czujników. \\
 \hline
-{\em speed} & Prędkość. \\
-\hline
-{\em battery} & Poziom naładowania baterii. \\
+{\em velocity} & \mbox{[}IN\mbox{]} Prędkość. \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{classPlotWindow_aa9e0718ac9ee98e57678e024bdbddbf7}\label{classPlotWindow_aa9e0718ac9ee98e57678e024bdbddbf7} 
-\index{PlotWindow@{PlotWindow}!batteryChartView@{batteryChartView}}
-\index{batteryChartView@{batteryChartView}!PlotWindow@{PlotWindow}}
-\doxysubsubsection{\texorpdfstring{batteryChartView}{batteryChartView}}
-{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Plot\+Window\+::battery\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
-
-Widok wykresu dla baterii. \Hypertarget{classPlotWindow_ad014c9dd8a6a9a4431724d61029031fd}\label{classPlotWindow_ad014c9dd8a6a9a4431724d61029031fd} 
-\index{PlotWindow@{PlotWindow}!batterySeries@{batterySeries}}
-\index{batterySeries@{batterySeries}!PlotWindow@{PlotWindow}}
-\doxysubsubsection{\texorpdfstring{batterySeries}{batterySeries}}
-{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::battery\+Series\hspace{0.3cm}{\ttfamily [private]}}
-
-Seria danych dla baterii. \Hypertarget{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97}\label{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97} 
+\Hypertarget{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97}\label{classPlotWindow_a4085f16a61bae9a79041fb0b8af1ef97} 
 \index{PlotWindow@{PlotWindow}!pwmChartView@{pwmChartView}}
 \index{pwmChartView@{pwmChartView}!PlotWindow@{PlotWindow}}
 \doxysubsubsection{\texorpdfstring{pwmChartView}{pwmChartView}}
@@ -129,23 +116,29 @@ Seria danych dla PWM lewego silnika. \Hypertarget{classPlotWindow_a9ae6a7c0d81ba
 \doxysubsubsection{\texorpdfstring{pwmRSeries}{pwmRSeries}}
 {\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::pwm\+RSeries\hspace{0.3cm}{\ttfamily [private]}}
 
-Seria danych dla PWM prawego silnika. \Hypertarget{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb}\label{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb} 
+Seria danych dla PWM prawego silnika. \Hypertarget{classPlotWindow_aafaf6d6bf03904c3e8dea979b4e19d59}\label{classPlotWindow_aafaf6d6bf03904c3e8dea979b4e19d59} 
+\index{PlotWindow@{PlotWindow}!sensorChartView@{sensorChartView}}
+\index{sensorChartView@{sensorChartView}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{sensorChartView}{sensorChartView}}
+{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Plot\+Window\+::sensor\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+Widok wykresu dla czujników. \Hypertarget{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb}\label{classPlotWindow_ad76d0bba1d975438ad1bb422def386eb} 
 \index{PlotWindow@{PlotWindow}!sensorSeries@{sensorSeries}}
 \index{sensorSeries@{sensorSeries}!PlotWindow@{PlotWindow}}
 \doxysubsubsection{\texorpdfstring{sensorSeries}{sensorSeries}}
 {\footnotesize\ttfamily QScatter\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::sensor\+Series\hspace{0.3cm}{\ttfamily [private]}}
 
-Seria danych dla czujników. \Hypertarget{classPlotWindow_ae2729e3b6b76107b6246317b7946ab14}\label{classPlotWindow_ae2729e3b6b76107b6246317b7946ab14} 
-\index{PlotWindow@{PlotWindow}!speedChartView@{speedChartView}}
-\index{speedChartView@{speedChartView}!PlotWindow@{PlotWindow}}
-\doxysubsubsection{\texorpdfstring{speedChartView}{speedChartView}}
-{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Plot\+Window\+::speed\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+Seria danych dla czujników. \Hypertarget{classPlotWindow_a32346ba98bfcd942f477dcdd1952ffb7}\label{classPlotWindow_a32346ba98bfcd942f477dcdd1952ffb7} 
+\index{PlotWindow@{PlotWindow}!velocityChartView@{velocityChartView}}
+\index{velocityChartView@{velocityChartView}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{velocityChartView}{velocityChartView}}
+{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Plot\+Window\+::velocity\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
 
-Widok wykresu dla prędkości. \Hypertarget{classPlotWindow_a3f0994205267cafd0f67484b224ed08b}\label{classPlotWindow_a3f0994205267cafd0f67484b224ed08b} 
-\index{PlotWindow@{PlotWindow}!speedSeries@{speedSeries}}
-\index{speedSeries@{speedSeries}!PlotWindow@{PlotWindow}}
-\doxysubsubsection{\texorpdfstring{speedSeries}{speedSeries}}
-{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::speed\+Series\hspace{0.3cm}{\ttfamily [private]}}
+Widok wykresu dla prędkości. \Hypertarget{classPlotWindow_a64d078660259991b4afb403452c40061}\label{classPlotWindow_a64d078660259991b4afb403452c40061} 
+\index{PlotWindow@{PlotWindow}!velocitySeries@{velocitySeries}}
+\index{velocitySeries@{velocitySeries}!PlotWindow@{PlotWindow}}
+\doxysubsubsection{\texorpdfstring{velocitySeries}{velocitySeries}}
+{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Plot\+Window\+::velocity\+Series\hspace{0.3cm}{\ttfamily [private]}}
 
 Seria danych dla prędkości. 
 
