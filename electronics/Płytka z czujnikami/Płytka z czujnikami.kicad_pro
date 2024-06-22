@@ -483,7 +483,7 @@
       "plot": "../../../../../Desktop/plytka_z_czujnikami/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../mechanics/Płytka z czujnikami.step",
       "svg": "",
       "vrml": ""
     },

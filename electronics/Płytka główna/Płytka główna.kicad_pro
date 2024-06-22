@@ -494,7 +494,7 @@
       "plot": "../../../../../Desktop/plytka_glowna/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../mechanics/Płytka główna.step",
       "svg": "",
       "vrml": ""
     },

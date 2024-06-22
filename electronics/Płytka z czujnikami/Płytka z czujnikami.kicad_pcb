@@ -785,7 +785,7 @@
 			(pintype "open_collector")
 			(uuid "17d977e6-2c87-4fe7-977f-0271a7b7341e")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_5.3x10.2mm_P1.27mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_3.9x8.65mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2025,7 +2025,7 @@
 			(pintype "open_collector")
 			(uuid "de3da8c0-6d98-41ea-9bb3-920c2d12527d")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_5.3x10.2mm_P1.27mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_3.9x8.65mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5176,7 +5176,7 @@
 			(pintype "open_collector")
 			(uuid "3a706e1a-1960-4aec-b5f8-58ef2de5ddaf")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_5.3x10.2mm_P1.27mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_3.9x8.65mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6208,7 +6208,7 @@
 			(pintype "open_collector")
 			(uuid "93602f1e-201a-49ec-a6bb-77bfbb3ca1b6")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_5.3x10.2mm_P1.27mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_3.9x8.65mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8124,7 +8124,7 @@
 			(pintype "open_collector")
 			(uuid "05d9b7ff-1da8-4832-b525-c95c6f6874d3")
 		)
-		(model "${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_5.3x10.2mm_P1.27mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/SO-14_3.9x8.65mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
