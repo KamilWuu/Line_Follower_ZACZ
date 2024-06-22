@@ -37,7 +37,7 @@ class MainWindow : public QMainWindow
 public:
     /*!
      * \brief Konstruktor klasy MainWindow.
-     * \param parent [IN] Wskaźnik na obiekt rodzica.
+     * \param[in] parent  Wskaźnik na obiekt rodzica.
      */
     explicit MainWindow(QWidget *parent = nullptr);
 
@@ -48,7 +48,7 @@ public:
 
     /*!
      * \brief Metoda do wysyłania ramek danych przez WiFi.
-     * \param msg [IN] Ramka do wysłania.
+     * \param[in] msg Ramka do wysłania.
      */
     void transmit(QString msg);
 
@@ -61,7 +61,7 @@ public slots:
 private slots:
     /*!
      * \brief Obsługuje zmianę rozmiaru okna.
-     * \param event [IN] Zdarzenie zmiany rozmiaru.
+     * \param[in] event Zdarzenie zmiany rozmiaru.
      */
     void resizeEvent(QResizeEvent *event);
 
@@ -82,7 +82,7 @@ private slots:
 
     /*!
      * \brief Obsługuje zmianę wartości paska postępu baterii.
-     * \param value [IN] Nowa wartość paska postępu.
+     * \param[in] value Nowa wartość paska postępu.
      */
     void on_batteryProgressBar_valueChanged(int value);
 
@@ -93,7 +93,7 @@ private slots:
 
     /*!
      * \brief Zmienia język interfejsu.
-     * \param language [IN] Ścieżka do pliku tłumaczenia z rozszerzeniem qm.
+     * \param[in] language] Ścieżka do pliku tłumaczenia z rozszerzeniem qm.
      */
     void changeLanguage(const QString &language);
 
@@ -143,13 +143,13 @@ private:
     // Metody prywatne
     /*!
      * \brief Przetwarza otrzymane dane z WiFi.
-     * \param input [IN] Dane wejściowe odczytane z WiFi.
+     * \param[in] input Dane wejściowe odczytane z WiFi.
      */
     void cutString(const QString &input);
 
     /*!
      * \brief Tworzy ramkę danych do wysłania przez WiFi.
-     * \param instruction [IN] Instrukcja do wysłania do robota.
+     * \param[in] instruction Instrukcja do wysłania do robota.
      * \return Ramka danych.
      */
     QString makeDataFrame(char instruction);
@@ -176,8 +176,8 @@ private:
 
     /*!
      * \brief Rysuje strzałkę na etykiecie.
-     * \param label [IN] Etykieta, na której ma być narysowana strzałka.
-     * \param velocity [IN] Prędkość, reprezentowana przez długość strzałki.
+     * \param[in] label - Etykieta, na której ma być narysowana strzałka.
+     * \param[in] velocity Prędkość, reprezentowana przez długość strzałki.
      */
     void drawArrow(QLabel *label, float velocity);
 

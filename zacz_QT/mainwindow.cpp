@@ -424,7 +424,7 @@ void MainWindow::on_updateButton_clicked()
 void MainWindow::on_batteryProgressBar_valueChanged(int value)
 {
     if(value < 15){
-       //QMessageBox::critical(this, "BATTERY WARNING!", "Battery is less than 15%. Please charge!");
+       //QMessageBox::critical(this, tr("BATTERY WARNING!"), tr("Battery is less than 15%. Please charge!"));
     }
     if (value < 35) {
         ui->batteryProgressBar->setStyleSheet("QProgressBar::chunk { background-color: red; }");
@@ -525,7 +525,7 @@ void MainWindow::displayStats()
 
     ui->velocityLCD->display(QString::number(linear_velocity, 'f', 2));
      ui->vMaxLCD->display(QString::number(max_linear_velocity, 'f', 2));
-    //ui->vMaxLCD->display(max_linear_velocity);
+
 
     if(average_velocity != 0){
         average_velocity = (average_velocity + linear_velocity)/2;
