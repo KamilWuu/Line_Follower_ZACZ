@@ -21,7 +21,7 @@ class PlotWindow : public QDialog
 public:
     /*!
      * \brief Konstruktor klasy PlotWindow.
-     * \param parent [IN] Wskaźnik na obiekt rodzica.
+     * \param[in] parent  Wskaźnik na obiekt rodzica.
      */
     explicit PlotWindow(QWidget *parent = nullptr);
 
@@ -37,11 +37,11 @@ public:
 
     /*!
      * \brief Aktualizuje wykresy danymi.
-     * \param time [IN] Czas.
-     * \param pwmL [IN] Wartość PWM dla lewego silnika.
-     * \param pwmR [IN] Wartość PWM dla prawego silnika.
-     * \param sensors [IN] Tablica z danymi czujników.
-     * \param velocity [IN] Prędkość.
+     * \param[in] time Czas.
+     * \param[in] pwmL Wartość PWM dla lewego silnika.
+     * \param[in] pwmR  Wartość PWM dla prawego silnika.
+     * \param[in] sensors  Tablica z danymi czujników.
+     * \param[in] velocity Prędkość.
      */
     void updatePlot(float time, int pwmL, int pwmR, const int sensors[], float velocity);
 
