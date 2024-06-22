@@ -176,7 +176,7 @@ private:
 
     /*!
      * \brief Rysuje strzałkę na etykiecie.
-     * \param label [IN] Etykieta, na której ma być narysowana strzałka.
+     * \param[in] label - Etykieta, na której ma być narysowana strzałka.
      * \param velocity [IN] Prędkość, reprezentowana przez długość strzałki.
      */
     void drawArrow(QLabel *label, float velocity);
